@@ -1,0 +1,419 @@
+{
+  "visibility": {
+    "resultats": true,
+    "methode": true,
+    "apropos": true,
+    "galerie": true,
+    "zone": true,
+    "faq": true,
+    "avis": true,
+    "barreMobile": true
+  },
+  "nav": [
+    {
+      "id": "prestations",
+      "label": "Prestations"
+    },
+    {
+      "id": "resultats",
+      "label": "Résultats"
+    },
+    {
+      "id": "methode",
+      "label": "Méthode"
+    },
+    {
+      "id": "apropos",
+      "label": "À propos"
+    },
+    {
+      "id": "zone",
+      "label": "Zone"
+    },
+    {
+      "id": "faq",
+      "label": "FAQ"
+    }
+  ],
+  "contact": {
+    "telephone": "07 68 70 69 96",
+    "whatsapp": "",
+    "email": "contact@pitlanelab.fr",
+    "instagram": "",
+    "facebook": "",
+    "tiktok": "",
+    "formEndpoint": "",
+    "horaires": "Du lundi au samedi, sur rendez-vous"
+  },
+  "hero": {
+    "titre": "Votre voiture mérite un passage aux stands.",
+    "texte": "Pitlane Lab, detailing automobile sur place à Mantes-la-Jolie et alentours. Lavage, correction de peinture, protection céramique : le soin d'un atelier, là où votre voiture est garée.",
+    "cta1": "Demander un devis",
+    "cta2": "Voir les prestations",
+    "points": [
+      "J'interviens sur place, chez vous ou au travail",
+      "Mantes-la-Jolie et communes alentour",
+      "Devis gratuit, annoncé avant d'intervenir",
+      "Certification professionnelle RS6930"
+    ]
+  },
+  "prestationsIntro": {
+    "titre": "Les prestations ",
+    "texte": "Des soins pour chaque besoin, du lavage soigné à la protection céramique. Les prix indiqués sont des tarifs de départ : le montant exact est confirmé dans le devis, avant toute intervention."
+  },
+  "services": [
+    {
+      "categorie": "Lavage",
+      "titre": "Lavage Prestige",
+      "image": "",
+      "resume": "Un lavage manuel, extérieur et intérieur, qui respecte la peinture.",
+      "description": "Le lavage de base, fait comme il faut. Chaque étape est pensée pour retirer la saleté sans marquer la peinture : pré-lavage à la mousse, lavage manuel, séchage doux.\nL'habitacle est aspiré et remis au propre pour que la voiture soit agréable de l'extérieur comme de l'intérieur.\n\nIdéal pour entretenir régulièrement une voiture en bon état, ou pour repartir sur de bonnes bases avant une prestation plus poussée.",
+      "inclus": [
+        "Pré-lavage à la mousse active",
+        "Lavage manuel à deux seaux",
+        "Jantes et passages de roues nettoyés",
+        "Séchage à la microfibre",
+        "Vitres intérieures et extérieures",
+        "Aspiration complète de l'habitacle",
+        "Plastiques nettoyés et protégés"
+      ],
+      "duree": "2 h environ",
+      "prix": "89 €",
+      "unite": "à partir de",
+      "populaire": false,
+      "visible": true
+    },
+    {
+      "categorie": "Intérieur",
+      "titre": "Intérieur Complet",
+      "image": "",
+      "resume": "Un habitacle nettoyé en profondeur, jusque dans les recoins.",
+      "description": "L'intérieur est la partie de la voiture qu'on touche, qu'on respire et qu'on voit tous les jours. Cette prestation le remet à neuf : aspiration en profondeur, nettoyage des plastiques, des sièges, des contre-portes et des vitres.\nLes matières sont traitées selon leur nature (tissu, cuir, alcantara, plastiques) avec le produit adapté.\n\nUne voiture plus saine et plus agréable, sans odeur persistante.",
+      "inclus": [
+        "Aspiration complète, sièges et coffre compris",
+        "Nettoyage des plastiques, contre-portes et console",
+        "Sièges nettoyés selon la matière (tissu, cuir, alcantara)",
+        "Tapis nettoyés",
+        "Vitres et rétroviseur intérieur",
+        "Désodorisation de l'habitacle"
+      ],
+      "duree": "3 h environ",
+      "prix": "129 €",
+      "unite": "à partir de",
+      "populaire": false,
+      "visible": true
+    },
+    {
+      "categorie": "Peinture",
+      "titre": "Décontamination & Lustrage",
+      "image": "",
+      "resume": "Une peinture lisse, brillante, débarrassée de ce que le lavage laisse.",
+      "description": "Après un simple lavage, la peinture garde souvent des particules incrustées (fer, goudron, résidus) qui la rendent rugueuse et terne. La décontamination les retire, le lustrage redonne profondeur et éclat.\nLa différence se voit et se sent : la surface devient lisse, la couleur gagne en profondeur.\n\nC'est le bon choix pour une voiture en bon état qui a perdu de son éclat, ou comme préparation avant une protection.",
+      "inclus": [
+        "Lavage complet de la carrosserie",
+        "Décontamination ferreuse",
+        "Décontamination mécanique (clay)",
+        "Lustrage en une étape",
+        "Finition et protection de courte durée"
+      ],
+      "duree": "4 à 5 h",
+      "prix": "249 €",
+      "unite": "à partir de",
+      "populaire": true,
+      "visible": true
+    },
+    {
+      "categorie": "Peinture",
+      "titre": "Correction de peinture",
+      "image": "",
+      "resume": "On supprime les micro-rayures et les hologrammes, pas seulement on les masque.",
+      "description": "Avec le temps, les lavages, les frottements et le soleil laissent sur la peinture des micro-rayures et des hologrammes qui ternissent la couleur. La correction les retire par un polissage en plusieurs passes, adapté à l'épaisseur et à la dureté de votre peinture.\nAvant de commencer, la peinture est observée sous lumière pour décider du bon niveau de correction : on ne polit jamais plus que nécessaire.\n\nLe résultat : une peinture profonde, régulière, avec un vrai effet miroir.",
+      "inclus": [
+        "Diagnostic de la peinture sous lumière",
+        "Lavage et décontamination complets",
+        "Polissage en une ou plusieurs étapes selon l'état",
+        "Contrôle du résultat sous lumière",
+        "Protection de finition"
+      ],
+      "duree": "1 à 2 jours",
+      "prix": "390 €",
+      "unite": "à partir de",
+      "populaire": false,
+      "visible": true
+    },
+    {
+      "categorie": "Protection",
+      "titre": "Protection céramique",
+      "image": "",
+      "resume": "Une couche de protection longue durée pour une peinture qui reste belle.",
+      "description": "Le traitement céramique crée sur la peinture une couche dure qui repousse l'eau et la saleté, rend l'entretien plus simple et fait ressortir la brillance.\nLa peinture est d'abord préparée avec soin (lavage, décontamination, polissage selon besoin), car la protection ne fait que garder ce qui est dessous.\n\nElle ne rend pas la voiture indestructible : un lavage régulier reste nécessaire. Je vous explique à quoi vous attendre selon votre usage.",
+      "inclus": [
+        "Préparation complète de la peinture",
+        "Polissage de préparation",
+        "Application du traitement céramique",
+        "Entretien conseillé après traitement"
+      ],
+      "duree": "1 à 2 jours",
+      "prix": "590 €",
+      "unite": "à partir de",
+      "populaire": false,
+      "visible": true
+    },
+    {
+      "categorie": "Extérieur",
+      "titre": "Rénovation de phares",
+      "image": "",
+      "resume": "Des phares à nouveau clairs, pour la sécurité et pour l'allure.",
+      "description": "Des phares jaunis ou ternes éclairent moins bien et vieillissent toute la face avant. La rénovation les remet au clair par un ponçage progressif suivi d'un polissage, puis d'une protection contre les UV.\n\nLa différence est immédiate, de nuit comme de jour.",
+      "inclus": [
+        "Ponçage progressif des optiques",
+        "Polissage",
+        "Protection contre les UV"
+      ],
+      "duree": "1 h 30",
+      "prix": "69 €",
+      "unite": "à partir de",
+      "populaire": false,
+      "visible": true
+    }
+  ],
+  "resultatsIntro": {
+    "titre": "Glissez pour voir la différence.",
+    "texte": "Le même panneau, avant et après un polissage. Déplacez la barre pour comparer."
+  },
+  "avantApres": [],
+  "methodeIntro": {
+    "titre": "Une méthode, de l'arrivée à la remise des clés.",
+    "texte": "Chaque voiture suit les mêmes étapes, dans le même ordre. C'est ce qui permet un résultat régulier, et un prix qui ne réserve pas de surprise."
+  },
+  "etapes": [
+    {
+      "titre": "Diagnostic",
+      "texte": "Tour complet du véhicule sous lumière : état de la peinture, de l'intérieur, points sensibles. On valide ensemble la prestation et le prix."
+    },
+    {
+      "titre": "Nettoyage",
+      "texte": "Pré-lavage, lavage manuel, jantes. La saleté part sans que la peinture soit marquée."
+    },
+    {
+      "titre": "Décontamination",
+      "texte": "Fer, goudron, résidus : on retire ce que le lavage laisse, pour travailler sur une surface saine."
+    },
+    {
+      "titre": "Correction & finition",
+      "texte": "Polissage adapté à l'état de la peinture, intérieur remis à neuf, chaque détail repris."
+    },
+    {
+      "titre": "Protection & contrôle",
+      "texte": "Cire, sealant ou céramique, puis contrôle final sous lumière avant de vous rendre les clés."
+    }
+  ],
+  "apropos": {
+    "titre": "Je m'appelle Jermaine Da Cruz.",
+    "texte1": "Pitlane Lab, c'est mon atelier de detailing, sans atelier : je viens à vous. Je travaille sur place, avec le matériel qu'il faut, pour donner à chaque voiture le temps et la précision qu'elle demande.",
+    "texte2": "Pas de cadence, pas de raccourci. Une voiture rendue propre, contrôlée sous lumière, et quelques conseils pour que le résultat dure.",
+    "engagements": [
+      "Un devis clair avant de commencer",
+      "Une voiture contrôlée sous lumière avant la remise des clés",
+      "Des conseils d'entretien pour garder le résultat plus longtemps"
+    ],
+    "certif": {
+      "actif": true,
+      "intitule": "Certification professionnelle RS6930",
+      "detail": "Sublimer et protéger l'aspect d'un véhicule grâce au detailing",
+      "source": "Enregistrée au Répertoire spécifique de France Compétences"
+    }
+  },
+  "galerie": [],
+  "galerieIntro": {
+    "titre": "Dernières réalisations",
+    "texte": ""
+  },
+  "zone": {
+    "titre": "Je viens à vous.",
+    "texte": "Pas de local : j'interviens sur place, à votre domicile ou sur votre lieu de travail, autour de Mantes-la-Jolie.",
+    "centre": {
+      "lat": 48.9906,
+      "lng": 1.717,
+      "label": "Mantes-la-Jolie"
+    },
+    "rayonKm": 20,
+    "communes": [
+      "Mantes-la-Jolie",
+      "Mantes-la-Ville",
+      "Buchelay",
+      "Magnanville",
+      "Rosny-sur-Seine",
+      "Limay",
+      "Guerville",
+      "Gargenville",
+      "Épône",
+      "Bonnières-sur-Seine",
+      "Meulan-en-Yvelines"
+    ],
+    "note": "Votre commune n'est pas dans la liste ? Écrivez-moi, on regarde ensemble."
+  },
+  "faq": [
+    {
+      "q": "Où intervenez-vous exactement ?",
+      "a": "À Mantes-la-Jolie et dans les communes alentour (voir la carte). Je me déplace sur place, à votre domicile ou sur votre lieu de travail. Pour une adresse plus éloignée, contactez-moi : on regarde ensemble."
+    },
+    {
+      "q": "Dois-je fournir de l'eau et de l'électricité ?",
+      "a": "Cela dépend de la prestation et du lieu. Dites-moi dans votre demande ce dont vous disposez (point d'eau, prise, place à l'abri) : je vous confirme ce qu'il faut avant de venir."
+    },
+    {
+      "q": "Combien de temps dure une prestation ?",
+      "a": "De 1 h 30 pour une rénovation de phares à deux jours pour une correction de peinture complète. La durée est indiquée sur chaque prestation et confirmée dans le devis."
+    },
+    {
+      "q": "Comment sont calculés les prix ?",
+      "a": "Les tarifs affichés sont des prix de départ pour une voiture de taille standard, en état normal. La taille du véhicule et l'état réel peuvent les faire évoluer : le prix final est annoncé dans le devis, avant toute intervention."
+    },
+    {
+      "q": "Quelle différence entre lustrage et correction de peinture ?",
+      "a": "Le lustrage redonne de l'éclat et atténue les défauts légers. La correction va plus loin : elle supprime les micro-rayures et les hologrammes par un polissage en plusieurs passes. Je vous conseille l'un ou l'autre après avoir observé la peinture."
+    },
+    {
+      "q": "La protection céramique, est-ce utile ?",
+      "a": "Elle forme une couche dure qui repousse l'eau et la saleté et facilite l'entretien. Elle ne rend pas la voiture indestructible : un lavage régulier reste nécessaire. Je vous explique à quoi vous attendre selon votre usage."
+    },
+    {
+      "q": "Comment réserver ?",
+      "a": "Envoyez-moi une demande avec le formulaire, par WhatsApp ou par téléphone. Je reviens vers vous avec un devis et une date."
+    }
+  ],
+  "avis": [],
+  "avisIntro": {
+    "titre": "Ils m'ont confié leur voiture."
+  },
+  "contactSection": {
+    "titre": "Parlons de votre voiture.",
+    "texte": "Décrivez-moi votre véhicule et ce que vous attendez. Je reviens vers vous avec un devis et une date."
+  },
+  "footer": {
+    "copyright": "Pitlane Lab — Jermaine Da Cruz, detailing automobile",
+    "tagline": "Detailing automobile sur place à Mantes-la-Jolie (78)"
+  },
+  "legal": {
+    "titre": "Mentions légales",
+    "texte": "Éditeur du site : Pitlane Lab, entreprise individuelle de Jermaine Da Cruz.\nSIRET : [à compléter].\nTéléphone : 07 68 70 69 96.\nHébergeur : GitHub Pages (GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis).\n\nDonnées personnelles : les informations saisies dans le formulaire de demande servent uniquement à répondre à votre demande. Elles ne sont ni revendues ni transmises à des tiers."
+  },
+  "seo": {
+    "siteTitle": "Pitlane Lab — Detailing automobile à Mantes-la-Jolie (78)",
+    "description": "Pitlane Lab : detailing automobile sur place à Mantes-la-Jolie et alentours, par Jermaine Da Cruz (certification professionnelle RS6930). Lavage, intérieur, correction de peinture, protection céramique. Devis gratuit.",
+    "siteUrl": "https://pitlanelab.fr",
+    "shareImage": "images/og-image.jpg"
+  },
+  "images": {
+    "hero": "",
+    "portrait": ""
+  },
+  "theme": {
+    "bg": "#08090b",
+    "surface": "#111317",
+    "surface2": "#181b21",
+    "ink": "#f5f6f8",
+    "muted": "#9aa3ad",
+    "accent": "#e10a1e",
+    "accentHot": "#ff3347",
+    "line": "#2a2f37"
+  },
+  "effets": {
+    "intro": true,
+    "essuyage": true,
+    "rail": true,
+    "curseur": true,
+    "details": true,
+    "marquee": true
+  },
+  "marquee": [
+    "Detailing sur place",
+    "Mantes-la-Jolie",
+    "Correction de peinture",
+    "Protection céramique",
+    "Intérieur comme neuf",
+    "Devis gratuit"
+  ],
+  "disponibilite": {
+    "actif": false,
+    "texte": "Prochain créneau : cette semaine"
+  },
+  "detailsIntro": {
+    "titre": "Chaque détail compte. Et pis voila",
+    "texte": "Touchez un point de la voiture pour voir ce qui est traité, et avec quelle prestation."
+  },
+  "zones": [
+    {
+      "titre": "Phares et optiques",
+      "texte": "Des optiques jaunies ou ternes éclairent moins bien et vieillissent toute la face avant. Ponçage progressif, polissage et protection contre les UV : la transparence revient.",
+      "x": 13,
+      "y": 72,
+      "prestation": "Rénovation de phares"
+    },
+    {
+      "titre": "Jantes et passages de roues",
+      "texte": "Poussière de freins, boue, goudron : tout est retiré à la main, jantes et passages de roues compris, pour que les roues ne trahissent pas le reste de la voiture.",
+      "x": 26,
+      "y": 85,
+      "prestation": "Lavage Prestige"
+    },
+    {
+      "titre": "Peinture et carrosserie",
+      "texte": "Décontamination, lustrage, correction : on retire ce que le lavage laisse et on corrige les micro-rayures, avec le niveau d'intervention adapté à votre peinture.",
+      "x": 38,
+      "y": 62,
+      "prestation": "Correction de peinture"
+    },
+    {
+      "titre": "Habitacle et sièges",
+      "texte": "Aspiration en profondeur, plastiques, sièges et tapis nettoyés selon la matière. L'habitacle est remis au propre, sans odeur persistante.",
+      "x": 58,
+      "y": 38,
+      "prestation": "Intérieur Complet"
+    },
+    {
+      "titre": "Protection et finition",
+      "texte": "Cire, sealant ou traitement céramique : une couche qui repousse l'eau et la saleté et facilite l'entretien. Un lavage régulier reste nécessaire.",
+      "x": 90,
+      "y": 58,
+      "prestation": "Protection céramique"
+    }
+  ],
+  "estimateur": {
+    "actif": true,
+    "tailles": [
+      {
+        "label": "Citadine",
+        "coef": 0.9
+      },
+      {
+        "label": "Berline / compacte",
+        "coef": 1
+      },
+      {
+        "label": "SUV / break",
+        "coef": 1.2
+      },
+      {
+        "label": "Grand SUV / utilitaire",
+        "coef": 1.4
+      }
+    ],
+    "etats": [
+      {
+        "label": "Bien entretenue",
+        "coef": 1
+      },
+      {
+        "label": "Sale",
+        "coef": 1.15
+      },
+      {
+        "label": "Très sale",
+        "coef": 1.3
+      }
+    ],
+    "note": "Estimation indicative : le prix final est confirmé dans le devis, avant toute intervention."
+  }
+}
