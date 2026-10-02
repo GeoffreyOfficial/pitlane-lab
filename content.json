@@ -58,7 +58,7 @@
     ]
   },
   "prestationsIntro": {
-    "titre": "Les prestations ",
+    "titre": "Les prestations",
     "texte": "Des soins pour chaque besoin, du lavage soigné à la protection céramique. Les prix indiqués sont des tarifs de départ : le montant exact est confirmé dans le devis, avant toute intervention."
   },
   "services": [
@@ -235,7 +235,7 @@
     "centre": {
       "lat": 48.9906,
       "lng": 1.717,
-      "label": "Mantes-la-Jolie"
+      "label": "Mantes-la-Jolie, France"
     },
     "rayonKm": 20,
     "communes": [
@@ -297,7 +297,7 @@
   },
   "legal": {
     "titre": "Mentions légales",
-    "texte": "Éditeur du site : Pitlane Lab, entreprise individuelle de Jermaine Da Cruz.\nSIRET : [à compléter].\nTéléphone : 07 68 70 69 96.\nHébergeur : GitHub Pages (GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis).\n\nDonnées personnelles : les informations saisies dans le formulaire de demande servent uniquement à répondre à votre demande. Elles ne sont ni revendues ni transmises à des tiers."
+    "texte": "Éditeur du site : Pitlane Lab, entreprise individuelle de Jermaine Da Cruz.\nSIRET : [à compléter].\nTéléphone : 07 68 70 69 96.\nHébergeur : GitHub Pages (GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis).\n\nCarte : la page intègre une carte Google Maps (Google LLC), qui peut déposer des cookies.\n\nDonnées personnelles : les informations saisies dans le formulaire de demande servent uniquement à répondre à votre demande. Elles ne sont ni revendues ni transmises à des tiers."
   },
   "seo": {
     "siteTitle": "Pitlane Lab — Detailing automobile à Mantes-la-Jolie (78)",
@@ -340,7 +340,7 @@
     "texte": "Prochain créneau : cette semaine"
   },
   "detailsIntro": {
-    "titre": "Chaque détail compte. Et pis voila",
+    "titre": "Chaque détail compte.",
     "texte": "Touchez un point de la voiture pour voir ce qui est traité, et avec quelle prestation."
   },
   "zones": [

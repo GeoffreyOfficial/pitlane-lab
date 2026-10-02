@@ -604,11 +604,11 @@ const PANELS = [
     fld('apropos.titre', 'Titre') + fld('apropos.texte1', 'Premier paragraphe', { area:1, rows:4 }) + fld('apropos.texte2', 'Deuxième paragraphe', { area:1, rows:3 }) +
     `<h4 class="sub">Certification</h4>` + sw('apropos.certif.actif', 'Afficher la certification', 'Encadré sur la page, sous le texte de présentation.') + fld('apropos.certif.intitule', 'Intitulé affiché', { ph:'Certification professionnelle RS6930' }) + fld('apropos.certif.detail', 'Intitulé officiel', { hint:'Tel qu\'il figure sur la fiche France Compétences.' }) + fld('apropos.certif.source', 'Précision', { hint:'Ex. Enregistrée au Répertoire spécifique de France Compétences.' }) +
     slist('apropos.engagements', 'Engagements', { add:'Ajouter un engagement' }) + imgf('images.portrait', 'Photo de portrait (facultative)', { max:1400, hint:'Format portrait (4/5) conseillé. Sans photo, une initiale est affichée.' }) },
-  { id:'zone', icon:'pin', title:'Zone d\'intervention', desc:'La carte autour de Mantes-la-Jolie et la liste des communes.', body:() =>
+  { id:'zone', icon:'pin', title:'Zone d\'intervention', desc:'La carte Google autour de Mantes-la-Jolie et la liste des communes.', body:() =>
     fld('zone.titre', 'Titre') + fld('zone.texte', 'Texte', { area:1, rows:3 }) +
-    `<h4 class="sub">Position sur la carte</h4>` + fld('zone.centre.label', 'Nom du lieu central') +
-    row2(fld('zone.centre.lat', 'Latitude', { num:1, hint:'ex. 48.9906' }), fld('zone.centre.lng', 'Longitude', { num:1, hint:'ex. 1.7170' })) +
-    fld('zone.rayonKm', 'Rayon de la zone (km)', { num:1, hint:'Dessiné en cercle sur la carte.' }) +
+    `<h4 class="sub">Position sur la carte</h4>` + fld('zone.centre.label', 'Lieu sur la carte Google', { hint:'Le lieu autour duquel la carte est centrée. Mets la ville suivie de « , France » (ex. Mantes-la-Jolie, France).' }) +
+    row2(fld('zone.centre.lat', 'Latitude (secours)', { num:1, hint:'Utilisée seulement si le lieu ci-dessus est vide.' }), fld('zone.centre.lng', 'Longitude (secours)', { num:1, hint:'Utilisée seulement si le lieu ci-dessus est vide.' })) +
+    fld('zone.rayonKm', 'Étendue de la zone (km)', { num:1, hint:'Règle le zoom de la carte : plus le nombre est grand, plus la carte montre large. Google ne permet pas de tracer un cercle.' }) +
     slist('zone.communes', 'Communes desservies', { add:'Ajouter une commune' }) + fld('zone.note', 'Note sous la liste') },
   { id:'contact', icon:'phone', title:'Coordonnées et réseaux', desc:'Téléphone, WhatsApp, e-mail, réseaux sociaux, envoi du formulaire.', body:() =>
     sw('disponibilite.actif', 'Afficher un badge de disponibilité', 'Petit badge vert en haut de l\'accueil. À garder à jour, ou à désactiver.') + fld('disponibilite.texte', 'Texte du badge', { ph:'ex. Prochain créneau : samedi' }) +
@@ -687,8 +687,8 @@ function validate(){
     ['x', 'y'].forEach(k => { const v = Number(zz[k]); if (zz[k] === '' || isNaN(v) || v < 0 || v > 100) add('zones.' + i + '.' + k, 'Entre un nombre de 0 à 100.', 'details'); }); });
   ['tailles', 'etats'].forEach(k => C.estimateur[k].forEach((t, i) => { if (!String(t.label).trim()) add('estimateur.' + k + '.' + i + '.label', 'Donne un nom.', 'estimateur'); const v = Number(t.coef); if (t.coef === '' || isNaN(v) || v <= 0 || v > 5) add('estimateur.' + k + '.' + i + '.coef', 'Entre un coefficient entre 0,1 et 5.', 'estimateur'); }));
   const z = C.zone, lat = Number(z.centre.lat), lng = Number(z.centre.lng), r = Number(z.rayonKm);
-  if (z.centre.lat === '' || isNaN(lat) || lat < -90 || lat > 90) add('zone.centre.lat', 'Latitude invalide (ex. 48.9906).', 'zone');
-  if (z.centre.lng === '' || isNaN(lng) || lng < -180 || lng > 180) add('zone.centre.lng', 'Longitude invalide (ex. 1.7170).', 'zone');
+  if (!String(z.centre.label).trim() && (z.centre.lat === '' || isNaN(lat) || lat < -90 || lat > 90)) add('zone.centre.lat', 'Latitude invalide (ex. 48.9906).', 'zone');
+  if (!String(z.centre.label).trim() && (z.centre.lng === '' || isNaN(lng) || lng < -180 || lng > 180)) add('zone.centre.lng', 'Longitude invalide (ex. 1.7170).', 'zone');
   if (z.rayonKm === '' || isNaN(r) || r <= 0 || r > 200) add('zone.rayonKm', 'Indique un rayon entre 1 et 200 km.', 'zone');
   COLORS.forEach(([k]) => { if (!isHex(C.theme[k])) add('theme.' + k, 'Couleur invalide : format #rrggbb.', 'couleurs'); });
   return E;

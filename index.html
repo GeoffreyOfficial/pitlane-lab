@@ -326,16 +326,18 @@ dialog.closing .modal-c{animation:popOut .25s forwards}
 .tags li{padding:.35rem .9rem; font-size:.9rem; font-weight:500; background:var(--surface); box-shadow:inset 0 0 0 1px rgba(var(--ink-rgb),.1)}
 .tags li:first-child{box-shadow:inset 0 0 0 1px var(--accent); color:#fff}
 .zone-note{color:var(--muted); font-size:.95rem}
-.map{position:relative; min-height:26rem; height:100%; background:var(--surface2); box-shadow:inset 0 0 0 1px rgba(var(--ink-rgb),.1)}
-.map #leaflet,.map iframe{position:absolute; inset:0; width:100%; height:100%; border:0}
-.map iframe{filter:grayscale(1) invert(.92) contrast(.9)}
-.leaflet-container{background:#0d0f13; font-family:var(--font-body)}
-.leaflet-control-attribution{background:rgba(8,9,11,.7)!important; color:#8b93a0!important} .leaflet-control-attribution a{color:#b9c0ca!important}
-.leaflet-bar a{background:#111317!important; color:#fff!important; border-color:#2a2f37!important}
-.pin{position:relative; width:1rem; height:1rem; border-radius:50%; background:var(--accent-hot); box-shadow:0 0 0 3px #fff, 0 0 18px 4px rgba(var(--accent-rgb),.9)}
-.pin::after{content:""; position:absolute; inset:-.2rem; border-radius:50%; border:2px solid var(--accent-hot); animation:ping 2.2s infinite}
-@keyframes ping{from{transform:scale(1); opacity:.9}to{transform:scale(4); opacity:0}}
-.map-btn{position:absolute; right:.8rem; bottom:2rem; z-index:500}
+.map{position:relative; min-height:26rem; height:100%; background:var(--surface2); overflow:hidden; box-shadow:inset 0 0 0 1px rgba(var(--ink-rgb),.1)}
+/* fond d'attente tant que Google Maps n'a pas répondu : jamais d'encart vide */
+.map::before{content:""; position:absolute; inset:0; z-index:1; background:radial-gradient(circle at 50% 42%,rgba(var(--accent-rgb),.14),transparent 60%),repeating-linear-gradient(100deg,rgba(var(--ink-rgb),.03) 0 40px,rgba(var(--ink-rgb),.06) 40px 80px); transition:opacity .4s ease .1s}
+.map.is-loaded::before{opacity:0; pointer-events:none}
+.map iframe{position:absolute; inset:0; width:100%; height:100%; border:0; display:block; filter:saturate(.92) contrast(1.02); pointer-events:none; opacity:0; transition:opacity .4s ease}
+.map.is-loaded iframe{opacity:1}
+.map.is-active iframe{pointer-events:auto}
+.map-hint{position:absolute; z-index:3; left:50%; bottom:2.8rem; transform:translateX(-50%); display:flex; align-items:center; gap:.5rem; padding:.55rem 1.05rem; border-radius:99px; border:1px solid rgba(var(--ink-rgb),.3); background:rgba(var(--bg-rgb),.78); -webkit-backdrop-filter:blur(6px); backdrop-filter:blur(6px); font-weight:600; font-size:.85rem; white-space:nowrap; cursor:pointer; transition:opacity .3s ease}
+.map-hint .icon{width:1.1em; height:1.1em; color:var(--accent-hot)}
+.map-hint:hover{border-color:var(--accent-hot)}
+.map.is-active .map-hint{opacity:0; pointer-events:none}
+.map-btn{position:absolute; right:.8rem; top:.8rem; z-index:3}
 
 /* =========================================================
    FAQ
@@ -900,8 +902,9 @@ function render(){
         <ul class="tags" aria-label="Communes desservies">${arr(Z.communes).map(c => `<li>${esc(c)}</li>`).join('')}</ul>
         ${Z.note ? `<p class="zone-note">${esc(Z.note)}</p>` : ''}
       </div>
-      <div class="map cut" id="map" data-lat="${esc(Z.centre.lat)}" data-lng="${esc(Z.centre.lng)}" data-r="${esc(Z.rayonKm)}" role="img" aria-label="Carte de la zone d'intervention autour de ${esc(Z.centre.label)}">
-        <div id="leaflet"></div>
+      <div class="map cut" id="map">
+        <iframe id="mapFrame" title="Carte de la zone d'intervention autour de ${esc(Z.centre.label)}" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        <button type="button" class="map-hint" id="mapHint">${ic('pin')}<span>Toucher pour interagir avec la carte</span></button>
         <a class="btn btn-sm map-btn" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(str(Z.centre.label) || (Z.centre.lat + ',' + Z.centre.lng))}">Ouvrir dans Maps</a>
       </div>
     </div>
@@ -1212,31 +1215,21 @@ function initSteps(){
 }
 
 /* =====================================================================
-   CARTE (Leaflet chargé à la demande, repli iframe)
+   CARTE : embed Google Maps public (sans clé), comme sur Momox Dogs.
+   Verrouillée tant qu'on ne l'a pas touchée, pour ne pas gêner le défilement.
    ===================================================================== */
-function loadLeaflet(){
-  return new Promise((resolve, reject) => {
-    if (window.L) return resolve(window.L);
-    const css = document.createElement('link'); css.rel = 'stylesheet'; css.href = 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css'; document.head.appendChild(css);
-    const js = document.createElement('script'); js.src = 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js'; js.onload = () => resolve(window.L); js.onerror = reject; document.head.appendChild(js);
-  });
-}
 function initMap(){
-  const box = $('#map'); if (!box) return;
-  const lat = parseFloat(box.dataset.lat), lng = parseFloat(box.dataset.lng), r = parseFloat(box.dataset.r) || 15;
-  const fallback = () => { const q = encodeURIComponent((C.zone.centre.label || '') || (lat + ',' + lng)); const z = r > 30 ? 9 : r > 14 ? 10 : 11;
-    $('#leaflet').outerHTML = `<iframe title="Carte" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=${q}&z=${z}&output=embed"></iframe>`; };
-  if (isNaN(lat) || isNaN(lng)) return;
-  const start = () => loadLeaflet().then(L => {
-    const map = L.map('leaflet', { zoomControl:true, scrollWheelZoom:false, dragging:!L.Browser.mobile, tap:false, attributionControl:true, zoomSnap:.25, zoomDelta:.5 });
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', { maxZoom:18, subdomains:'abcd', attribution:'© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> © <a href="https://carto.com/attributions">CARTO</a>' }).addTo(map);
-    const circle = L.circle([lat, lng], { radius:r * 1000, color:getComputedStyle(document.documentElement).getPropertyValue('--accent-hot').trim() || '#ff3347', weight:2, dashArray:'6 8', fillOpacity:.13 }).addTo(map);
-    L.marker([lat, lng], { icon:L.divIcon({ className:'', html:'<div class="pin"></div>', iconSize:[16,16], iconAnchor:[8,8] }), keyboard:false }).addTo(map);
-    map.fitBounds(L.latLng(lat, lng).toBounds(r * 2000 * 1.12), { padding:[8,8] });
-    map.on('click', () => map.scrollWheelZoom.enable()); map.on('mouseout', () => map.scrollWheelZoom.disable());
-    new ResizeObserver(() => map.invalidateSize()).observe(box);
-  }).catch(err => { console.error('Carte :', err); fallback(); });
-  if ('IntersectionObserver' in window){ const io = new IntersectionObserver(es => { if (es[0].isIntersecting){ io.disconnect(); start(); } }, { rootMargin:'400px' }); io.observe(box); } else start();
+  const box = $('#map'), frame = $('#mapFrame'); if (!box || !frame) return;
+  const Z = C.zone || {}, c = Z.centre || {};
+  const q = str(c.label).trim() || (c.lat + ',' + c.lng);
+  const r = parseFloat(Z.rayonKm) || 15, zoom = r > 30 ? 9 : r > 14 ? 10 : 11;
+  const loaded = () => box.classList.add('is-loaded');
+  frame.addEventListener('load', loaded); setTimeout(loaded, 8000);
+  frame.src = 'https://www.google.com/maps?q=' + encodeURIComponent(q) + '&z=' + zoom + '&output=embed';
+  const hint = $('#mapHint'); if (hint) $('span', hint).textContent = isTouch ? 'Toucher pour interagir avec la carte' : 'Cliquer pour interagir avec la carte';
+  const activate = () => box.classList.add('is-active');
+  if (hint) hint.addEventListener('click', activate);
+  box.addEventListener('click', activate, { once:true });
 }
 
 /* =====================================================================
