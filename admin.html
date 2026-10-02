@@ -143,6 +143,9 @@ input:focus,textarea:focus,select:focus{outline:none; border-color:var(--accent-
 .mini .b{align-self:flex-start; padding:.45rem 1.1rem; font:italic 700 .85rem var(--font-d); text-transform:uppercase; color:#fff; clip-path:polygon(.5rem 0,100% 0,calc(100% - .5rem) 100%,0 100%)}
 .mini .card{padding:.7rem .9rem; border-radius:.4rem; font-size:.85rem}
 
+.pick{position:relative; max-width:34rem; aspect-ratio:958/166; background:#0b0c0f; border:1px solid var(--line); border-radius:.5rem; cursor:crosshair; margin-top:.3rem; touch-action:manipulation}
+.pick img{position:absolute; inset:0; width:100%; height:100%; opacity:.85; pointer-events:none}
+.pick i{position:absolute; width:1rem; height:1rem; margin:-.5rem 0 0 -.5rem; border-radius:50%; background:var(--accent-hot); box-shadow:0 0 0 2px #fff,0 0 14px rgba(255,51,71,.9); pointer-events:none}
 /* checklist */
 .ck{display:grid; gap:.45rem; margin-top:.9rem}
 .ck button{display:flex; gap:.75rem; align-items:flex-start; text-align:left; padding:.7rem .8rem; background:var(--field); border:1px solid var(--line); border-radius:.55rem; width:100%}
@@ -263,6 +266,7 @@ dialog::backdrop{background:rgba(3,4,6,.8); -webkit-backdrop-filter:blur(5px); b
           <a href="#g6">6. Recevoir les demandes de devis</a>
           <a href="#g7">7. Protéger cette page</a>
           <a href="#g8">8. Si quelque chose ne va pas</a>
+          <a href="#g9">9. Les effets et l'estimateur de prix</a>
         </div>
 
         <h2 id="g1">1. Comment ça marche</h2>
@@ -317,6 +321,16 @@ dialog::backdrop{background:rgba(3,4,6,.8); -webkit-backdrop-filter:blur(5px); b
           <li><b>Je me suis trompé :</b> utilise ↶ en bas de page. Le lien « Abandonner mes modifications », en haut, revient à la version en ligne.</li>
           <li><b>Le pack ne se télécharge pas sur téléphone :</b> utilise « content.json » seul, ou refais l'opération depuis un ordinateur.</li>
         </ul>
+
+        <h2 id="g9">9. Les effets et l'estimateur de prix</h2>
+        <p>Le site contient quelques éléments animés. Tous se règlent (et se coupent) dans les blocs ci-dessous.</p>
+        <ul>
+          <li><b>Effets et animations</b> : intro « feux de départ » (une fois par visite), peinture à essuyer sur la page d'accueil, bandeau défilant, rail de navigation, curseur lumineux. Chaque effet a son interrupteur.</li>
+          <li><b>Détails de la voiture</b> : les points cliquables sur la silhouette. Ouvre une zone, puis <b>clique sur la silhouette</b> pour placer le point au bon endroit. Le champ « Prestation liée » ajoute un bouton vers la fiche.</li>
+          <li><b>Estimateur de prix</b> : le visiteur choisit sa voiture, son état et les prestations, et voit un prix approximatif. Le calcul est : prix affiché × coefficient de la taille × coefficient de l'état. Un coefficient de 1,2 signifie +20 %. Vérifie ces coefficients : ce sont des valeurs de départ.</li>
+          <li><b>Disponibilité</b> (dans « Coordonnées et réseaux ») : un petit badge vert en haut de l'accueil, par exemple « Prochain créneau : samedi ». À mettre à jour, ou à désactiver.</li>
+        </ul>
+        <div class="tip">L'estimateur ne remplace pas un devis : il aide le client à se situer. Le prix final reste confirmé par Jermaine avant toute intervention, et c'est écrit sous l'estimation.</div>
       </div>
     </div>
   </div>
@@ -353,19 +367,34 @@ const SHAPE = {
   prestationsIntro:{ titre:'', texte:'' }, services:[],
   resultatsIntro:{ titre:'', texte:'' }, avantApres:[],
   methodeIntro:{ titre:'', texte:'' }, etapes:[],
-  apropos:{ titre:'', texte1:'', texte2:'', engagements:[] },
+  apropos:{ titre:'', texte1:'', texte2:'', engagements:[], certif:{ actif:true, intitule:'', detail:'', source:'' } },
   galerie:[], galerieIntro:{ titre:'', texte:'' },
   zone:{ titre:'', texte:'', centre:{ lat:48.9906, lng:1.717, label:'Mantes-la-Jolie' }, rayonKm:20, communes:[], note:'' },
   faq:[], avis:[], avisIntro:{ titre:'' }, contactSection:{ titre:'', texte:'' },
   footer:{ copyright:'', tagline:'' }, legal:{ titre:'', texte:'' },
   seo:{ siteTitle:'', description:'', siteUrl:'', shareImage:'' },
+  effets:{ intro:true, essuyage:true, details:true, marquee:true, rail:true, curseur:true },
+  marquee:['Detailing sur place','Mantes-la-Jolie','Correction de peinture','Protection céramique','Intérieur comme neuf','Devis gratuit'],
+  disponibilite:{ actif:false, texte:'Prochain créneau : cette semaine' },
+  detailsIntro:{ titre:'Chaque détail compte.', texte:'Touchez un point de la voiture pour voir ce qui est traité, et avec quelle prestation.' },
+  zones:[
+    { titre:'Phares et optiques', texte:'Des optiques jaunies ou ternes éclairent moins bien et vieillissent toute la face avant. Ponçage progressif, polissage et protection contre les UV : la transparence revient.', x:13, y:72, prestation:'Rénovation de phares' },
+    { titre:'Jantes et passages de roues', texte:'Poussière de freins, boue, goudron : tout est retiré à la main, jantes et passages de roues compris, pour que les roues ne trahissent pas le reste de la voiture.', x:26, y:85, prestation:'Lavage Prestige' },
+    { titre:'Peinture et carrosserie', texte:'Décontamination, lustrage, correction : on retire ce que le lavage laisse et on corrige les micro-rayures, avec le niveau d\'intervention adapté à votre peinture.', x:38, y:62, prestation:'Correction de peinture' },
+    { titre:'Habitacle et sièges', texte:'Aspiration en profondeur, plastiques, sièges et tapis nettoyés selon la matière. L\'habitacle est remis au propre, sans odeur persistante.', x:58, y:38, prestation:'Intérieur Complet' },
+    { titre:'Protection et finition', texte:'Cire, sealant ou traitement céramique : une couche qui repousse l\'eau et la saleté et facilite l\'entretien. Un lavage régulier reste nécessaire.', x:90, y:58, prestation:'Protection céramique' }
+  ],
+  estimateur:{ actif:true,
+    tailles:[ { label:'Citadine', coef:0.9 }, { label:'Berline / compacte', coef:1 }, { label:'SUV / break', coef:1.2 }, { label:'Grand SUV / utilitaire', coef:1.4 } ],
+    etats:[ { label:'Bien entretenue', coef:1 }, { label:'Sale', coef:1.15 }, { label:'Très sale', coef:1.3 } ],
+    note:'Estimation indicative : le prix final est confirmé dans le devis, avant toute intervention.' },
   images:{ hero:'', portrait:'' },
   theme:{ bg:'#08090b', surface:'#111317', surface2:'#181b21', ink:'#f5f6f8', muted:'#9aa3ad', accent:'#e10a1e', accentHot:'#ff3347', line:'#2a2f37' }
 };
 const TPL = {
   services:{ categorie:'', titre:'', image:'', resume:'', description:'', inclus:[], duree:'', prix:'', unite:'à partir de', populaire:false, visible:true },
   avantApres:{ titre:'', vehicule:'', avant:'', apres:'' },
-  etapes:{ titre:'', texte:'' }, faq:{ q:'', a:'' }, avis:{ nom:'', vehicule:'', texte:'' }, galerie:{ src:'', alt:'' }, nav:{ id:'', label:'' }
+  zones:{ titre:'', texte:'', x:50, y:50, prestation:'' }, etapes:{ titre:'', texte:'' }, faq:{ q:'', a:'' }, avis:{ nom:'', vehicule:'', texte:'' }, galerie:{ src:'', alt:'' }, nav:{ id:'', label:'' }
 };
 function deepFill(t, shape){
   Object.keys(shape).forEach(k => {
@@ -382,6 +411,8 @@ function normalize(c){
     if (!Array.isArray(c[k])) c[k] = [];
     c[k] = c[k].filter(x => x && typeof x === 'object').map(x => deepFill(x, TPL[k]));
   });
+  ['tailles', 'etats'].forEach(k => { if (!Array.isArray(c.estimateur[k])) c.estimateur[k] = clone(SHAPE.estimateur[k]); c.estimateur[k] = c.estimateur[k].filter(x => x && typeof x === 'object').map(x => deepFill(x, { label:'', coef:1 })); });
+  if (!Array.isArray(c.marquee)) c.marquee = clone(SHAPE.marquee);
   ['points'].forEach(k => { if (!Array.isArray(c.hero[k])) c.hero[k] = []; });
   ['engagements'].forEach(k => { if (!Array.isArray(c.apropos[k])) c.apropos[k] = []; });
   if (!Array.isArray(c.zone.communes)) c.zone.communes = [];
@@ -446,6 +477,10 @@ function fld(path, label, o = {}){
     : `<input id="${id}" type="${o.type || 'text'}" data-path="${path}" ${o.num ? 'data-num="1" inputmode="decimal"' : ''} ${o.type === 'tel' ? 'inputmode="tel"' : ''} value="${esc(v)}" placeholder="${esc(o.ph || '')}" autocomplete="off" autocapitalize="${o.nocap ? 'off' : 'sentences'}">`;
   return `<div class="fld" data-fp="${path}"><label for="${id}">${esc(label)}</label>${ctl}${o.hint ? `<p class="hint">${esc(o.hint)}</p>` : ''}<p class="err"></p></div>`;
 }
+function sel(path, label, opts, o = {}){
+  let v = get(CONTENT, path); v = v == null ? '' : v; const id = fid(path); const list = opts.slice(); if (v !== '' && !list.some(x => x[0] === v)) list.push([v, v + ' (introuvable)']);
+  return `<div class="fld" data-fp="${path}"><label for="${id}">${esc(label)}</label><select id="${id}" data-path="${path}">${list.map(([val, lab]) => `<option value="${esc(val)}" ${val === v ? 'selected' : ''}>${esc(lab)}</option>`).join('')}</select>${o.hint ? `<p class="hint">${esc(o.hint)}</p>` : ''}<p class="err"></p></div>`;
+}
 const row2 = (a, b) => `<div class="row2">${a}${b}</div>`;
 function sw(path, label, hint){ return `<label class="sw"><span class="t">${esc(label)}${hint ? `<small>${esc(hint)}</small>` : ''}</span><span class="switch"><input type="checkbox" data-path="${path}" ${get(CONTENT, path) ? 'checked' : ''}><i></i></span></label>`; }
 function imgf(path, label, o = {}){
@@ -488,6 +523,15 @@ const LISTS = {
     body:(p) => fld(p + '.q', 'Question') + fld(p + '.a', 'Réponse', { area:1, rows:4 }) },
   avis:{ item:'avis', title:i => i.nom || 'Sans nom', sub:i => i.vehicule || '', def:() => clone(TPL.avis),
     body:(p) => row2(fld(p + '.nom', 'Prénom du client'), fld(p + '.vehicule', 'Voiture', { ph:'ex. BMW M2' })) + fld(p + '.texte', 'Avis', { area:1, rows:4 }) },
+  zones:{ item:'zone', title:i => i.titre || 'Sans titre', sub:i => i.prestation || '', def:() => ({ titre:'Nouvelle zone', texte:'', x:50, y:50, prestation:'' }),
+    body:(p, it) => fld(p + '.titre', 'Titre') + fld(p + '.texte', 'Ce qui est fait', { area:1, rows:4 }) +
+      sel(p + '.prestation', 'Prestation liée (facultatif)', [['', 'Aucune'].concat([]), ...CONTENT.services.filter(s => s.titre).map(s => [s.titre, s.titre])], { hint:'Ajoute un bouton vers la fiche de cette prestation.' }) +
+      `<div class="fld"><span class="lbl">Position sur la voiture</span><div class="pick" data-pick="${p}" role="button" tabindex="0" aria-label="Cliquer pour placer le point sur la voiture"><img src="images/car-lines.png" alt=""><i style="left:${+it.x || 0}%;top:${+it.y || 0}%"></i></div><p class="hint">Clique sur la silhouette pour placer le point.</p></div>` +
+      row2(fld(p + '.x', 'Horizontal (0 à 100)', { num:1 }), fld(p + '.y', 'Vertical (0 à 100)', { num:1 })) },
+  'estimateur.tailles':{ item:'taille', title:i => i.label || 'Sans nom', sub:i => 'coefficient ' + i.coef, def:() => ({ label:'Nouvelle taille', coef:1 }),
+    body:(p) => row2(fld(p + '.label', 'Nom affiché'), fld(p + '.coef', 'Coefficient', { num:1, hint:'1 = prix affiché. 1,2 = +20 %. 0,9 = -10 %.' })) },
+  'estimateur.etats':{ item:'état', title:i => i.label || 'Sans nom', sub:i => 'coefficient ' + i.coef, def:() => ({ label:'Nouvel état', coef:1 }),
+    body:(p) => row2(fld(p + '.label', 'Nom affiché'), fld(p + '.coef', 'Coefficient', { num:1, hint:'1 = prix affiché. 1,15 = +15 %.' })) },
   galerie:{ item:'photo', title:i => i.alt || 'Photo', sub:i => '', def:() => clone(TPL.galerie),
     body:(p) => imgf(p + '.src', 'Photo', { max:1600 }) + fld(p + '.alt', 'Description de la photo', { hint:'Courte. Lue par les lecteurs d\'écran et utile pour Google.', ph:'ex. Audi RS3 après correction de peinture' }) }
 };
@@ -530,16 +574,27 @@ const PI = {
   palette:'<path d="M12 3a9 9 0 1 0 0 18c1.3 0 2-.8 2-1.8 0-1.2-1-1.5-1-2.7 0-1 .8-1.5 1.8-1.5H17a4 4 0 0 0 4-4c0-4.4-4-8-9-8z"/><circle cx="7.5" cy="11" r="1"/><circle cx="10" cy="7" r="1"/><circle cx="15" cy="7" r="1"/>',
   eye:'<path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/>',
   doc:'<path d="M6 3h8l4 4v14H6z"/><path d="M14 3v4h4M9 12h6M9 16h6"/>',
-  search:'<circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/>'
+  search:'<circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/>',
+  calc:'<rect x="5" y="3" width="14" height="18" rx="2"/><path d="M8 7h8M8 12h.01M12 12h.01M16 12h.01M8 16h.01M12 16h.01M16 16h.01"/>',
+  target:'<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/>',
+  spark:'<path d="m12 3 1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/>'
 };
 const PANELS = [
   { id:'prestations', icon:'car', title:'Prestations et tarifs', desc:'Les soins proposés, leurs prix, leurs photos.', body:() =>
     fld('prestationsIntro.titre', 'Titre de la section') + fld('prestationsIntro.texte', 'Texte d\'introduction', { area:1, rows:3 }) +
     `<h4 class="sub">Les prestations</h4><p class="hint" style="margin:0;color:var(--muted);font-size:.85rem">Ouvre une ligne pour la modifier. L'interrupteur la masque du site sans la supprimer.</p>` + listBlock('services', { add:'Ajouter une prestation', empty:'Aucune prestation. Ajoute la première.' }) },
+  { id:'estimateur', icon:'calc', title:'Estimateur de prix', desc:'Le calcul approximatif affiché dans le formulaire de devis.', body:() =>
+    sw('estimateur.actif', 'Afficher l\'estimateur', 'Désactivé : le formulaire propose une simple liste de prestations.') +
+    fld('estimateur.note', 'Phrase sous l\'estimation', { area:1, rows:2 }) +
+    `<h4 class="sub">Tailles de voiture</h4><p class="pdesc" style="margin-top:.5rem">Prix final = prix affiché × coefficient de la taille × coefficient de l'état.</p>` + listBlock('estimateur.tailles', { add:'Ajouter une taille' }) +
+    `<h4 class="sub">États de la voiture</h4>` + listBlock('estimateur.etats', { add:'Ajouter un état' }) },
+  { id:'details', icon:'target', title:'Détails de la voiture', desc:'Les points cliquables sur la silhouette de voiture.', body:() =>
+    fld('detailsIntro.titre', 'Titre') + fld('detailsIntro.texte', 'Texte', { area:1, rows:2 }) + listBlock('zones', { add:'Ajouter une zone', empty:'Aucune zone : la section ne s\'affiche pas.' }) },
   { id:'accueil', icon:'home', title:'Page d\'accueil', desc:'Le grand titre, le texte et la photo du haut de page.', body:() =>
     fld('hero.titre', 'Grand titre', { area:1, rows:2, hint:'Court et direct : 6 à 10 mots.' }) + fld('hero.texte', 'Texte d\'introduction', { area:1, rows:3 }) +
     row2(fld('hero.cta1', 'Bouton principal'), fld('hero.cta2', 'Bouton secondaire')) +
     slist('hero.points', 'Trois points forts sous les boutons', { ph:'ex. Devis gratuit' }) +
+    slist('marquee', 'Bandeau défilant sous l\'accueil', { add:'Ajouter un mot', ph:'ex. Devis gratuit', hint:'Courtes expressions. Le bandeau défile en boucle.' }) +
     imgf('images.hero', 'Photo d\'accueil (facultative)', { max:2200, hint:'Une belle photo de voiture, en paysage. Elle est assombrie derrière le titre. Sans photo, le fond animé est utilisé.' }) },
   { id:'resultats', icon:'split', title:'Résultats avant / après', desc:'Les comparaisons à glisser. Sans photo, une illustration de démonstration est affichée.', body:() =>
     fld('resultatsIntro.titre', 'Titre') + fld('resultatsIntro.texte', 'Texte', { area:1, rows:2 }) + listBlock('avantApres', { add:'Ajouter une comparaison', empty:'Aucune comparaison : le site affiche une illustration de démonstration.' }) },
@@ -547,6 +602,7 @@ const PANELS = [
     fld('galerieIntro.titre', 'Titre') + fld('galerieIntro.texte', 'Texte (facultatif)', { area:1, rows:2 }) + listBlock('galerie', { empty:'Aucune photo. La section ne s\'affiche pas tant qu\'elle est vide.' }) },
   { id:'apropos', icon:'user', title:'À propos de Jermaine', desc:'La présentation et la photo de portrait.', body:() =>
     fld('apropos.titre', 'Titre') + fld('apropos.texte1', 'Premier paragraphe', { area:1, rows:4 }) + fld('apropos.texte2', 'Deuxième paragraphe', { area:1, rows:3 }) +
+    `<h4 class="sub">Certification</h4>` + sw('apropos.certif.actif', 'Afficher la certification', 'Encadré sur la page, sous le texte de présentation.') + fld('apropos.certif.intitule', 'Intitulé affiché', { ph:'Certification professionnelle RS6930' }) + fld('apropos.certif.detail', 'Intitulé officiel', { hint:'Tel qu\'il figure sur la fiche France Compétences.' }) + fld('apropos.certif.source', 'Précision', { hint:'Ex. Enregistrée au Répertoire spécifique de France Compétences.' }) +
     slist('apropos.engagements', 'Engagements', { add:'Ajouter un engagement' }) + imgf('images.portrait', 'Photo de portrait (facultative)', { max:1400, hint:'Format portrait (4/5) conseillé. Sans photo, une initiale est affichée.' }) },
   { id:'zone', icon:'pin', title:'Zone d\'intervention', desc:'La carte autour de Mantes-la-Jolie et la liste des communes.', body:() =>
     fld('zone.titre', 'Titre') + fld('zone.texte', 'Texte', { area:1, rows:3 }) +
@@ -555,6 +611,7 @@ const PANELS = [
     fld('zone.rayonKm', 'Rayon de la zone (km)', { num:1, hint:'Dessiné en cercle sur la carte.' }) +
     slist('zone.communes', 'Communes desservies', { add:'Ajouter une commune' }) + fld('zone.note', 'Note sous la liste') },
   { id:'contact', icon:'phone', title:'Coordonnées et réseaux', desc:'Téléphone, WhatsApp, e-mail, réseaux sociaux, envoi du formulaire.', body:() =>
+    sw('disponibilite.actif', 'Afficher un badge de disponibilité', 'Petit badge vert en haut de l\'accueil. À garder à jour, ou à désactiver.') + fld('disponibilite.texte', 'Texte du badge', { ph:'ex. Prochain créneau : samedi' }) +
     fld('contactSection.titre', 'Titre de la section contact') + fld('contactSection.texte', 'Texte', { area:1, rows:2 }) +
     `<h4 class="sub">Coordonnées</h4>` +
     row2(fld('contact.telephone', 'Téléphone', { type:'tel', ph:'06 12 34 56 78' }), fld('contact.whatsapp', 'WhatsApp (si différent)', { type:'tel', hint:'Laisse vide pour utiliser le téléphone s\'il commence par 06 ou 07.' })) +
@@ -575,6 +632,9 @@ const PANELS = [
     `<div class="mini" id="mini"><b>Aperçu</b><p>Texte secondaire du site</p><span class="b">Devis</span><div class="card">Une carte de prestation</div></div>` +
     `<h4 class="sub">Réglage détaillé</h4><div class="colors">${COLORS.map(([k, l]) => `<div class="fld" data-fp="theme.${k}"><label for="${fid('theme.' + k)}">${l}</label><div class="crow"><input type="color" data-color="${k}" value="${/^#[0-9a-f]{6}$/i.test(CONTENT.theme[k]) ? CONTENT.theme[k] : '#000000'}" aria-label="${l} : sélecteur"><input id="${fid('theme.' + k)}" type="text" data-path="theme.${k}" value="${esc(CONTENT.theme[k])}" autocapitalize="off" spellcheck="false" maxlength="7"></div><p class="err"></p></div>`).join('')}</div>` +
     `<div class="addbar"><button class="btn sm" type="button" data-act="preset" data-i="0">Revenir au rouge d'origine</button></div>` },
+  { id:'effets', icon:'spark', title:'Effets et animations', desc:'Allumer ou couper chaque effet du site.', body:() =>
+    [['intro', 'Intro « feux de départ »', 'Une seule fois par visite, passable d\'un clic.'], ['essuyage', 'Peinture à essuyer sur l\'accueil', 'Le visiteur « polit » le fond en bougeant la souris ou le doigt.'], ['details', 'Section « Chaque détail compte »', 'Les points cliquables sur la voiture.'], ['marquee', 'Bandeau défilant', ''], ['rail', 'Rail de navigation', 'Petits points sur le côté, grands écrans seulement.'], ['curseur', 'Curseur lumineux', 'Ordinateur seulement.']].map(([k, l, h]) => sw('effets.' + k, l, h)).join('') +
+    `<p class="hint" style="color:var(--muted);font-size:.85rem;margin-top:1rem">Les animations sont automatiquement coupées pour les visiteurs qui ont réglé leur appareil sur « réduire les animations ».</p>` },
   { id:'visibilite', icon:'eye', title:'Visibilité des sections', desc:'Afficher ou masquer des blocs sans rien supprimer.', body:() =>
     Object.keys(VIS_LABELS).map(k => sw('visibility.' + k, VIS_LABELS[k][0], VIS_LABELS[k][1])).join('') },
   { id:'pied', icon:'doc', title:'Pied de page et mentions légales', desc:'Copyright et texte légal. À compléter avant la mise en ligne.', body:() =>
@@ -623,6 +683,9 @@ function validate(){
   C.avantApres.forEach((a, i) => { if (!a.avant) add('avantApres.' + i + '.avant', 'Ajoute la photo d\'avant.', 'resultats'); if (!a.apres) add('avantApres.' + i + '.apres', 'Ajoute la photo d\'après.', 'resultats'); });
   C.galerie.forEach((g, i) => { if (!g.src) add('galerie.' + i + '.src', 'Ajoute une photo.', 'galerie'); });
   C.faq.forEach((f, i) => { if (!String(f.q).trim()) add('faq.' + i + '.q', 'Écris la question.', 'faq'); });
+  C.zones.forEach((zz, i) => { if (!String(zz.titre).trim()) add('zones.' + i + '.titre', 'Donne un titre à cette zone.', 'details');
+    ['x', 'y'].forEach(k => { const v = Number(zz[k]); if (zz[k] === '' || isNaN(v) || v < 0 || v > 100) add('zones.' + i + '.' + k, 'Entre un nombre de 0 à 100.', 'details'); }); });
+  ['tailles', 'etats'].forEach(k => C.estimateur[k].forEach((t, i) => { if (!String(t.label).trim()) add('estimateur.' + k + '.' + i + '.label', 'Donne un nom.', 'estimateur'); const v = Number(t.coef); if (t.coef === '' || isNaN(v) || v <= 0 || v > 5) add('estimateur.' + k + '.' + i + '.coef', 'Entre un coefficient entre 0,1 et 5.', 'estimateur'); }));
   const z = C.zone, lat = Number(z.centre.lat), lng = Number(z.centre.lng), r = Number(z.rayonKm);
   if (z.centre.lat === '' || isNaN(lat) || lat < -90 || lat > 90) add('zone.centre.lat', 'Latitude invalide (ex. 48.9906).', 'zone');
   if (z.centre.lng === '' || isNaN(lng) || lng < -180 || lng > 180) add('zone.centre.lng', 'Longitude invalide (ex. 1.7170).', 'zone');
@@ -647,6 +710,7 @@ function checklist(){
   if (/\[[^\]]*\]/.test(C.legal.texte)) W('Mentions légales à compléter', 'Il reste des crochets [ ] : nom, SIRET, hébergeur.', 'pied', 'legal.texte');
   if (!/^https?:\/\/(?!pitlanelab\.fr)/i.test(C.seo.siteUrl)) N('Confirme l\'adresse du site', 'Utilisée par Google et pour le partage.', 'seo', 'seo.siteUrl');
   if (!C.images.hero) N('Ajoute une photo d\'accueil', 'Une belle photo de voiture donne le ton dès l\'arrivée.', 'accueil', 'images.hero');
+  if (C.estimateur.actif && JSON.stringify(C.estimateur.tailles) === JSON.stringify(SHAPE.estimateur.tailles) && JSON.stringify(C.estimateur.etats) === JSON.stringify(SHAPE.estimateur.etats)) N('Vérifie les coefficients de l\'estimateur', 'Ce sont des valeurs de départ : ajuste-les à tes vrais tarifs.', 'estimateur');
   const noImg = C.services.filter(s => s.visible !== false && !s.image).length; if (noImg) N(noImg + ' prestation' + (noImg > 1 ? 's' : '') + ' sans photo', 'Un visuel sobre est affiché à la place.', 'prestations');
   if (C.visibility.resultats && !C.avantApres.length) N('Avant / après : illustration de démonstration', 'Ajoute de vraies photos ou masque la section.', 'resultats');
   if (C.visibility.galerie && !C.galerie.length) N('Galerie vide', 'Elle n\'apparaît pas tant qu\'il n\'y a pas de photo.', 'galerie');
@@ -717,6 +781,10 @@ panelsEl.addEventListener('change', async e => {
   }
 });
 panelsEl.addEventListener('click', e => {
+  const pk = e.target.closest('[data-pick]');
+  if (pk){ const r = pk.getBoundingClientRect(), pp = pk.dataset.pick; const x = Math.max(0, Math.min(100, Math.round((e.clientX - r.left) / r.width * 1000) / 10)), y = Math.max(0, Math.min(100, Math.round((e.clientY - r.top) / r.height * 1000) / 10));
+    setp(CONTENT, pp + '.x', x); setp(CONTENT, pp + '.y', y); const dot = $('i', pk); dot.style.left = x + '%'; dot.style.top = y + '%';
+    const ix = $('input[data-path="' + pp + '.x"]'), iy = $('input[data-path="' + pp + '.y"]'); if (ix) ix.value = x; if (iy) iy.value = y; changed(false); return; }
   const b = e.target.closest('[data-act]'); if (!b) return; const act = b.dataset.act, p = b.dataset.p, i = +b.dataset.i, panel = b.closest('.panel');
   if (act === 'toggle-panel'){ const open = !panel.classList.contains('open'); panel.classList.toggle('open', open); b.setAttribute('aria-expanded', String(open)); if (open){ OPEN_PANELS.add(p); renderPanel(panel); } else OPEN_PANELS.delete(p); return; }
   if (act === 'toggle-item'){ const it = b.closest('.item'); const open = !it.classList.contains('open'); it.classList.toggle('open', open); b.setAttribute('aria-expanded', String(open)); open ? OPEN_ITEMS.add(p) : OPEN_ITEMS.delete(p); return; }
@@ -730,7 +798,7 @@ panelsEl.addEventListener('click', e => {
     const a = p + '.' + i, c = p + '.' + j, oa = OPEN_ITEMS.has(a), oc = OPEN_ITEMS.has(c); oa ? OPEN_ITEMS.add(c) : OPEN_ITEMS.delete(c); oc ? OPEN_ITEMS.add(a) : OPEN_ITEMS.delete(a);
     changed(true); renderPanel(panel); return; }
   if (act === 'del-s'){ get(CONTENT, p).splice(i, 1); changed(true); renderPanel(panel); return; }
-  if (act === 'del'){ const o = get(CONTENT, p)[i]; const name = LISTS[p].title(o);
+  if (act === 'del'){ const o = get(CONTENT, p)[i]; const name = LISTS[p].title(o) || 'cet élément';
     confirmBox({ title:'Supprimer ?', text:'« ' + name + ' » sera supprimé' + (p === 'services' ? ' (tu peux plutôt le masquer avec l\'interrupteur)' : '') + '. Tu pourras annuler avec le bouton ↶.', yes:'Supprimer' }).then(ok => {
       if (!ok) return; get(CONTENT, p).splice(i, 1); Array.from(OPEN_ITEMS).forEach(k => { if (k.indexOf(p + '.') === 0) OPEN_ITEMS.delete(k); }); changed(true); renderPanel(panel); toast('Supprimé. Tu peux annuler avec ↶.'); }); }
 });

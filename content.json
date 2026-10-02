@@ -36,7 +36,7 @@
     }
   ],
   "contact": {
-    "telephone": "06 00 00 00 00",
+    "telephone": "07 68 70 69 96",
     "whatsapp": "",
     "email": "contact@pitlanelab.fr",
     "instagram": "",
@@ -53,7 +53,8 @@
     "points": [
       "J'interviens sur place, chez vous ou au travail",
       "Mantes-la-Jolie et communes alentour",
-      "Devis gratuit, annoncé avant d'intervenir"
+      "Devis gratuit, annoncé avant d'intervenir",
+      "Certification professionnelle RS6930"
     ]
   },
   "prestationsIntro": {
@@ -208,14 +209,20 @@
     }
   ],
   "apropos": {
-    "titre": "Je m'appelle Jermaine.",
+    "titre": "Je m'appelle Jermaine Da Cruz.",
     "texte1": "Pitlane Lab, c'est mon atelier de detailing, sans atelier : je viens à vous. Je travaille sur place, avec le matériel qu'il faut, pour donner à chaque voiture le temps et la précision qu'elle demande.",
     "texte2": "Pas de cadence, pas de raccourci. Une voiture rendue propre, contrôlée sous lumière, et quelques conseils pour que le résultat dure.",
     "engagements": [
       "Un devis clair avant de commencer",
       "Une voiture contrôlée sous lumière avant la remise des clés",
       "Des conseils d'entretien pour garder le résultat plus longtemps"
-    ]
+    ],
+    "certif": {
+      "actif": true,
+      "intitule": "Certification professionnelle RS6930",
+      "detail": "Sublimer et protéger l'aspect d'un véhicule grâce au detailing",
+      "source": "Enregistrée au Répertoire spécifique de France Compétences"
+    }
   },
   "galerie": [],
   "galerieIntro": {
@@ -285,16 +292,16 @@
     "texte": "Décrivez-moi votre véhicule et ce que vous attendez. Je reviens vers vous avec un devis et une date."
   },
   "footer": {
-    "copyright": "Pitlane Lab — Jermaine, detailing automobile",
+    "copyright": "Pitlane Lab — Jermaine Da Cruz, detailing automobile",
     "tagline": "Detailing automobile sur place à Mantes-la-Jolie (78)"
   },
   "legal": {
     "titre": "Mentions légales",
-    "texte": "Éditeur du site : Pitlane Lab, entreprise individuelle de Jermaine [nom de famille].\nSIRET : [à compléter].\nContact : voir la section Contact du site.\nHébergeur : [à compléter].\n\nDonnées personnelles : les informations saisies dans le formulaire de demande servent uniquement à répondre à votre demande. Elles ne sont ni revendues ni transmises à des tiers."
+    "texte": "Éditeur du site : Pitlane Lab, entreprise individuelle de Jermaine Da Cruz.\nSIRET : [à compléter].\nTéléphone : 07 68 70 69 96.\nHébergeur : GitHub Pages (GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis).\n\nDonnées personnelles : les informations saisies dans le formulaire de demande servent uniquement à répondre à votre demande. Elles ne sont ni revendues ni transmises à des tiers."
   },
   "seo": {
     "siteTitle": "Pitlane Lab — Detailing automobile à Mantes-la-Jolie (78)",
-    "description": "Pitlane Lab : detailing automobile sur place à Mantes-la-Jolie et alentours. Lavage, nettoyage intérieur, correction de peinture, protection céramique, rénovation de phares. Devis gratuit.",
+    "description": "Pitlane Lab : detailing automobile sur place à Mantes-la-Jolie et alentours, par Jermaine Da Cruz (certification professionnelle RS6930). Lavage, intérieur, correction de peinture, protection céramique. Devis gratuit.",
     "siteUrl": "https://pitlanelab.fr",
     "shareImage": "images/og-image.jpg"
   },
@@ -311,5 +318,102 @@
     "accent": "#e10a1e",
     "accentHot": "#ff3347",
     "line": "#2a2f37"
+  },
+  "effets": {
+    "intro": true,
+    "essuyage": true,
+    "rail": true,
+    "curseur": true,
+    "details": true,
+    "marquee": true
+  },
+  "marquee": [
+    "Detailing sur place",
+    "Mantes-la-Jolie",
+    "Correction de peinture",
+    "Protection céramique",
+    "Intérieur comme neuf",
+    "Devis gratuit"
+  ],
+  "disponibilite": {
+    "actif": false,
+    "texte": "Prochain créneau : cette semaine"
+  },
+  "detailsIntro": {
+    "titre": "Chaque détail compte.",
+    "texte": "Touchez un point de la voiture pour voir ce qui est traité, et avec quelle prestation."
+  },
+  "zones": [
+    {
+      "titre": "Phares et optiques",
+      "texte": "Des optiques jaunies ou ternes éclairent moins bien et vieillissent toute la face avant. Ponçage progressif, polissage et protection contre les UV : la transparence revient.",
+      "x": 13,
+      "y": 72,
+      "prestation": "Rénovation de phares"
+    },
+    {
+      "titre": "Jantes et passages de roues",
+      "texte": "Poussière de freins, boue, goudron : tout est retiré à la main, jantes et passages de roues compris, pour que les roues ne trahissent pas le reste de la voiture.",
+      "x": 26,
+      "y": 85,
+      "prestation": "Lavage Prestige"
+    },
+    {
+      "titre": "Peinture et carrosserie",
+      "texte": "Décontamination, lustrage, correction : on retire ce que le lavage laisse et on corrige les micro-rayures, avec le niveau d'intervention adapté à votre peinture.",
+      "x": 38,
+      "y": 62,
+      "prestation": "Correction de peinture"
+    },
+    {
+      "titre": "Habitacle et sièges",
+      "texte": "Aspiration en profondeur, plastiques, sièges et tapis nettoyés selon la matière. L'habitacle est remis au propre, sans odeur persistante.",
+      "x": 58,
+      "y": 38,
+      "prestation": "Intérieur Complet"
+    },
+    {
+      "titre": "Protection et finition",
+      "texte": "Cire, sealant ou traitement céramique : une couche qui repousse l'eau et la saleté et facilite l'entretien. Un lavage régulier reste nécessaire.",
+      "x": 90,
+      "y": 58,
+      "prestation": "Protection céramique"
+    }
+  ],
+  "estimateur": {
+    "actif": true,
+    "tailles": [
+      {
+        "label": "Citadine",
+        "coef": 0.9
+      },
+      {
+        "label": "Berline / compacte",
+        "coef": 1
+      },
+      {
+        "label": "SUV / break",
+        "coef": 1.2
+      },
+      {
+        "label": "Grand SUV / utilitaire",
+        "coef": 1.4
+      }
+    ],
+    "etats": [
+      {
+        "label": "Bien entretenue",
+        "coef": 1
+      },
+      {
+        "label": "Sale",
+        "coef": 1.15
+      },
+      {
+        "label": "Très sale",
+        "coef": 1.3
+      }
+    ],
+    "note": "Estimation indicative : le prix final est confirmé dans le devis, avant toute intervention."
   }
 }
