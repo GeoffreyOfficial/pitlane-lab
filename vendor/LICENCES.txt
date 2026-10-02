@@ -1,0 +1,5 @@
+Bibliothèques tierces utilisées uniquement par la page d'administration (admin.html)
+
+- heic2any 0.0.4 (lecture des photos HEIC/HEIF)   : licence MIT  - https://github.com/alexcorvi/heic2any
+- UTIF.js 3.1.0 (lecture des fichiers TIFF)        : licence MIT  - Copyright (c) 2017 Photopea
+- pako 2.1.0, module inflate (décompression TIFF)  : licences MIT et Zlib - https://github.com/nodeca/pako
