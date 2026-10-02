@@ -48,3 +48,15 @@ La liste « Avant de publier » en haut de l'admin suit tout ça.
 - Bandeau défilant, section « Chaque détail compte » (points cliquables sur la voiture), rail de navigation, curseur personnalisé : chacun se désactive dans l'admin (bloc Effets).
 - Formulaire de devis avec estimateur indicatif (taille de voiture, état, prestations). Les coefficients se règlent dans l'admin : à valider avec Jermaine.
 - `sw.js` : permet au site de s'ouvrir même avec un réseau instable. Il relit toujours `content.json` et `index.html` en ligne en priorité, donc les mises à jour apparaissent normalement.
+
+## Photothèque (admin)
+- Le bouton « Photos » de l'admin ouvre la photothèque : importer (tous formats, y compris HEIC iPhone et TIFF), choisir, recadrer, remplacer, supprimer, nettoyer les photos inutilisées.
+- Le dossier `vendor/` (lecteurs HEIC et TIFF, licences MIT) doit être envoyé avec le reste : sans lui, seuls ces deux formats ne s'ouvrent pas.
+- Les photos ajoutées vont dans `images/uploads/`. Après une suppression, le pack contient `A-SUPPRIMER.txt` : la liste des fichiers à effacer sur GitHub.
+- Le registre des photos est enregistré dans `content.json` (clé « medias »).
+
+## Suivi des modifications (admin)
+- L'admin compare en permanence le contenu à la version en ligne : pastille « ✎ N modifications » sur chaque section, bouton ↺ pour annuler une section, indicateur global.
+- La fenêtre de comparaison (clic sur l'indicateur ou « Voir les modifications ») liste ajouts, suppressions et modifications avec anciennes et nouvelles valeurs ; chaque ligne s'annule seule.
+- Elle s'ouvre aussi avant chaque téléchargement (pack ou content.json) et avant le chargement d'un fichier.
+- Les éléments des listes portent un identifiant interne `_id` dans `content.json` : normal, ne pas supprimer.
