@@ -434,6 +434,100 @@ dialog#dlgDiff::backdrop{background:rgba(3,4,6,.82); -webkit-backdrop-filter:blu
 .df-foot p{margin:0 auto 0 0; color:var(--muted); font-size:.88rem}
 .df-foot .btn[hidden],.df-extra[hidden],.df-sections[hidden]{display:none!important}
 @media (max-width:640px){ .df{width:100vw; height:100dvh; inset:0; border-radius:0; border:0} .df-body{padding:.3rem .8rem 1rem} .df-head{padding:.8rem} .df-foot .btn{flex:1 1 auto} .p-undo{right:2.7rem} .d-th img{width:6rem; height:4rem} }
+
+.idprev{margin:1rem 0; border:1px solid var(--line); border-radius:.8rem; overflow:hidden; background:linear-gradient(180deg,#0c0d10,#08090b)}
+.idp-head{display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:.8rem 1rem; border-bottom:1px solid var(--line); min-height:3.4rem}
+.idp-head img{width:auto; max-width:55%; object-fit:contain}
+.idp-head b{font:italic 800 1.1rem var(--font-d); text-transform:uppercase}
+.idp-nav{color:var(--muted); font-size:.78rem; white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
+.idp-car{padding:1.2rem 1rem; text-align:center; background:radial-gradient(55% 80% at 70% 100%,rgba(225,10,30,.25),transparent 70%)}
+.idp-car img{width:min(100%,26rem); height:auto; opacity:.8}
+.idp-car.off{color:var(--muted); font-size:.85rem}
+.idp-foot{display:flex; align-items:center; gap:.8rem; padding:.7rem 1rem; border-top:1px solid var(--line); color:var(--muted)}
+.idp-icon{width:2.6rem; height:2.6rem; border-radius:.6rem; overflow:hidden; background:#0c0d10; border:1px solid var(--line); flex:none} .idp-icon img{width:100%; height:100%; object-fit:cover}
+.ce-fx{display:grid; gap:.5rem}
+.ce-fx .sw{margin-top:.2rem}
+.ce-fx .sub-opts{display:grid; gap:.4rem; padding:.2rem 0 .4rem .3rem}
+.ce-fx .sub-opts[hidden]{display:none}
+.ce-fx .crow2{display:flex; gap:.6rem; align-items:center; font-size:.86rem}
+.ce-fx input[type=color]{width:3rem; height:2.4rem; padding:.1rem; border:1px solid var(--line); border-radius:.4rem; background:var(--field)}
+
+.guide .g-lead{color:#d4d9df; font-size:1.02rem}
+.guide #guideSearch{margin:0 0 1rem; width:100%}
+.guide h3{font:italic 700 1.05rem var(--font-d); margin:1.8rem 0 .5rem; color:#fff; padding-top:.2rem; border-top:1px solid var(--line)}
+.guide section{scroll-margin-top:1rem}
+.guide table{width:100%; border-collapse:collapse; margin:1rem 0; font-size:.9rem}
+.guide th,.guide td{border:1px solid var(--line); padding:.5rem .65rem; text-align:left; vertical-align:top}
+.guide th{background:var(--panel); font-weight:700}
+.guide .ex{margin:1rem 0; padding:.85rem 1rem; border:1px dashed #4a5360; border-radius:.6rem; background:rgba(90,141,255,.06); color:#d4d9df}
+.guide .ex b:first-child{color:#9db9ff}
+.guide ol.steps{padding-left:1.3rem} .guide ol.steps li{margin:.45rem 0}
+.guide kbd{background:#1b2027; border:1px solid #38404b; border-bottom-width:2px; border-radius:.3rem; padding:.05rem .4rem; font:600 .85em var(--font-b)}
+.guide .gdot{display:inline-block; width:.7rem; height:.7rem; border-radius:50%; background:var(--warn)} .guide .gdot.info{background:#5a8dff}
+.guide .gk{padding:.02rem .5rem; border-radius:.3rem; font-weight:700} .guide .gk.add{background:rgba(47,179,106,.18); color:#6fdc9d} .guide .gk.del{background:rgba(255,102,116,.15); color:#ff8f9b} .guide .gk.mod{background:rgba(240,168,28,.15); color:#f3c97a}
+.guide .lex{display:grid; grid-template-columns:auto 1fr; gap:.4rem 1.2rem} .guide .lex dt{font-weight:700} .guide .lex dd{margin:0; color:#d4d9df}
+.guide .gsec[hidden]{display:none}
+@media (max-width:640px){ .guide table{font-size:.82rem; display:block; overflow-x:auto} }
+
+button.thumb.contain img{object-fit:contain; padding:.3rem; background:repeating-conic-gradient(#14181e 0 25%,#0e1116 0 50%) 0 0/14px 14px}
+
+/* ---------- studio de design ---------- */
+.st{position:fixed; inset:0; background:var(--bg); display:flex; flex-direction:column; min-height:0}
+.st .md-h{flex-wrap:wrap}
+.st-dev{display:flex; gap:.3rem; margin-left:auto} .st-dev button{border:1px solid var(--line); background:var(--panel2); border-radius:.5rem; padding:.35rem .7rem; font-size:.84rem; font-weight:600; min-height:2.4rem} .st-dev button[aria-pressed="true"]{background:var(--accent); border-color:var(--accent); color:#fff}
+.st-body{flex:1; min-height:0; display:flex}
+.st-ctl{width:27rem; flex:none; border-right:1px solid var(--line); display:flex; flex-direction:column; min-height:0; background:var(--panel)}
+.st-tabs{display:flex; gap:.2rem; padding:.6rem .7rem 0; flex-wrap:wrap; border-bottom:1px solid var(--line)}
+.st-tabs button{border:0; background:none; padding:.55rem .5rem; font-weight:600; font-size:.84rem; color:var(--muted); border-bottom:3px solid transparent; min-height:2.6rem} .st-tabs button[aria-selected="true"]{color:var(--ink); border-bottom-color:var(--accent-hot)}
+.st-pane{flex:1; overflow:auto; padding:1rem; overscroll-behavior:contain}
+.st-pane .sub.first{margin-top:0}
+.st-help{color:var(--muted); font-size:.84rem; margin:.5rem 0}
+.st-prev{flex:1; min-width:0; position:relative; display:flex; justify-content:center; align-items:flex-start; padding:20px; background:#05060a repeating-conic-gradient(#0a0c11 0 25%,#07080c 0 50%) 0 0/20px 20px; overflow:hidden}
+.st-viewport{position:relative; overflow:hidden; border-radius:.8rem; box-shadow:0 20px 70px rgba(0,0,0,.65), 0 0 0 1px #2a313b; background:#000; transition:width .35s var(--ease)}
+.st-viewport iframe{border:0; background:#000; display:block; transform-origin:0 0}
+.st-load{position:absolute; inset:0; display:grid; place-items:center; color:var(--muted); text-align:center; padding:2rem; pointer-events:none}
+.st-load[hidden]{display:none}
+.amb-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:.7rem} .amb-grid.sm{grid-template-columns:repeat(auto-fill,minmax(8.5rem,1fr))}
+.amb-wrap{display:flex; flex-direction:column; gap:.35rem; background:none; border:2px solid transparent; border-radius:.9rem; padding:.3rem; text-align:left; transition:transform .2s var(--ease), border-color .2s} .amb-wrap:hover{transform:translateY(-3px)} .amb-wrap.on{border-color:var(--accent-hot); background:rgba(255,51,71,.06)}
+.amb-wrap strong{font-size:.86rem; padding:0 .2rem}
+.amb{display:block; border-radius:.6rem; padding:.55rem; background:var(--a-bg); color:var(--a-ink); font-family:var(--a-ff); box-shadow:inset 0 0 0 1px var(--a-line); pointer-events:none}
+.amb .a-h{display:flex; align-items:center; gap:.3rem; height:.8rem} .amb .a-h i{width:.8rem; height:.3rem; background:var(--a-ink); opacity:.85; border-radius:2px} .amb .a-h u{margin-left:auto; width:1.4rem; height:.5rem; background:var(--a-acc); border-radius:var(--a-br)}
+.amb .a-t{display:block; font-size:1rem; line-height:1.05; margin:.5rem 0 .25rem; font-weight:var(--a-w); font-style:var(--a-st); text-transform:var(--a-tc); white-space:nowrap}
+.amb .a-p{display:block; height:.22rem; width:68%; background:var(--a-mut); border-radius:2px; margin-bottom:.5rem; opacity:.7}
+.amb .a-b{display:inline-block; padding:.18rem .75rem; background:var(--a-acc); color:var(--a-on); font:700 .58rem/1.4 var(--font-b); border-radius:var(--a-br)} .amb.para .a-b,.amb.para .a-h u{clip-path:polygon(.35rem 0,100% 0,calc(100% - .35rem) 100%,0 100%)}
+.amb .a-c{display:block; margin-top:.5rem; height:1.3rem; background:var(--a-sf); border:1px solid var(--a-line); border-radius:var(--a-cr)}
+.st-gen{display:grid; gap:.7rem; padding:.9rem; border:1px solid var(--line); border-radius:.7rem; background:var(--field)} .st-gen label{display:flex; align-items:center; gap:.8rem; font-weight:600} .st-gen input[type=color]{width:3.4rem; height:2.6rem; padding:.1rem; border:1px solid var(--line); border-radius:.5rem; background:var(--field)}
+.st-seg{display:flex; gap:.4rem} .st-seg button{flex:1; border:1px solid var(--line); background:var(--panel2); border-radius:.5rem; padding:.55rem; font-weight:600; font-size:.88rem; min-height:2.6rem}
+.st-seg button:hover,.st-harm:hover{border-color:var(--accent-hot)}
+.st-colors{display:grid; grid-template-columns:1fr 1fr; gap:.6rem} .st-col label{display:block; font-size:.82rem; font-weight:600; margin-bottom:.2rem} .st-col>div{display:flex; gap:.4rem} .st-col input[type=color]{width:2.8rem; height:2.7rem; padding:.1rem; border:1px solid var(--line); border-radius:.45rem; background:var(--field); flex:none} .st-col input[type=text]{min-width:0; padding:.5rem .55rem}
+.st-contrast{display:grid; gap:.3rem; font-size:.84rem} .st-contrast span{padding:.35rem .6rem; border-radius:.4rem; background:var(--field); border:1px solid var(--line)} .st-contrast .ok{color:#6fdc9d} .st-contrast .bad{color:#f3c97a; border-color:rgba(240,168,28,.5)} .st-contrast b{margin-left:.3rem; color:var(--ink)}
+.st-acts{display:flex; gap:.5rem; flex-wrap:wrap; margin:.7rem 0}
+.st-harms{display:grid; grid-template-columns:repeat(4,1fr); gap:.4rem} .st-harm{display:grid; gap:.3rem; justify-items:center; padding:.5rem .2rem; border:1px solid var(--line); background:var(--field); border-radius:.55rem; font-size:.72rem; color:var(--muted)} .st-harm i{width:2rem; height:2rem; border-radius:50%; display:block; box-shadow:0 0 0 2px var(--panel)}
+.st-tiles{display:grid; gap:.5rem; margin:.4rem 0} .st-tiles.c1{grid-template-columns:1fr} .st-tiles.c2{grid-template-columns:repeat(2,1fr)} .st-tiles.c3{grid-template-columns:repeat(3,1fr)} .st-tiles.c4{grid-template-columns:repeat(4,1fr)} .st-tiles.c5{grid-template-columns:repeat(5,1fr)}
+.st-tile{display:flex; flex-direction:column; align-items:center; justify-content:center; gap:.4rem; padding:.7rem .3rem; border:2px solid var(--line); border-radius:.65rem; background:var(--field); font-size:.8rem; font-weight:600; min-height:4.6rem; text-align:center; transition:border-color .15s, transform .15s} .st-tile:hover{border-color:#4a5360; transform:translateY(-2px)} .st-tile.on{border-color:var(--accent-hot); background:rgba(255,51,71,.08)}
+.st-tile em{font-size:.95rem; font-style:normal; line-height:1.1; white-space:nowrap}
+.smp-btn{display:block; width:3rem; height:1.1rem; background:var(--accent-hot)} .smp-btn.parallelogramme{clip-path:polygon(.35rem 0,100% 0,calc(100% - .35rem) 100%,0 100%)} .smp-btn.arrondi{border-radius:.35rem} .smp-btn.pilule{border-radius:99px}
+.smp-card{display:block; width:2.8rem; height:1.7rem; background:var(--panel2); border:1px solid #4a5360} .smp-card.coins{clip-path:polygon(0 0,calc(100% - .5rem) 0,100% .5rem,100% 100%,.5rem 100%,0 calc(100% - .5rem))} .smp-card.arrondi{border-radius:.5rem}
+.smp-bg{display:block; width:2.8rem; height:1.5rem; background-color:#0c0e12; border:1px solid #2a313b} .smp-bg.points{background-image:radial-gradient(#6b7480 1px,transparent 1.3px); background-size:7px 7px} .smp-bg.lignes{background-image:repeating-linear-gradient(135deg,#3a424d 0 1px,transparent 1px 6px)} .smp-bg.grille{background-image:linear-gradient(#3a424d 1px,transparent 1px),linear-gradient(90deg,#3a424d 1px,transparent 1px); background-size:8px 8px} .smp-bg.carbone{background-image:linear-gradient(45deg,#1a1e25 25%,transparent 25%,transparent 75%,#1a1e25 75%); background-size:6px 6px}
+.smp-dens{display:block; width:2.4rem; background:linear-gradient(#4a5360 0 .3rem,transparent .3rem) 0 0/100% var(--g) repeat-y; height:2rem} .smp-dens.compacte{--g:.6rem} .smp-dens.normale{--g:.8rem} .smp-dens.aeree{--g:1rem}
+.smp-hdr{display:block; width:3.2rem; height:.9rem; border-radius:.2rem; background:#4a5360} .smp-hdr.degrade{background:linear-gradient(#4a5360,transparent)} .smp-hdr.verre{background:rgba(120,130,150,.35); box-shadow:inset 0 0 0 1px #6b7480} .smp-hdr.discret{background:transparent; box-shadow:inset 0 -1px 0 #4a5360}
+.smp-hero{display:block; width:3.2rem; height:1.3rem; background:linear-gradient(#6b7480,#6b7480) 0 20%/60% 2px no-repeat,linear-gradient(#4a5360,#4a5360) 0 60%/40% 2px no-repeat} .smp-hero.centre{background-position:50% 20%,50% 60%}
+.st-sl{margin:.6rem 0} .st-sl label{display:flex; justify-content:space-between; font-size:.86rem; font-weight:600; margin-bottom:.15rem} .st-sl output{color:var(--muted); font-variant-numeric:tabular-nums} .st-sl input{width:100%; min-height:2rem; accent-color:var(--accent)}
+.st-sw{display:flex; align-items:center; gap:.8rem; padding:.55rem .75rem; margin:.3rem 0; background:var(--field); border:1px solid var(--line); border-radius:.55rem} .st-sw>span:first-child{flex:1; font-weight:600; font-size:.9rem} .st-sw small{display:block; color:var(--muted); font-weight:400}
+.st-list{list-style:none; margin:.6rem 0; padding:0; display:grid; gap:.35rem}
+.st-row{display:flex; align-items:center; gap:.55rem; padding:.45rem .6rem; background:var(--field); border:1px solid var(--line); border-radius:.55rem} .st-row.off{opacity:.55} .st-row b{flex:1; min-width:0; font-size:.9rem; white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
+.st-row em{font-style:normal; font-size:.7rem; background:rgba(90,141,255,.18); color:#9db9ff; border-radius:99px; padding:.05rem .5rem} .st-n{width:1.5rem; height:1.5rem; border-radius:50%; background:var(--panel2); display:grid; place-items:center; font-size:.75rem; color:var(--muted)}
+.st-rb{display:flex; gap:.3rem; align-items:center} .st-rb .ib{width:2.1rem; height:2.1rem} .st-lock{width:2.9rem; text-align:center}
+.st-mods{display:grid; grid-template-columns:1fr 1fr; gap:.5rem} .st-mod{display:grid; gap:.3rem; padding:.7rem; background:var(--field); border:1px solid var(--line); border-radius:.65rem} .st-mod.on{border-color:var(--accent-hot)} .st-mod small{color:var(--muted); font-size:.78rem} .st-mod>div{display:flex; justify-content:space-between; align-items:center; margin-top:.3rem}
+.st-now{display:flex; align-items:center; gap:1rem; flex-wrap:wrap; padding:.9rem; background:var(--field); border:1px solid var(--line); border-radius:.7rem} .st-now small{display:block; color:var(--muted)} .st-now b{font:italic 800 1.2rem var(--font-d)} .st-sw i{display:inline-block}
+.st-now .st-sw{display:flex; gap:.2rem; flex:1} .st-now .st-sw i{width:1.6rem; height:1.6rem; border-radius:50%; box-shadow:0 0 0 2px var(--panel)}
+.modcard{margin:1rem 0; padding:1rem; border:1px solid var(--line); border-radius:.8rem; background:var(--panel2)} .modhd{display:flex; align-items:center; gap:1rem; margin-bottom:.4rem} .modhd>div{flex:1} .modhd b{display:block; font:italic 700 1.05rem var(--font-d)} .modhd small{color:var(--muted)}
+@media (max-width:900px){ .st-body{flex-direction:column} .st-prev{flex:0 0 38%; padding:10px} .st-ctl{width:auto; flex:1; border-right:0; border-top:1px solid var(--line)} .st-dev button span{display:none} .st-tabs{overflow-x:auto; flex-wrap:nowrap} .st-tabs button{white-space:nowrap} .st-body{order:1} }
+@media (max-width:520px){ .st-tiles.c5{grid-template-columns:repeat(3,1fr)} .st-tiles.c4{grid-template-columns:repeat(2,1fr)} .st-colors,.st-mods{grid-template-columns:1fr} .amb-grid{grid-template-columns:repeat(2,1fr)} }
+
+@media (max-width:900px){ #designBtn .lab-t,#mediaBtn .lab-t,#guideBtn .lab-t,#previewBtn .lab-t{display:none} }
+
+@media (max-width:420px){ #previewBtn .lab-p{display:none} #previewBtn{padding-inline:.7rem} }
 </style>
 </head>
 <body>
@@ -445,9 +539,10 @@ dialog#dlgDiff::backdrop{background:rgba(3,4,6,.82); -webkit-backdrop-filter:blu
     <span class="ttl">Administration</span>
     <span class="sp"></span>
     <span class="save-state" id="saveState" role="status"><i></i><span>Chargé</span></span>
+    <button class="btn sm" id="designBtn" type="button" aria-label="Studio de design"><svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 0 18c1.3 0 2-.8 2-1.8 0-1.2-1-1.5-1-2.7 0-1 .8-1.5 1.8-1.5H17a4 4 0 0 0 4-4c0-4.4-4-8-9-8z"/><circle cx="7.5" cy="11" r="1"/><circle cx="10" cy="7" r="1"/><circle cx="15" cy="7" r="1"/></svg><span class="lab-t">Design</span></button>
     <button class="btn sm" id="mediaBtn" type="button" aria-label="Photothèque"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-8 8"/></svg><span class="lab-t">Photos</span></button>
     <button class="btn sm" id="guideBtn" type="button"><svg viewBox="0 0 24 24"><path d="M4 5a2 2 0 0 1 2-2h12v16H6a2 2 0 0 0-2 2z"/><path d="M4 21V5M8 7h6"/></svg><span class="lab-t">Guide</span></button>
-    <button class="btn sm pri" id="previewBtn" type="button"><svg viewBox="0 0 24 24"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg>Aperçu</button>
+    <button class="btn sm pri" id="previewBtn" type="button"><svg viewBox="0 0 24 24"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><span class="lab-p">Aperçu</span></button>
   </div>
 </header>
 
@@ -518,6 +613,17 @@ dialog#dlgDiff::backdrop{background:rgba(3,4,6,.82); -webkit-backdrop-filter:blu
   </div>
 </dialog>
 
+<dialog id="dlgStudio" class="mdlg" aria-labelledby="stTitle">
+  <div class="st" id="stRoot">
+    <header class="md-h"><b id="stTitle">Studio de design</b><span class="md-sub">Ton site s'affiche en direct à droite</span>
+      <div class="st-dev" id="stDev" role="group" aria-label="Appareil de l'aperçu"><button type="button" data-dev="desktop" aria-pressed="true" title="Ordinateur">🖥 <span>Ordinateur</span></button><button type="button" data-dev="tablet" aria-pressed="false" title="Tablette">▭ <span>Tablette</span></button><button type="button" data-dev="phone" aria-pressed="false" title="Téléphone">📱 <span>Téléphone</span></button></div>
+      <button class="ib" id="stUndo" type="button" aria-label="Annuler" title="Annuler"><svg viewBox="0 0 24 24"><path d="M9 14 4 9l5-5"/><path d="M4 9h10a6 6 0 0 1 0 12h-3"/></svg></button>
+      <button class="ib" id="stRedo" type="button" aria-label="Rétablir" title="Rétablir"><svg viewBox="0 0 24 24"><path d="m15 14 5-5-5-5"/><path d="M20 9H10a6 6 0 0 0 0 12h3"/></svg></button>
+      <button class="btn sm pri" id="stDone" type="button">Terminer</button><button class="ib" id="stClose" type="button" aria-label="Fermer"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button></header>
+    <div class="st-body"><aside class="st-ctl" aria-label="Réglages"><nav class="st-tabs" id="stTabs" role="tablist" aria-label="Catégories de réglages"></nav><div class="st-pane" id="stPane"></div></aside>
+      <section class="st-prev" id="stPrev" aria-label="Aperçu en direct"><div class="st-viewport" id="stVp"><iframe id="stFrame" title="Aperçu du site en direct"></iframe></div><div class="st-load" id="stLoad">Chargement de l'aperçu…</div></section></div>
+  </div>
+</dialog>
 <dialog id="dlgClean" aria-labelledby="clTitle"><div class="cbox wide"><h3 id="clTitle">Nettoyer la photothèque</h3><p id="clText"></p><ul class="clean-list" id="clList"></ul><div class="acts"><button class="btn" id="clNo" type="button">Annuler</button><button class="btn pri" id="clYes" type="button">Supprimer</button></div></div></dialog>
 <dialog id="dlgInfo" aria-labelledby="inTitle"><div class="cbox wide"><h3 id="inTitle"></h3><div id="inBody"></div><div class="acts"><button class="btn pri" id="inOk" type="button">OK</button></div></div></dialog>
 <div class="veil" id="veil">Déposez vos photos pour les ajouter</div>
@@ -548,104 +654,245 @@ dialog#dlgDiff::backdrop{background:rgba(3,4,6,.82); -webkit-backdrop-filter:blu
 
 <dialog id="dlgGuide" aria-label="Guide">
   <div class="full">
-    <div class="fh"><b>Guide : mettre le site à jour</b><button class="btn sm pri" id="gClose" type="button">Fermer</button></div>
+    <div class="fh"><b>Guide complet de l'administration</b><button class="btn sm pri" id="gClose" type="button">Fermer</button></div>
     <div class="fb">
       <div class="guide">
-        <div class="toc">
-          <a href="#g1">1. Comment ça marche</a>
-          <a href="#g2">2. Modifier un texte ou un prix</a>
-          <a href="#g2b">2 bis. Suivre et annuler tes modifications</a>
-          <a href="#g3">3. Les photos : la photothèque</a>
-          <a href="#g4">4. Publier les changements</a>
-          <a href="#g5">5. Les photos avant / après</a>
-          <a href="#g6">6. Recevoir les demandes de devis</a>
-          <a href="#g7">7. Protéger cette page</a>
-          <a href="#g8">8. Si quelque chose ne va pas</a>
-          <a href="#g9">9. Les effets et l'estimateur de prix</a>
+        <input type="search" id="guideSearch" placeholder="Chercher dans le guide (ex. photo, prix, logo, carte…)" aria-label="Chercher dans le guide">
+        <p class="g-lead">Cette page t'explique tout, du premier clic à la mise en ligne. Chaque section commence par l'essentiel, puis donne des <b>exemples</b>. Tu peux aussi taper un mot dans la recherche ci-dessus.</p>
+        <div class="toc" id="guideToc">
+          <a href="#gA">1. Comment ça marche</a>
+          <a href="#gB">2. Visite de l'écran</a>
+          <a href="#gC">3. Panneau par panneau, avec exemples</a>
+          <a href="#gD">4. Les photos en détail</a>
+          <a href="#gE">5. Logo, silhouette et icône</a>
+          <a href="#gK">6. Le studio de design et les modules</a>
+          <a href="#gF">7. Suivre et annuler tes modifications</a>
+          <a href="#gG">8. Publier sur GitHub, pas à pas</a>
+          <a href="#gH">9. Raccourcis et astuces</a>
+          <a href="#gI">10. Dépannage</a>
+          <a href="#gJ">11. Petit lexique</a>
         </div>
 
-        <h2 id="g1">1. Comment ça marche</h2>
-        <p>Le site est fait de quatre éléments, placés dans le même dossier sur l'hébergement :</p>
-        <ul>
-          <li><code>index.html</code> : le site lui-même. On n'y touche jamais.</li>
-          <li><code>content.json</code> : tous les textes, prix, réglages et noms de photos. C'est lui que cette page modifie.</li>
-          <li><code>images/</code> : les photos et le logo.</li>
-          <li><code>admin.html</code> : cette page.</li>
-        </ul>
-        <p>Le principe est toujours le même : <b>1)</b> tu modifies ici, <b>2)</b> tu regardes le résultat avec « Aperçu », <b>3)</b> tu télécharges le pack, <b>4)</b> tu envoies les fichiers sur l'hébergement.</p>
-        <div class="tip">Ton travail est enregistré automatiquement dans ce navigateur. Si tu fermes l'onglet par erreur, tu retrouves ton brouillon à la prochaine ouverture.</div>
+        <section class="gsec" id="gA"><h2>1. Comment ça marche</h2>
+          <p>Le site est « statique » : il n'y a pas de base de données. Tout ce qui s'affiche vient de quelques fichiers. L'admin sert à les modifier <b>sans toucher au code</b>.</p>
+          <table>
+            <tr><th>Fichier ou dossier</th><th>Rôle</th><th>Tu y touches ?</th></tr>
+            <tr><td><code>index.html</code></td><td>Le site lui-même (mise en page, animations)</td><td>Jamais</td></tr>
+            <tr><td><code>content.json</code></td><td>Tous les textes, prix, réglages, couleurs, noms de photos</td><td>Via l'admin</td></tr>
+            <tr><td><code>images/</code></td><td>Logo, icônes, photos (les tiennes vont dans <code>images/uploads/</code>)</td><td>Via l'admin</td></tr>
+            <tr><td><code>admin.html</code></td><td>Cette page</td><td>Garde-la en favori</td></tr>
+            <tr><td><code>vendor/</code></td><td>Lecteurs de photos iPhone (HEIC) et TIFF</td><td>À envoyer, sans y toucher</td></tr>
+            <tr><td><code>fonts/</code>, <code>sw.js</code>, <code>manifest.webmanifest</code></td><td>Polices, cache hors ligne, installation</td><td>Jamais</td></tr>
+          </table>
+          <p><b>Le principe en 4 gestes :</b></p>
+          <ol class="steps"><li><b>Modifier</b> dans l'admin (rien n'est en ligne à ce stade).</li><li><b>Vérifier</b> avec « Aperçu » (ordinateur et téléphone) et la fenêtre des modifications.</li><li><b>Télécharger le pack</b> (un fichier .zip).</li><li><b>Envoyer</b> le contenu du pack sur GitHub : le site se met à jour tout seul en quelques minutes.</li></ol>
+          <div class="tip">Ton travail est enregistré <b>automatiquement dans ce navigateur</b> (brouillon). Si tu fermes l'onglet par erreur ou si la batterie lâche, tu retrouves tout à la prochaine ouverture. En revanche, ce brouillon reste sur <b>cet appareil</b> : pour continuer sur un autre, télécharge le pack ou utilise « Copier le JSON ».</div>
+        </section>
 
-        <h2 id="g2">2. Modifier un texte ou un prix</h2>
-        <ol>
-          <li>Ouvre le bloc concerné (par exemple « Prestations »).</li>
-          <li>Modifie le champ. Les erreurs s'affichent en rouge sous le champ.</li>
-          <li>Pour masquer une prestation sans la supprimer, utilise l'interrupteur de sa ligne.</li>
-          <li>Clique sur <b>Aperçu</b> pour voir le site avec tes changements, sur ordinateur et sur téléphone.</li>
-        </ol>
-        <p>Les boutons ↑ ↓ changent l'ordre d'affichage. Les boutons ↶ ↷ en bas annulent et rétablissent tes modifications.</p>
+        <section class="gsec" id="gB"><h2>2. Visite de l'écran</h2>
+          <ul>
+            <li><b>Barre du haut</b> : <b>Photos</b> (la photothèque), <b>Guide</b>, <b>Aperçu</b>. À gauche du bouton Guide, le compteur indique « 3 modifications non téléchargées » : clique dessus pour voir le détail.</li>
+            <li><b>Titre et ligne jaune</b> : « Page d'accueil, Prestations — 4 changements au total ». Clique dessus pour ouvrir la fenêtre de comparaison. Les boutons <b>🔍 Voir les modifications</b> et <b>↺ Tout restaurer</b> sont juste dessous.</li>
+            <li><b>Avant de publier</b> : liste de contrôle. Pastille <span class="gdot warn"></span> orange = à corriger (ex. numéro d'exemple), <span class="gdot info"></span> bleue = suggestion. Clique une ligne : l'admin ouvre le bon panneau.</li>
+            <li><b>Les panneaux</b> : un par partie du site. Clique le titre pour l'ouvrir. Une pastille « ✎ 2 modifications » apparaît sur ceux que tu as changés, avec un bouton ↺ pour les annuler d'un coup.</li>
+            <li><b>Barre du bas</b> : <b>↶ ↷</b> annuler / rétablir (le survol dit quoi), <b>↑</b> charger un <code>content.json</code>, <b>copier</b> le JSON, <b>content.json</b> (téléchargement seul), <b>Télécharger le pack</b> (le bouton principal).</li>
+          </ul>
+        </section>
 
-        <h2 id="g2b">Suivre et annuler tes modifications</h2>
-        <p>L'admin compare en permanence ton contenu à <b>la version actuellement en ligne</b> (le <code>content.json</code> chargé au démarrage).</p>
-        <ul>
-          <li><b>Pastille jaune « ✎ 2 modifications »</b> sur chaque section modifiée, visible même repliée. Le bouton <b>↺</b> à côté annule toute la section.</li>
-          <li><b>Ligne sous le titre</b> : les sections modifiées et le total. Clique dessus (ou sur « 🔍 Voir les modifications », ou sur le compteur en haut) pour ouvrir le détail.</li>
-          <li><b>La fenêtre de comparaison</b> montre chaque changement : ajouts en vert, suppressions en rouge, modifications en orange, avec l'ancienne et la nouvelle valeur (mot par mot pour les longs textes, miniatures pour les photos, pastilles pour les couleurs). <b>↺ à droite d'une ligne</b> annule uniquement ce changement ; « Tout annuler » annule la section ; les pastilles du haut filtrent.</li>
-          <li><b>Avant chaque téléchargement</b> (pack ou content.json), cette fenêtre s'ouvre : tu relis tout, tu annules ce que tu ne veux pas publier, puis tu confirmes. Elle signale aussi les photos introuvables et ce que contiendra le pack.</li>
-          <li><b>↶ / ↷</b> en bas : le survol indique l'action concernée (« Annuler : Prestation… »). <b>↺ Tout restaurer</b> remet tout aux valeurs en ligne.</li>
-          <li><b>Charger un content.json</b> (bouton ↑) affiche d'abord ce qui changerait, sans rien appliquer avant ta confirmation.</li>
-        </ul>
-        <div class="tip">Chaque prestation, question, photo de galerie… reçoit un identifiant interne (<code>_id</code>) dans <code>content.json</code> : il permet de suivre un élément précisément, même renommé ou déplacé. Tu peux l'ignorer.</div>
+        <section class="gsec" id="gC"><h2>3. Panneau par panneau, avec exemples</h2>
+          <p>Pour chaque panneau : ce qu'il règle, puis un exemple. Les champs en rouge après validation signalent une erreur (prix vide, e-mail invalide…).</p>
 
-        <h2 id="g3">3. Les photos : la photothèque</h2>
-        <p>Le bouton <b>Photos</b> en haut ouvre la photothèque : toutes les photos du site, avec leur usage, leur poids et leur état. Tu peux aussi y accéder depuis chaque champ photo avec « Choisir… ».</p>
-        <ul>
-          <li><b>Ajouter :</b> « Importer des photos », ou glisse-les n'importe où sur la page, ou colle-les avec Ctrl+V. Formats lus : JPG, PNG, WebP, GIF, BMP, AVIF, SVG, ICO, HEIC (iPhone) et TIFF. Chaque photo est remise à l'endroit, réduite pour le web, et ses données de localisation (GPS) sont retirées.</li>
-          <li><b>Choisir :</b> clique sur la miniature d'un champ, puis sur la photo voulue. « Utilisée dans » te dit où chaque photo sert déjà.</li>
-          <li><b>Recadrer :</b> bouton « Recadrer » (ou « Recadrer, puis utiliser »). Déplace le cadre à la souris ou au doigt, choisis un format (★ = le format conseillé pour l'emplacement), pivote, retourne, règle la luminosité. L'étoile et les messages jaunes sous chaque champ t'indiquent quand une photo est mal cadrée, trop petite ou trop lourde.</li>
-          <li><b>Remplacer :</b> dans le détail d'une photo, « Remplacer le fichier… » met la nouvelle photo partout où l'ancienne servait.</li>
-          <li><b>Supprimer et nettoyer :</b> « Supprimer » vide les emplacements concernés (annulable avec ↶). « Nettoyer » liste les photos inutilisées pour les retirer d'un coup.</li>
-        </ul>
-        <div class="tip">Les photos déjà en ligne que tu retires restent sur GitHub : le pack contient alors un fichier <code>A-SUPPRIMER.txt</code> avec la liste à effacer pour faire du ménage.</div>
-        <div class="tip warn">Pour lire les photos iPhone (HEIC) et TIFF, le dossier <code>vendor</code> doit être présent sur le site à côté de <code>admin.html</code>.</div>
+          <h3>Prestations et tarifs</h3>
+          <p>La liste des soins proposés. Clique une ligne pour l'ouvrir. L'<b>interrupteur</b> à droite la masque du site sans la supprimer (pratique pour une offre saisonnière). Les flèches changent l'ordre, la corbeille supprime (annulable avec ↶).</p>
+          <div class="ex"><b>Exemple de prestation bien remplie</b><br><b>Catégorie</b> : Peinture · <b>Titre</b> : Correction de peinture · <b>Résumé</b> : « On supprime les micro-rayures, on ne les masque pas. » · <b>Description</b> : 2 à 3 paragraphes (un retour à la ligne = un paragraphe) · <b>Ce qui est inclus</b> : une ligne par point · <b>Durée</b> : 1 à 2 jours · <b>Prix</b> : 390 € · <b>Texte au-dessus du prix</b> : à partir de.</div>
+          <ul><li>La <b>catégorie</b> crée automatiquement les boutons de filtre (Lavage, Peinture…). Écris-la toujours de la même façon (« Peinture », pas « peinture » ici et « Peintures » là).</li><li><b>Mise en avant « Populaire »</b> affiche un badge rouge sur la carte : à réserver à une ou deux prestations.</li><li>La <b>photo</b> est facultative. Sans photo, une illustration sobre s'affiche.</li></ul>
 
-        <h2 id="g4">4. Publier les changements</h2>
-        <ol>
-          <li>Clique sur <b>Télécharger le pack</b> en bas de page. Tu obtiens un fichier <code>.zip</code>.</li>
-          <li>Décompresse-le. Il contient <code>content.json</code> et, s'il y a des nouvelles photos, un dossier <code>images</code>.</li>
-          <li>Envoie ces fichiers sur l'hébergement, dans le dossier du site : <code>content.json</code> remplace l'ancien, et les photos vont dans <code>images/</code>.</li>
-          <li>Recharge le site (Ctrl+F5, ou ferme et rouvre l'onglet) pour vérifier.</li>
-        </ol>
-        <div class="tip warn">Le nom <code>content.json</code> doit rester exactement celui-là. Si ton navigateur le renomme en <code>content (1).json</code>, renomme-le avant l'envoi.</div>
+          <h3>Estimateur de prix</h3>
+          <p>Le petit calculateur du formulaire de devis. <b>Prix affiché × coefficient de taille × coefficient d'état</b>, arrondi à 5 €.</p>
+          <div class="ex"><b>Exemple</b> : Correction de peinture 390 € sur un SUV (× 1,2) très sale (× 1,3) → 390 × 1,2 × 1,3 = 608 € → affiché « environ 610 € ». Le client voit toujours la phrase « Estimation indicative… » : ajuste-la dans « Phrase sous l'estimation ».</div>
+          <ul><li>Un coefficient de <b>1</b> ne change rien. Moins de 1 = moins cher (citadine : 0,9).</li><li>Tu peux ajouter des tailles ou des états. Désactive l'estimateur si tu préfères ne rien afficher : le formulaire propose alors une simple liste.</li></ul>
 
-        <h2 id="g5">5. Les photos avant / après</h2>
-        <p>Dans le bloc « Résultats avant / après », ajoute une ligne par voiture avec la photo d'avant et celle d'après. Pour que la comparaison soit réussie, prends les deux photos <b>du même endroit, avec le même cadrage et la même lumière</b>.</p>
-        <p>Tant qu'aucune paire n'est ajoutée, le site affiche une illustration de démonstration. Si tu préfères ne rien montrer, désactive la section dans « Visibilité des sections ».</p>
+          <h3>Détails de la voiture</h3>
+          <p>Les points cliquables sur la silhouette (« Chaque détail compte »). Chaque <b>zone</b> a un titre, un texte, une position et une prestation liée (le bouton « Voir : … » y mène).</p>
+          <div class="ex"><b>Placer un point</b> : ouvre la zone, puis <b>clique directement sur la silhouette</b> dans l'admin : la position (en % de gauche à droite et de haut en bas) se règle toute seule. Exemple : les phares à l'avant → x ≈ 13, y ≈ 72.</div>
 
-        <h2 id="g6">6. Recevoir les demandes de devis</h2>
-        <p>Par défaut, le formulaire prépare le message et l'envoie par <b>WhatsApp</b> (si un numéro est renseigné) ou par <b>e-mail</b> : le visiteur n'a plus qu'à appuyer sur « envoyer ».</p>
-        <p>Pour recevoir les demandes directement dans ta boîte mail sans que le visiteur ouvre une autre application, crée un formulaire gratuit sur un service comme Formspree, puis colle l'adresse fournie dans « Coordonnées et réseaux », champ « Adresse d'envoi du formulaire ».</p>
+          <h3>Page d'accueil</h3>
+          <ul><li><b>Grand titre</b> : court (6 à 10 mots). Ex. « Votre voiture mérite un passage aux stands. »</li><li><b>Boutons</b> : l'action principale (« Demander un devis ») et une secondaire (« Voir les prestations »).</li><li><b>Points forts</b> : 3 ou 4 courtes lignes de réassurance.</li><li><b>Bandeau défilant</b> : de courtes expressions qui défilent en boucle.</li><li><b>Photo d'accueil</b> : une voiture en paysage ; elle est assombrie derrière le titre. Sans photo, le fond animé est utilisé.</li></ul>
 
-        <h2 id="g7">7. Protéger cette page</h2>
-        <p>Cette page peut être ouverte par n'importe qui qui en connaît l'adresse, mais elle ne peut rien publier : seul quelqu'un qui a accès à l'hébergement peut mettre le site en ligne. Pour plus de tranquillité, demande à ton hébergeur de protéger <code>admin.html</code> par un mot de passe (option « protection de répertoire » ou fichier <code>.htaccess</code>), ou donne-lui un nom moins évident.</p>
+          <h3>Résultats avant / après</h3>
+          <p>Une ligne par voiture, avec la photo d'avant et d'après. Le visiteur glisse une barre pour comparer. Sans photo, une illustration de démonstration est affichée (masque la section dans « Visibilité » si tu n'en veux pas).</p>
+          <div class="tip"><b>Pour une comparaison convaincante</b> : même endroit, même cadrage, même lumière, même distance. Prends d'abord la photo « avant », note la position (un repère au sol), puis refais la même après. Si les cadrages diffèrent un peu, aligne-les avec « Recadrer ».</div>
 
-        <h2 id="g8">8. Si quelque chose ne va pas</h2>
-        <ul>
-          <li><b>Une photo ne s'affiche pas sur le site :</b> vérifie que le dossier <code>images</code> du pack a bien été envoyé, avec le même nom de fichier. La photothèque marque « Introuvable » les photos absentes du site.</li>
-          <li><b>Le site n'a pas changé :</b> vide le cache du navigateur (Ctrl+F5) et vérifie que <code>content.json</code> a bien été remplacé.</li>
-          <li><b>L'aperçu ne s'ouvre pas :</b> cette page doit être ouverte depuis le site en ligne (ou un serveur local), pas depuis un fichier sur l'ordinateur.</li>
-          <li><b>Je me suis trompé :</b> utilise ↶ en bas de page. Le lien « Abandonner mes modifications », en haut, revient à la version en ligne.</li>
-          <li><b>Le pack ne se télécharge pas sur téléphone :</b> utilise « content.json » seul, ou refais l'opération depuis un ordinateur.</li>
-        </ul>
+          <h3>Galerie de réalisations</h3>
+          <p>Un mur de photos qui s'agrandissent au clic. « Choisir dans la photothèque » ajoute plusieurs photos d'un coup ; « Importer des photos » les envoie directement. <b>Décris chaque photo</b> (ex. « Audi RS3 après correction de peinture ») : c'est lu par les lecteurs d'écran et utile à Google. La section n'apparaît que s'il y a au moins une photo.</p>
 
-        <h2 id="g9">9. Les effets et l'estimateur de prix</h2>
-        <p>Le site contient quelques éléments animés. Tous se règlent (et se coupent) dans les blocs ci-dessous.</p>
-        <ul>
-          <li><b>Effets et animations</b> : intro « feux de départ » (une fois par visite), peinture à essuyer sur la page d'accueil, bandeau défilant, rail de navigation, curseur lumineux. Chaque effet a son interrupteur.</li>
-          <li><b>Détails de la voiture</b> : les points cliquables sur la silhouette. Ouvre une zone, puis <b>clique sur la silhouette</b> pour placer le point au bon endroit. Le champ « Prestation liée » ajoute un bouton vers la fiche.</li>
-          <li><b>Estimateur de prix</b> : le visiteur choisit sa voiture, son état et les prestations, et voit un prix approximatif. Le calcul est : prix affiché × coefficient de la taille × coefficient de l'état. Un coefficient de 1,2 signifie +20 %. Vérifie ces coefficients : ce sont des valeurs de départ.</li>
-          <li><b>Disponibilité</b> (dans « Coordonnées et réseaux ») : un petit badge vert en haut de l'accueil, par exemple « Prochain créneau : samedi ». À mettre à jour, ou à désactiver.</li>
-        </ul>
-        <div class="tip">L'estimateur ne remplace pas un devis : il aide le client à se situer. Le prix final reste confirmé par Jermaine avant toute intervention, et c'est écrit sous l'estimation.</div>
+          <h3>À propos de Jermaine</h3>
+          <p>Texte de présentation, engagements, portrait, et l'encadré de <b>certification</b> (intitulé, intitulé officiel, précision). Tu peux masquer l'encadré avec son interrupteur.</p>
+
+          <h3>Zone d'intervention</h3>
+          <ul><li><b>Lieu sur la carte Google</b> : écris « Mantes-la-Jolie, France ». C'est ce lieu que Google centre.</li><li><b>Étendue de la zone</b> : règle le zoom. jusqu'à 14 km = zoom proche, de 15 à 30 km = intermédiaire, au-delà de 30 km = large.</li><li><b>Communes</b> : la liste des villes desservies, affichée sous forme d'étiquettes.</li></ul>
+          <div class="tip">La carte est <b>verrouillée</b> pour ne pas gêner le défilement sur téléphone : le visiteur touche le bouton « Interagir avec la carte » pour la déplacer, et elle se reverrouille quand il touche ailleurs.</div>
+
+          <h3>Coordonnées et réseaux</h3>
+          <ul><li><b>Téléphone</b> : « 07 68 70 69 96 ». Le numéro WhatsApp se déduit tout seul d'un 06 ou 07 ; remplis « WhatsApp » seulement s'il est différent.</li><li><b>Réseaux</b> : colle le lien complet (<code>https://www.instagram.com/…</code>). Une icône n'apparaît que si le lien est rempli.</li><li><b>Disponibilité</b> : un petit bandeau vert « Prochain créneau : mardi » (à activer et à tenir à jour).</li></ul>
+          <p><b>Que fait le formulaire de devis ?</b> Deux modes :</p>
+          <ol class="steps"><li><b>Par défaut</b> : il prépare un message et ouvre WhatsApp ou le mail du client, prêt à envoyer (aucun service à créer).</li><li><b>Avec une « adresse d'envoi »</b> (ex. <code>https://formspree.io/f/xxxxxxx</code>) : la demande arrive directement dans ta boîte mail, sans que le client quitte le site. Crée le formulaire gratuit sur formspree.io, puis colle son adresse.</li></ol>
+
+          <h3>Méthode, FAQ, Avis</h3>
+          <ul><li><b>Méthode</b> : les étapes de la prestation (5 conseillées). Une phrase par étape.</li><li><b>FAQ</b> : les vraies questions des clients. Ex. « Dois-je fournir de l'eau ? », « Que se passe-t-il s'il pleut ? », « Combien de temps dure une correction ? ».</li><li><b>Avis</b> : la section n'apparaît qu'avec au moins un avis. Mets un prénom et la voiture (« Karim — BMW M2 »). Demande l'accord du client.</li></ul>
+
+          <h3>Menu, Visibilité, Effets</h3>
+          <ul><li><b>Menu</b> : change le texte des liens (« Prestations » → « Nos soins »). Un lien disparaît tout seul si sa section est masquée.</li><li><b>Visibilité des sections</b> : masque des blocs entiers sans rien supprimer. Idéal pour préparer une section avant de l'ouvrir au public.</li><li><b>Effets et animations</b> : coupe l'intro, la peinture à polir, le bandeau, le rail ou le curseur lumineux. Les visiteurs qui ont demandé « réduire les animations » ne les voient jamais.</li></ul>
+
+          <h3>Couleurs</h3>
+          <p>Six ambiances prêtes (rouge piste, bleu glace, orange…), puis un réglage fin des 8 couleurs. L'aperçu miniature montre l'effet immédiat.</p>
+          <div class="ex"><b>Garder un bon contraste</b> : le texte doit rester lisible sur le fond. Fond très sombre + texte clair = lisible ; évite un gris moyen sur un gris moyen. En cas de doute, clique « Revenir au rouge d'origine ».</div>
+
+          <h3>Pied de page et mentions légales</h3>
+          <p>Le texte légal est <b>obligatoire en France</b> pour un site professionnel. Complète les crochets : nom, SIRET, hébergeur (GitHub Pages si le site est sur GitHub), et ce que fait le site de ses données (formulaire, carte Google).</p>
+
+          <h3>Référencement et partage</h3>
+          <div class="ex"><b>Titre du site</b> (idéal &lt; 60 caractères) : « Pitlane Lab — Detailing automobile à Mantes-la-Jolie ».<br><b>Description</b> (150 à 160 caractères) : une phrase qui donne envie de cliquer sur Google : « Detailing sur place à Mantes-la-Jolie : lavage, correction de peinture, protection céramique. Devis gratuit. »<br><b>Adresse du site</b> : l'adresse définitive, sans « / » final.<br><b>Image de partage</b> : 1200 × 630, affichée quand on envoie le lien sur WhatsApp ou Facebook.</div>
+        </section>
+
+        <section class="gsec" id="gD"><h2>4. Les photos en détail</h2>
+          <p>Le bouton <b>Photos</b> ouvre la <b>photothèque</b> : toutes les photos du site, avec leur usage, leur poids et leur état.</p>
+          <h3>Ajouter</h3>
+          <ul><li><b>Importer</b> : bouton « Importer des photos » (plusieurs à la fois), ou <b>glisse-les</b> n'importe où sur la page, ou <b>colle</b> une capture avec <kbd>Ctrl</kbd>+<kbd>V</kbd>.</li><li><b>Formats lus</b> : JPG, PNG, WebP, GIF (animations conservées), BMP, AVIF, SVG, ICO, <b>HEIC (iPhone)</b> et TIFF. Un PDF, un fichier abîmé ou un faux « .jpg » sont refusés avec un message clair.</li><li><b>Ce que fait l'import</b> : remise à l'endroit (même une photo prise en travers), réduction pour le web (2000 px ; « haute qualité » = 3000 px dans la barre d'outils), suppression des données de localisation (GPS) et détection des doublons.</li></ul>
+          <h3>Choisir</h3>
+          <p>Clique la miniature d'un champ photo, puis la photo voulue. La fiche « Utilisée dans » indique où elle sert déjà. Double-clic = choisir.</p>
+          <h3>Recadrer et retoucher</h3>
+          <ol class="steps"><li>Clique <b>Recadrer</b> (sur un champ ou dans la fiche d'une photo).</li><li>Déplace le cadre à la souris ou au doigt, tire les poignées pour le redimensionner. Au clavier : flèches pour déplacer, <kbd>+</kbd> / <kbd>-</kbd> pour agrandir ou réduire.</li><li>Choisis un <b>format</b> : <b>★</b> marque celui conseillé pour l'emplacement (ex. 16:9 pour la photo d'accueil).</li><li>Pivote, retourne, règle luminosité, contraste, saturation.</li><li>Choisis la <b>taille maximale</b> et la <b>qualité</b> : l'estimation du poids se met à jour (viser moins de 300 Ko pour une photo de carte, moins de 600 Ko pour une grande).</li><li><b>Enregistrer et utiliser</b> crée une copie ; <b>Remplacer l'originale</b> change la photo partout où elle servait.</li></ol>
+          <h3>Supprimer et nettoyer</h3>
+          <ul><li><b>Supprimer</b> une photo utilisée vide ses emplacements (annulable avec ↶).</li><li><b>Nettoyer</b> liste les photos que plus rien n'utilise, pour les retirer d'un coup.</li><li>Les photos déjà <b>en ligne</b> que tu retires restent sur GitHub : le pack contient alors un fichier <code>A-SUPPRIMER.txt</code> qui liste ce qu'il faut effacer pour faire du ménage.</li></ul>
+          <div class="ex"><b>Bien photographier une voiture</b> : lumière naturelle douce (ombre ou ciel couvert, pas de plein soleil qui crée des reflets durs), voiture propre et dégagée, cadrage horizontal, une photo de 3/4 avant, une de profil, une détail (jante, phare, capot). Évite de photographier avec le soleil de face.</div>
+        </section>
+
+        <section class="gsec" id="gE"><h2>5. Logo, silhouette et icône</h2>
+          <p>Le panneau <b>Logo et identité visuelle</b> pilote tout ce qui touche à l'image de marque. Un aperçu en direct montre l'en-tête, la silhouette et l'icône.</p>
+          <table>
+            <tr><th>Élément</th><th>Où il apparaît</th><th>Idéal</th></tr>
+            <tr><td><b>Logo principal</b></td><td>En-tête, pied de page, écran d'intro</td><td>PNG ou SVG à fond transparent, lisible sur fond sombre</td></tr>
+            <tr><td><b>Logo du pied de page</b></td><td>Bas de page (sinon le logo principal)</td><td>Version courte ou claire si besoin</td></tr>
+            <tr><td><b>Silhouette de voiture</b></td><td>Accueil (avec reflet animé) et « Chaque détail compte »</td><td>Traits clairs fins, fond transparent, très allongée (≈ 5 pour 1)</td></tr>
+            <tr><td><b>Icône du site</b></td><td>Onglet du navigateur, écran d'accueil du téléphone</td><td>Carrée, 512 × 512</td></tr>
+            <tr><td><b>Nom affiché</b></td><td>Texte alternatif ; logo écrit si pas d'image</td><td>Le nom de l'entreprise</td></tr>
+          </table>
+          <h3>Mon logo a un fond blanc (ou noir) : le détourer</h3>
+          <ol class="steps"><li>Importe-le (champ « Logo principal » → Importer).</li><li>Clique <b>Recadrer</b>, section <b>Fond et couleur</b>.</li><li>Active <b>Rendre le fond transparent</b> (c'est le « détourage » : retirer le fond pour ne garder que le logo). Le damier gris derrière le logo montre ce qui est devenu transparent.</li><li>Ajuste la <b>tolérance</b> : trop faible, il reste un halo de fond ; trop forte, le logo se grignote. Les <b>bords adoucis</b> évitent l'effet « découpé au ciseau ».</li><li>Coche <b>Supprimer aussi à l'intérieur</b> si des trous (le centre d'un « A », d'un « O ») doivent disparaître aussi.</li><li><b>Enregistrer et utiliser</b>.</li></ol>
+          <h3>Ma silhouette est noire</h3>
+          <p>Le site est sombre : une silhouette noire serait invisible. Dans <b>Recadrer → Fond et couleur → Couleur unie</b>, choisis le blanc : toute l'image devient blanche en gardant sa transparence.</p>
+          <h3>Fabriquer une icône carrée</h3>
+          <p>Importe ton logo ou un symbole, <b>Recadrer</b> avec le format <b>1:1</b>, active <b>Remplir le fond transparent</b> avec la couleur de ta marque, taille 512 px, <b>Enregistrer et utiliser</b>.</p>
+          <h3>Logo écrit, taille, retour à l'origine</h3>
+          <ul><li><b>« Retirer »</b> sur le logo : le nom s'affiche en lettres à la place (aucune image nécessaire).</li><li>Le curseur règle la <b>taille du logo dans l'en-tête</b> (1,4 à 4,2 ; 2,9 = origine).</li><li><b>↺ Revenir au logo / à la silhouette d'origine</b> remet les fichiers fournis.</li></ul>
+          <div class="tip">L'icône de l'onglet et de l'écran d'accueil peut mettre quelques heures à changer chez les visiteurs : les navigateurs la gardent en mémoire. Un nouveau test dans une fenêtre privée montre le résultat tout de suite.</div>
+        </section>
+
+        <section class="gsec" id="gK"><h2>6. Le studio de design et les modules</h2>
+          <p>Le bouton <b>Design</b> (en haut) ouvre le <b>studio</b> : ton site s'affiche <b>en direct</b> à droite, et tu règles tout à gauche. Chaque clic se voit tout de suite, sans rien publier. Le bouton « Ordinateur / Tablette / Téléphone » montre le vrai rendu sur chaque appareil.</p>
+          <h3>Onglet Ambiances : changer d'univers en un clic</h3>
+          <ul><li>Huit ambiances prêtes : <b>Piste rouge</b> (l'origine), Glace bleue, <b>Showroom clair</b>, Or prestige, Néon violet, Racing green, Orange paddock, Noir et blanc, Sable chaud.</li>
+          <li><b>Survole</b> une vignette : l'aperçu change sans rien valider. <b>Clique</b> : elle s'applique (couleurs + polices + formes + fond). Un <b>↶</b> annule.</li>
+          <li><b>Créer la tienne</b> : choisis la couleur de ta marque, puis « Fond sombre » ou « Fond clair » : l'admin compose une palette complète et lisible. <b>🎲 Surprends-moi</b> tire une ambiance au hasard (recommence autant que tu veux).</li></ul>
+          <div class="ex"><b>Exemple</b> : tu veux un site clair et chic ? Clique « Showroom clair ». Trop doux ? Onglet Style → boutons « Carré ». Tu gardes tout le reste.</div>
+          <h3>Onglet Couleurs</h3>
+          <p>Les 8 couleurs une par une (sélecteur ou code <code>#rrggbb</code>). La zone <b>Lisibilité</b> mesure le contraste : ✓ vert = bon, ⚠ orange = à améliorer (texte difficile à lire). <b>🩺 Corriger la lisibilité</b> ajuste les textes automatiquement. Les <b>accents harmonieux</b> proposent des couleurs qui vont bien avec la tienne.</p>
+          <div class="tip">Le texte des boutons passe tout seul en blanc ou en noir selon la couleur d'accent, pour toujours rester lisible (un accent doré aura un texte noir).</div>
+          <h3>Onglet Style</h3>
+          <ul><li><b>Polices</b> : Sport (italique large, l'origine), Moderne, Élégant (empattements), Technique (machine à écrire), Système. Ce sont des polices déjà présentes : aucun chargement externe, le site reste rapide.</li>
+          <li><b>Titres</b> : italique, majuscules, épaisseur, largeur des lettres. <b>Taille générale du texte</b> : de 85 % à 125 %.</li>
+          <li><b>Boutons</b> : Course (parallélogramme), Carré, Arrondi, Pilule. <b>Cartes</b> : coins coupés, arrondies, carrées. <b>Arrondi</b> : le curseur règle la douceur des angles.</li>
+          <li><b>Fond</b> des sections alternées : Carbone (l'origine), Uni, Points, Lignes, Grille.</li></ul>
+          <h3>Onglet Mise en page</h3>
+          <ul><li><b>Densité</b> : espaces entre les sections (compacte pour un site dense, aérée pour un look luxe). <b>Largeur du contenu</b> : « auto » s'adapte aux grands écrans.</li>
+          <li><b>En-tête</b> : Dégradé, Plein, Verre (flouté), Discret. <b>Accueil</b> : titre à gauche ou centré.</li>
+          <li><b>Mouvement</b> : <b>Riche</b> (tout s'anime), <b>Calme</b> (apparitions douces), <b>Aucun</b> (rien ne bouge : idéal si tes clients sont sensibles aux animations).</li></ul>
+          <h3>Onglet Modules : ordre, affichage et nouveautés</h3>
+          <p>Tu vois toutes les sections dans l'ordre. Les <b>flèches ↑ ↓</b> les déplacent, l'<b>interrupteur</b> les affiche ou les masque. L'accueil reste en tête ; le contact et le pied de page restent à la fin (🔒 = toujours affichée).</p>
+          <table><tr><th>Module</th><th>À quoi ça sert</th><th>Exemple</th></tr>
+            <tr><td><b>Bandeau d'annonce</b></td><td>Une barre tout en haut du site, que le visiteur peut fermer</td><td>« -15 % sur la protection céramique en octobre — Réserver »</td></tr>
+            <tr><td><b>Atouts</b></td><td>3 ou 4 arguments avec icône</td><td>🛡 Garantie résultat · ⏱ Intervention sous 48 h · 📍 Chez vous</td></tr>
+            <tr><td><b>Chiffres clés</b></td><td>Des nombres qui s'animent à l'écran</td><td>350+ voitures traitées · 4,9/5 de moyenne · 8 ans d'expérience</td></tr>
+            <tr><td><b>Appel à l'action</b></td><td>Un grand bandeau avec un bouton vers le devis</td><td>« Prêt à retrouver une voiture neuve ? » → Demander un devis</td></tr>
+            <tr><td><b>Blocs libres</b></td><td>Autant que tu veux : texte, texte + image, citation</td><td>« Notre atelier mobile » avec une photo à côté</td></tr></table>
+          <p>Le contenu de chaque module se saisit dans le panneau <b>Modules ajoutables</b> (bouton « ✏️ Contenu » depuis le studio). Un module vide ou éteint n'apparaît pas sur le site. Les liens acceptent <code>#contact</code> (une section), <code>https://…</code>, <code>tel:…</code> ou <code>mailto:…</code> ; tout autre lien est refusé pour ta sécurité.</p>
+          <div class="ex"><b>Scénario</b> : en octobre, tu actives « Bandeau d'annonce » avec ton offre, tu ajoutes « Chiffres clés » juste après « Prestations » (flèches ↑ dans l'onglet Modules), et tu masques « Avis clients » le temps d'en récolter. Tu télécharges le pack : la fenêtre de comparaison liste ces trois changements, tu peux en annuler un seul.</div>
+          <div class="tip warn">Un fond <b>clair</b> est détecté automatiquement : le logo et la silhouette (en traits blancs) sont inversés pour rester lisibles, et l'effet « peinture sale à polir » (conçu pour fond sombre) est retiré.</div>
+        </section>
+
+        <section class="gsec" id="gF"><h2>7. Suivre et annuler tes modifications</h2>
+          <p>L'admin compare en permanence ton contenu à <b>la version actuellement en ligne</b> (le <code>content.json</code> chargé à l'ouverture).</p>
+          <ul>
+            <li><b>Pastille jaune « ✎ 2 modifications »</b> sur chaque section modifiée, visible même repliée. Le bouton <b>↺</b> à côté annule toute la section.</li>
+            <li><b>La fenêtre de comparaison</b> montre chaque changement : <span class="gk add">ajout</span>, <span class="gk del">suppression</span>, <span class="gk mod">modification</span>, avec l'ancienne et la nouvelle valeur (mot par mot pour les longs textes, miniatures pour les photos, pastilles pour les couleurs).</li>
+            <li><b>↺ à droite d'une ligne</b> annule uniquement ce changement. <b>« Tout annuler »</b> annule la section. Les pastilles du haut (ajouts / modifications / suppressions) filtrent la liste.</li>
+            <li><b>Avant chaque téléchargement</b>, cette fenêtre s'ouvre : relis, annule ce que tu ne veux pas publier, puis confirme. Elle indique aussi ce que contiendra le pack et signale les photos introuvables.</li>
+            <li><b>↶ / ↷</b> : l'historique de la session. Le survol dit quoi (« Annuler : Prestation Lavage — Prix »). <b>↺ Tout restaurer</b> remet tout aux valeurs en ligne.</li>
+            <li><b>Charger un fichier</b> (↑) montre d'abord ce qui changerait, sans rien appliquer avant ta confirmation. Pratique pour reprendre un ancien <code>content.json</code>.</li>
+          </ul>
+          <div class="ex"><b>Scénario</b> : tu as changé le titre d'accueil, deux prix et ajouté une prestation. Tu cliques « Télécharger le pack » → la fenêtre liste 4 lignes. Tu te rends compte que la nouvelle prestation n'est pas prête : ↺ sur cette ligne seule, puis « Télécharger le pack ». Le reste part, pas la prestation.</div>
+          <div class="tip">Chaque élément d'une liste (prestation, question, photo de galerie…) reçoit un identifiant interne <code>_id</code> dans <code>content.json</code> : il permet de suivre un élément précisément, même renommé ou déplacé. Tu peux l'ignorer et ne jamais le supprimer.</div>
+        </section>
+
+        <section class="gsec" id="gG"><h2>8. Publier sur GitHub, pas à pas</h2>
+          <ol class="steps">
+            <li>Clique <b>Télécharger le pack</b> en bas. Relis la fenêtre, confirme. Tu obtiens <code>pitlane-lab-mise-a-jour.zip</code>.</li>
+            <li><b>Décompresse</b> le zip (sur téléphone : appui long → Extraire). Il contient <code>content.json</code>, éventuellement un dossier <code>images</code> (tes nouvelles photos), et parfois <code>A-SUPPRIMER.txt</code>.</li>
+            <li>Sur <b>github.com</b>, ouvre ton dépôt, clique <b>Add file → Upload files</b>.</li>
+            <li>Glisse <code>content.json</code> (il remplace l'ancien) et le <b>contenu</b> du dossier <code>images</code> (il se range dans <code>images/uploads</code>). Garde la même arborescence.</li>
+            <li>Clique <b>Commit changes</b>. Attends 1 à 3 minutes (GitHub reconstruit le site).</li>
+            <li>Ouvre le site et fais <kbd>Ctrl</kbd>+<kbd>F5</kbd> (sur téléphone : ferme l'onglet et rouvre-le). Vérifie le résultat.</li>
+            <li><i>Facultatif</i> : ouvre <code>A-SUPPRIMER.txt</code>, puis supprime ces fichiers dans le dépôt pour libérer de la place.</li>
+          </ol>
+          <div class="ex"><b>Premier envoi complet</b> : envoie tout le contenu du zip fourni au départ (<code>index.html</code>, <code>admin.html</code>, <code>content.json</code>, <code>sw.js</code>, <code>images/</code>, <code>fonts/</code>, <code>vendor/</code>, etc.) à la <b>racine</b> du dépôt, puis active GitHub Pages : <b>Settings → Pages → Deploy from a branch → main / (root)</b>.</div>
+          <div class="tip warn">Le nom <code>content.json</code> doit rester exactement celui-là. Si ton navigateur le renomme en <code>content (1).json</code>, renomme-le avant l'envoi. Et ne supprime jamais le dossier <code>vendor</code> : sans lui, les photos iPhone (HEIC) et TIFF ne s'ouvrent plus dans l'admin.</div>
+          <p><b>Sécuriser l'admin</b> : GitHub Pages n'a pas de mot de passe. La page peut être ouverte par quiconque connaît son adresse, mais <b>elle ne peut rien publier</b> : seul quelqu'un qui a accès au dépôt GitHub le peut. Pour plus de discrétion, renomme <code>admin.html</code> (ex. <code>gestion-x7k2.html</code>).</p>
+        </section>
+
+        <section class="gsec" id="gH"><h2>9. Raccourcis et astuces</h2>
+          <table>
+            <tr><th>Action</th><th>Raccourci</th></tr>
+            <tr><td>Annuler / rétablir</td><td><kbd>Ctrl</kbd>+<kbd>Z</kbd> / <kbd>Ctrl</kbd>+<kbd>Y</kbd> (en dehors d'un champ texte)</td></tr>
+            <tr><td>Coller une photo depuis le presse-papiers</td><td><kbd>Ctrl</kbd>+<kbd>V</kbd></td></tr>
+            <tr><td>Fermer une fenêtre</td><td><kbd>Échap</kbd></td></tr>
+            <tr><td>Déplacer le cadre de recadrage</td><td>Flèches (<kbd>Maj</kbd> = plus grand pas)</td></tr>
+            <tr><td>Agrandir / réduire le cadre</td><td><kbd>+</kbd> / <kbd>-</kbd></td></tr>
+            <tr><td>Supprimer la photo sélectionnée</td><td><kbd>Suppr</kbd> dans la photothèque</td></tr>
+            <tr><td>Choisir une photo directement</td><td>Double-clic sur la miniature</td></tr>
+          </table>
+          <ul><li><b>Aperçu</b> : bascule entre « Ordinateur » et « Téléphone » pour voir le rendu mobile, avec tes modifications non publiées.</li><li>Sur téléphone, <b>importe tes photos directement</b> depuis la galerie : elles sont réduites sur place, tu n'envoies pas 10 Mo par photo.</li><li>Travaille par petites étapes : une modification, un coup d'œil à l'aperçu, la suivante.</li></ul>
+        </section>
+
+        <section class="gsec" id="gI"><h2>10. Dépannage</h2>
+          <table>
+            <tr><th>Le problème</th><th>La cause probable</th><th>Que faire</th></tr>
+            <tr><td>Une photo ne s'affiche pas sur le site</td><td>Le dossier <code>images</code> du pack n'a pas été envoyé, ou le nom diffère</td><td>Renvoie le dossier. La photothèque marque « Introuvable » les photos absentes du site.</td></tr>
+            <tr><td>Le site n'a pas changé</td><td>Cache du navigateur, ou envoi incomplet</td><td><kbd>Ctrl</kbd>+<kbd>F5</kbd>, attends 3 minutes, vérifie que <code>content.json</code> a bien été remplacé sur GitHub.</td></tr>
+            <tr><td>« Aperçu indisponible »</td><td>L'admin est ouvert depuis un fichier du téléphone ou de l'ordinateur</td><td>Ouvre-le depuis l'adresse du site (https://…/admin.html).</td></tr>
+            <tr><td>Une photo iPhone (HEIC) ou TIFF refuse de s'ouvrir</td><td>Le dossier <code>vendor</code> est absent du site</td><td>Envoie le dossier <code>vendor</code>. Sinon, exporte la photo en JPEG.</td></tr>
+            <tr><td>Le pack ne se télécharge pas sur téléphone</td><td>Certains navigateurs mobiles bloquent le zip</td><td>Utilise « content.json » seul puis envoie les photos à part, ou refais l'opération sur ordinateur.</td></tr>
+            <tr><td>Rien ne se télécharge, « champs à corriger »</td><td>Un champ obligatoire est vide ou invalide</td><td>L'admin ouvre le panneau et surligne le champ en rouge : corrige-le.</td></tr>
+            <tr><td>J'ai perdu mes modifications</td><td>Autre navigateur ou navigation privée</td><td>Le brouillon est lié au navigateur. Rouvre l'admin dans le même : l'admin propose de reprendre le brouillon.</td></tr>
+            <tr><td>La carte n'apparaît pas</td><td>Google répond lentement</td><td>Un bouton « Recharger la carte » apparaît après quelques secondes ; sinon utilise « Ouvrir dans Google Maps ».</td></tr>
+            <tr><td>Le formulaire n'envoie rien</td><td>Aucun téléphone ni e-mail renseigné, ou adresse d'envoi invalide</td><td>Remplis « Coordonnées et réseaux ». L'adresse d'envoi doit commencer par <code>https://</code>.</td></tr>
+            <tr><td>J'ai fait une erreur</td><td>—</td><td>↶ pour la dernière action, la fenêtre de comparaison pour annuler une ligne précise, ↺ pour une section.</td></tr>
+          </table>
+        </section>
+
+        <section class="gsec" id="gJ"><h2>11. Petit lexique</h2>
+          <dl class="lex">
+            <dt>Pack</dt><dd>Le fichier .zip qui contient tout ce qui a changé (content.json + nouvelles photos).</dd>
+            <dt>Version en ligne</dt><dd>Ce que les visiteurs voient en ce moment : la référence de toutes les comparaisons.</dd>
+            <dt>Brouillon</dt><dd>Ton travail enregistré dans ce navigateur, pas encore publié.</dd>
+            <dt>Photothèque</dt><dd>La bibliothèque de toutes les photos du site.</dd>
+            <dt>Silhouette</dt><dd>Le dessin de voiture en lignes claires de l'accueil et de « Chaque détail compte ».</dd>
+            <dt>HEIC</dt><dd>Le format de photo des iPhone récents. L'admin le lit et le convertit.</dd>
+            <dt>Transparence</dt><dd>Zone d'une image « vide », où l'on voit le fond du site (logos, silhouettes).</dd>
+            <dt>Commit</dt><dd>Le bouton vert de GitHub qui enregistre ton envoi de fichiers.</dd>
+            <dt>Cache</dt><dd>Copie gardée par le navigateur. <kbd>Ctrl</kbd>+<kbd>F5</kbd> force la mise à jour.</dd>
+          </dl>
+        </section>
       </div>
     </div>
   </div>
@@ -676,6 +923,10 @@ let HIST = [], HI = -1, histTimer = null;
 
 const SHAPE = {
   medias:[],
+  design:{ ambiance:'piste', police:'sport', titres:{ italique:true, majuscules:true, graisse:800, etirement:118 }, tailleTexte:100, boutons:'parallelogramme', cartes:'coins', rayon:14, densite:'normale', largeur:1360, entete:'degrade', accueil:'gauche', fond:'carbone', grain:7, mouvement:'riche', ordre:[] },
+  modules:{ annonce:{ actif:false, texte:'', lien:'', libelle:'', style:'accent', fermable:true }, atouts:{ actif:false, titre:'', texte:'', items:[] }, chiffres:{ actif:false, titre:'', items:[] }, cta:{ actif:false, titre:'', texte:'', bouton:'', lien:'' } },
+  blocs:[],
+  branding:{ nom:'Pitlane Lab', logo:'images/logo-full.png', logoHauteur:2.9, logoPied:'', silhouette:'images/car-lines.png', silhouetteActive:true, icone:'' },
   visibility:{ resultats:true, methode:true, apropos:true, galerie:true, zone:true, faq:true, avis:true, barreMobile:true },
   nav:[],
   contact:{ telephone:'', whatsapp:'', email:'', instagram:'', facebook:'', tiktok:'', formEndpoint:'', horaires:'' },
@@ -708,6 +959,7 @@ const SHAPE = {
   theme:{ bg:'#08090b', surface:'#111317', surface2:'#181b21', ink:'#f5f6f8', muted:'#9aa3ad', accent:'#e10a1e', accentHot:'#ff3347', line:'#2a2f37' }
 };
 const TPL = {
+  blocs:{ actif:true, mise:'texte', titre:'', texte:'', image:'', bouton:'', lien:'' },
   services:{ categorie:'', titre:'', image:'', resume:'', description:'', inclus:[], duree:'', prix:'', unite:'à partir de', populaire:false, visible:true },
   avantApres:{ titre:'', vehicule:'', avant:'', apres:'' },
   zones:{ titre:'', texte:'', x:50, y:50, prestation:'' }, etapes:{ titre:'', texte:'' }, faq:{ q:'', a:'' }, avis:{ nom:'', vehicule:'', texte:'' }, galerie:{ src:'', alt:'' }, nav:{ id:'', label:'' }
@@ -783,7 +1035,21 @@ function slist(path, label, o = {}){
 }
 
 /* ----- listes d'objets ----- */
+const ICON_OPTS = [['check', '✓ Coche'], ['shield', '🛡 Bouclier'], ['clock', '⏱ Horloge'], ['spark', '✨ Étincelle'], ['drop', '💧 Goutte'], ['seat', '💺 Siège'], ['lamp', '💡 Phare'], ['car', '🚗 Voiture'], ['pin', '📍 Lieu'], ['phone', '📞 Téléphone'], ['mail', '✉ E-mail'], ['whatsapp', '💬 Message']];
+function sel(path, label, opts, hint){
+  const v = get(CONTENT, path), id = fid(path);
+  return `<div class="fld" data-fp="${path}"><label for="${id}">${esc(label)}</label><select id="${id}" data-path="${path}">${opts.map(([k, l]) => `<option value="${esc(k)}" ${String(v) === k ? 'selected' : ''}>${esc(l)}</option>`).join('')}</select>${hint ? `<p class="hint">${esc(hint)}</p>` : ''}<p class="err"></p></div>`;
+}
 const LISTS = {
+  blocs:{ item:'bloc', title:i => i.titre || 'Bloc sans titre', sub:i => ({ texte:'Texte seul', 'image-gauche':'Image à gauche', 'image-droite':'Image à droite', citation:'Citation' })[i.mise] || '', vis:'actif',
+    def:() => ({ actif:true, mise:'texte', titre:'Nouveau bloc', texte:'', image:'', bouton:'', lien:'' }),
+    body:(p) => sel(p + '.mise', 'Mise en page', [['texte', 'Texte seul'], ['image-gauche', 'Image à gauche'], ['image-droite', 'Image à droite'], ['citation', 'Citation (grande phrase)']], 'Avec une image, le texte est placé à côté. « Citation » met le texte en grand, centré.') +
+      fld(p + '.titre', 'Titre') + fld(p + '.texte', 'Texte', { area:1, rows:5, hint:'Un retour à la ligne = un paragraphe.' }) + imgf(p + '.image', 'Image (pour les mises en page avec image)', { hint:'Paysage 4:3 conseillé.' }) +
+      row2(fld(p + '.bouton', 'Texte du bouton (facultatif)'), fld(p + '.lien', 'Lien du bouton', { type:'url', nocap:1, ph:'https://… ou #contact' })) },
+  'modules.atouts.items':{ item:'atout', title:i => i.titre || 'Atout sans titre', sub:i => i.icone || '', def:() => ({ icone:'check', titre:'Nouvel atout', texte:'' }),
+    body:(p) => sel(p + '.icone', 'Icône', ICON_OPTS) + fld(p + '.titre', 'Titre') + fld(p + '.texte', 'Texte court', { area:1, rows:2 }) },
+  'modules.chiffres.items':{ item:'chiffre', title:i => (i.valeur || '') + (i.suffixe || '') + ' ' + (i.label || ''), sub:i => '', def:() => ({ valeur:'100', suffixe:'+', label:'clients satisfaits' }),
+    body:(p) => row2(fld(p + '.valeur', 'Valeur', { hint:'Un nombre (il s\'anime à l\'écran) : 350, 4,9…' }), fld(p + '.suffixe', 'Après le nombre', { ph:'+, %, ans…' })) + fld(p + '.label', 'Légende', { ph:'voitures traitées' }) },
   services:{ item:'prestation', title:i => i.titre || 'Sans titre', sub:i => [i.categorie, i.prix].filter(Boolean).join(' · '), vis:'visible',
     def:() => ({ ...clone(TPL.services), titre:'Nouvelle prestation', categorie:'Lavage' }),
     body:(p) => row2(fld(p + '.categorie', 'Catégorie', { hint:'Sert aux filtres du site (ex. Lavage, Peinture).' }), fld(p + '.titre', 'Titre')) +
@@ -860,7 +1126,33 @@ const PI = {
   target:'<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3"/>',
   spark:'<path d="m12 3 1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8z"/>'
 };
+const BRAND_DEFAULTS = { logo:'images/logo-full.png', silhouette:'images/car-lines.png', logoHauteur:2.9 };
+function rng(path, label, min, max, step, unit, hint){
+  const v = get(CONTENT, path), id = fid(path);
+  return `<div class="fld" data-fp="${path}"><label for="${id}">${esc(label)} : <output id="${id}_o">${esc(v)}</output> ${esc(unit)}</label><input id="${id}" type="range" min="${min}" max="${max}" step="${step}" value="${esc(v)}" data-path="${path}" data-num="1" style="min-height:2rem;accent-color:var(--accent)">${hint ? `<p class="hint">${esc(hint)}</p>` : ''}<p class="err"></p></div>`;
+}
+function idPreview(){
+  const B = CONTENT.branding, src = p => esc(imgSrc(p || ''));
+  return `<div class="idprev" id="idPrev"><div class="idp-head">${B.logo ? `<img src="${src(B.logo)}" alt="" style="height:${Math.min(4.2, Math.max(1.4, +B.logoHauteur || 2.9)) * .78}rem">` : `<b>${esc(B.nom || 'Nom')}</b>`}<span class="idp-nav">Prestations · Résultats · Zone</span></div>
+    ${B.silhouetteActive ? `<div class="idp-car"><img src="${src(B.silhouette || BRAND_DEFAULTS.silhouette)}" alt=""></div>` : '<div class="idp-car off">Silhouette masquée</div>'}
+    <div class="idp-foot"><div class="idp-icon">${B.icone ? `<img src="${src(B.icone)}" alt="">` : `<img src="images/icon-192.png" alt="">`}</div><small>Icône de l'onglet et de l'écran d'accueil</small></div></div>`;
+}
 const PANELS = [
+  { id:'design', icon:'palette', title:'Design et ambiance', desc:'Le studio : ambiances, couleurs, polices, formes, modules, avec aperçu en direct.', body:() => designLauncher() },
+  { id:'modules', icon:'list', title:'Modules ajoutables', desc:'Annonce, atouts, chiffres clés, appel à l\'action, blocs libres : ajoute ce que tu veux.', body:() => modulesBody() },
+  { id:'identite', icon:'car', title:'Logo et identité visuelle', desc:'Logo, silhouette de voiture, icône du site, nom : tout ce qui fait l\'image de marque.', body:() =>
+    `<p class="pdesc">Ce qui change ici change partout sur le site : en-tête, pied de page, écran d'intro, accueil, section « Chaque détail compte », onglet du navigateur.</p>` + idPreview() +
+    fld('branding.nom', 'Nom affiché', { hint:'Sert de texte alternatif au logo, et de logo écrit si tu retires l\'image du logo.' }) +
+    `<h4 class="sub">Logo</h4>` + imgf('branding.logo', 'Logo principal', { hint:'En-tête, pied de page et écran d\'intro. Idéal : PNG ou SVG à fond transparent, lisible sur fond sombre. « Retirer » = afficher le nom en lettres à la place.' }) +
+    `<div class="addbar"><button class="btn sm" type="button" data-m="brand-reset" data-p="branding.logo">↺ Revenir au logo d'origine</button></div>` +
+    rng('branding.logoHauteur', 'Taille du logo dans l\'en-tête', 1.4, 4.2, .1, 'rem', 'Plus petit = plus discret. 2,9 est la valeur d\'origine.') +
+    imgf('branding.logoPied', 'Logo du pied de page (facultatif)', { hint:'Vide : le logo principal est utilisé. Utile si ton logo a un fond clair ou une version courte.' }) +
+    `<h4 class="sub">Silhouette de voiture</h4>` + sw('branding.silhouetteActive', 'Afficher la silhouette sur l\'accueil', 'La section « Chaque détail compte » garde la sienne.') +
+    imgf('branding.silhouette', 'Silhouette (accueil et « Chaque détail compte »)', { hint:'Lignes claires sur fond transparent, format très allongé (environ 5 pour 1). Elle brille et se « scanne » : plus elle est détaillée en traits fins, plus l\'effet est beau.' }) +
+    `<div class="addbar"><button class="btn sm" type="button" data-m="brand-reset" data-p="branding.silhouette">↺ Revenir à la silhouette d'origine</button></div>` +
+    `<h4 class="sub">Icône du site</h4>` + imgf('branding.icone', 'Icône (onglet, écran d\'accueil du téléphone)', { hint:'Carrée, idéalement 512 × 512. Vide : l\'icône d\'origine. Astuce : dans « Recadrer », choisis 1:1 puis « Remplir le fond » avec la couleur de ta marque.' }) +
+    `<p class="hint">L'image affichée quand on partage le lien (WhatsApp, Facebook…) se règle dans « Référencement et partage ».</p>` +
+    `<div class="note" style="margin-top:1rem">Ton logo a un fond blanc ou noir ? Ouvre-le avec « Recadrer », section « Fond et couleur » : « Rendre le fond transparent » le détoure en un clic.</div>` },
   { id:'photos', icon:'img', title:'Photothèque', desc:'Toutes les photos du site : importer, recadrer, supprimer, nettoyer.', body:() => photosBody() },
   { id:'prestations', icon:'car', title:'Prestations et tarifs', desc:'Les soins proposés, leurs prix, leurs photos.', body:() =>
     fld('prestationsIntro.titre', 'Titre de la section') + fld('prestationsIntro.texte', 'Texte d\'introduction', { area:1, rows:3 }) +
@@ -961,6 +1253,11 @@ function validate(){
   if (ct.email && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(ct.email.trim())) add('contact.email', 'Adresse e-mail invalide.', 'contact');
   ['instagram', 'facebook', 'tiktok', 'formEndpoint'].forEach(k => { if (ct[k] && !isUrl(ct[k])) add('contact.' + k, 'Lien invalide : commence par https://', 'contact'); });
   if (C.seo.siteUrl && !isUrl(C.seo.siteUrl)) add('seo.siteUrl', 'Adresse invalide : commence par https://', 'seo');
+  if (!String(C.branding.nom).trim()) add('branding.nom', 'Indique le nom du site.', 'identite');
+  { const h = Number(C.branding.logoHauteur); if (isNaN(h) || h < 1.4 || h > 4.2) add('branding.logoHauteur', 'La taille doit être comprise entre 1,4 et 4,2.', 'identite'); }
+  { const okL = v => !v || /^#[\w-]+$/.test(v) || /^https?:\/\/\S+\.\S+$/.test(v) || /^(tel:|mailto:)\S+$/.test(v), bad = 'Lien invalide : « #section », https://… , tel: ou mailto:';
+    if (!okL(C.modules.annonce.lien)) add('modules.annonce.lien', bad, 'modules'); if (!okL(C.modules.cta.lien)) add('modules.cta.lien', bad, 'modules');
+    C.blocs.forEach((b, i) => { if (!okL(b.lien)) add('blocs.' + i + '.lien', bad, 'modules'); }); }
   C.services.forEach((s, i) => { if (!String(s.titre).trim()) add('services.' + i + '.titre', 'Donne un titre à cette prestation.', 'prestations'); if (!String(s.prix).trim()) add('services.' + i + '.prix', 'Indique un prix (ex. 89 €).', 'prestations'); });
   C.avantApres.forEach((a, i) => { if (!a.avant) add('avantApres.' + i + '.avant', 'Ajoute la photo d\'avant.', 'resultats'); if (!a.apres) add('avantApres.' + i + '.apres', 'Ajoute la photo d\'après.', 'resultats'); });
   C.galerie.forEach((g, i) => { if (!g.src) add('galerie.' + i + '.src', 'Ajoute une photo.', 'galerie'); });
@@ -1045,6 +1342,8 @@ function onField(t, commit){
   else if (t.dataset.num){ const raw = t.value.trim().replace(',', '.'); v = raw === '' ? '' : (isNaN(Number(raw)) ? t.value : Number(raw)); }
   else v = t.value;
   setp(CONTENT, path, v);
+  if (t.type === 'range'){ const o = document.getElementById(t.id + '_o'); if (o) o.textContent = String(v); }
+  if (path.indexOf('branding.') === 0){ const pv = $('#idPrev'); if (pv){ const tmp = document.createElement('div'); tmp.innerHTML = idPreview(); pv.replaceWith(tmp.firstElementChild); } }
   if (path.indexOf('theme.') === 0){ updMini(); const c = $('input[data-color="' + path.slice(6) + '"]'); if (c && isHex(v)) c.value = v; }
   if (commit && /\.(src|avant|apres|image)$|^images\.|shareImage$/.test(path)) imagePathEdited();
   changed(false, 'Modification : ' + pathLabel(path));
@@ -1179,6 +1478,10 @@ function describeField(fp){
   if ((m = /^avantApres\.(\d+)\.(avant|apres)$/.exec(fp))) { const s = CONTENT.avantApres[+m[1]]; return { label:'Avant / après « ' + ((s && s.titre) || 'sans titre') + ' » (' + (m[2] === 'avant' ? 'avant' : 'après') + ')', panel:'resultats' }; }
   if ((m = /^galerie\.(\d+)\.src$/.exec(fp))) return { label:'Galerie, photo n° ' + (+m[1] + 1), panel:'galerie' };
   if (fp === 'images.hero') return { label:'Photo d\'accueil', panel:'accueil' };
+  if (fp === 'branding.logo') return { label:'Logo principal', panel:'identite' };
+  if (fp === 'branding.logoPied') return { label:'Logo du pied de page', panel:'identite' };
+  if (fp === 'branding.silhouette') return { label:'Silhouette de voiture', panel:'identite' };
+  if (fp === 'branding.icone') return { label:'Icône du site', panel:'identite' };
   if (fp === 'images.portrait') return { label:'Portrait (À propos)', panel:'apropos' };
   if (fp === 'seo.shareImage') return { label:'Image de partage', panel:'seo' };
   return { label:fp, panel:null };
@@ -1187,6 +1490,9 @@ function fieldCfg(p){
   if (/^services\.\d+\.image$/.test(p)) return { ratio:[16, 11], label:'16:11', minW:900, max:1600, tol:.22 };
   if (/^avantApres\.\d+\.(avant|apres)$/.test(p)) return { ratio:[2, 1], label:'2:1', minW:1200, max:1800, tol:.18 };
   if (/^galerie\.\d+\.src$/.test(p)) return { ratio:null, minW:800, max:1600, tol:1 };
+  if (p === 'branding.logo' || p === 'branding.logoPied') return { ratio:null, minW:300, max:1600, tol:1 };
+  if (p === 'branding.silhouette') return { ratio:null, minW:900, max:2400, tol:1 };
+  if (p === 'branding.icone') return { ratio:[1, 1], label:'carré', minW:256, max:512, tol:.06, fmt:'png' };
   if (p === 'images.hero') return { ratio:[16, 9], label:'16:9', minW:1600, max:2200, tol:.25 };
   if (p === 'images.portrait') return { ratio:[4, 5], label:'4:5', minW:800, max:1400, tol:.2 };
   if (p === 'seo.shareImage') return { ratio:[1200, 630], label:'1200 × 630', minW:1200, max:1200, tol:.05, fmt:'jpeg' };
@@ -1305,7 +1611,6 @@ async function decodeAny(file, { maxSide = 2000 } = {}){
   if (file.size > 90 * 1048576) throw new MediaError('Fichier trop lourd (plus de 90 Mo).');
   const head = new Uint8Array(await file.slice(0, 4096).arrayBuffer());
   let kind = sniff(head);
-  if (!kind){ const g = guessKindFromName(file); const mimeImg = /^image\//.test(file.type || ''); if (g && (mimeImg || !file.type)) kind = g; else if (mimeImg) kind = 'unknown'; }
   if (!kind) throw new MediaError('Format non reconnu : ce n\'est pas une image (JPG, PNG, WebP, GIF, BMP, AVIF, SVG, ICO, HEIC ou TIFF attendus).');
   if (kind === 'pdf') throw new MediaError('C\'est un PDF, pas une image. Exporte la page en JPG ou PNG.');
   if (kind === 'jpeg' || kind === 'png'){ const tail = new Uint8Array(await file.slice(Math.max(0, file.size - 262144)).arrayBuffer()); let ok = false;
@@ -1373,8 +1678,16 @@ async function importFiles(fileList, onProgress){
 async function blobDims(b){ try { const bm = await createImageBitmap(b); const r = { w:bm.width, h:bm.height }; bm.close && bm.close(); return r; } catch(e){ try { const i = await loadImgEl(b); return { w:i.naturalWidth, h:i.naturalHeight }; } catch(e2){ return { w:0, h:0 }; } } }
 async function probe(p){
   if (PROBE[p] || IMGS[p] || location.protocol === 'file:') return;
-  try { const r = await fetch(p, { cache:'no-store' }); if (!r.ok) throw 0; const b = await r.blob(); const d = await blobDims(b); PROBE[p] = { w:d.w, h:d.h, bytes:b.size, missing:false }; }
-  catch(e){ PROBE[p] = { missing:true }; }
+  /* Un fichier n'est déclaré « introuvable » que sur une vraie réponse 404 ; toute autre défaillance (réseau, charge) est retentée. */
+  for (let attempt = 0; attempt < 3; attempt++){
+    try {
+      const r = await fetch(p, { cache:'no-store' });
+      if (r.status === 404 || r.status === 410){ PROBE[p] = { missing:true }; return; }
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      const b = await r.blob(); const d = await blobDims(b); PROBE[p] = { w:d.w, h:d.h, bytes:b.size, missing:false }; return;
+    } catch(e){ await new Promise(res => setTimeout(res, 250 * (attempt + 1))); }
+  }
+  /* trois échecs de suite sans réponse 404 : on ne conclut pas à une absence, on réessaiera à la prochaine ouverture */
 }
 let probing = null;
 function probeAll(){
@@ -1464,7 +1777,7 @@ function imgf(path, label, o = {}){
   }
   const thumb = v ? `<img src="${esc(thumbUrl(v))}" alt="">` : `${SV('<path d="M12 5v14M5 12h14"/>')}<span>Ajouter</span>`;
   return `<div class="fld imgfld" data-fp="${path}" data-label="${esc(label)}" data-hint="${esc(o.hint || '')}"><span class="lbl">${esc(label)}${m && m.pending ? '<span class="badge-new">à envoyer</span>' : ''}</span>
-    <div class="imgf"><button type="button" class="thumb ${v ? '' : 'empty'} ${m && m.missing ? 'miss' : ''}" data-m="pick" data-p="${path}" aria-label="${v ? 'Changer la photo' : 'Choisir une photo'} : ${esc(label)}">${thumb}</button>
+    <div class="imgf"><button type="button" class="thumb ${v ? '' : 'empty'} ${m && m.missing ? 'miss' : ''} ${path.indexOf('branding.') === 0 ? 'contain' : ''}" data-m="pick" data-p="${path}" aria-label="${v ? 'Changer la photo' : 'Choisir une photo'} : ${esc(label)}">${thumb}</button>
     <div class="imgc">
       <div class="meta">${m ? `<b>${esc(m.nom)}</b><span>${m.w && m.h ? m.w + ' × ' + m.h + ' px · ' : ''}${m.type ? m.type + ' · ' : ''}${humanSize(m.bytes)}</span>` : '<span>Aucune photo choisie</span>'}</div>
       <div class="acts"><button type="button" class="btn sm pri" data-m="pick" data-p="${path}">${v ? 'Changer' : 'Choisir'}…</button>
@@ -1485,6 +1798,7 @@ panelsEl.addEventListener('click', e => {
   if (m === 'gal-pick') return openMedia({ target:'galerie', multi:true });
   if (m === 'open-lib') return openMedia({});
   if (m === 'lib-clean') return openClean();
+  if (m === 'brand-reset'){ const d = BRAND_DEFAULTS[p.split('.').pop()]; if (d !== undefined){ setp(CONTENT, p, d); changed(true, 'Retour à l\'original : ' + pathLabel(p)); renderPanel(b.closest('.panel')); toast('Valeur d\'origine rétablie.'); } return; }
 });
 panelsEl.addEventListener('change', e => {
   const t = e.target;
@@ -1604,7 +1918,7 @@ function openMedia(o = {}){
   MEDIA.active = o.active || (MEDIA.target && !MEDIA.multi ? (get(CONTENT, MEDIA.target) || null) : null);
   renderMedia(); if (!dlgMedia.open) dlgMedia.showModal();
   const g = $('#mdGrid'); const a = g.querySelector('.md-card.on'); if (a) a.scrollIntoView({ block:'center' });
-  probeAll().then(() => { if (dlgMedia.open) renderMedia(); rerenderPanels(); });
+  probeAll().then(() => { if (dlgMedia.open) renderMedia(); refreshThumbs(); });
 }
 function closeMedia(){ if (dlgMedia.open) dlgMedia.close(); rerenderPanels(); }
 async function useActive(){
@@ -1748,7 +2062,7 @@ function remapRect(op){
 function ceTransform(op){
   remapRect(op);                                                           // calculé sur l'ancienne image
   if (op === 'cw') CE.rot = (CE.rot + 1) % 4; else if (op === 'ccw') CE.rot = (CE.rot + 3) % 4; else if (op === 'fh') CE.fh = !CE.fh; else CE.fv = !CE.fv;
-  buildWork();
+  buildWork(); if (CE.fx.bgOn) CE.bgRGB = ceBgColor();
   if (CE.mode === 'orig') CE.rect = fullRect(); else if (CE.mode === 'fixed' && (op === 'cw' || op === 'ccw')){ CE.fixed = 1 / CE.fixed; CE.rect = fitRatioRect(CE.fixed); }
   CE.touched = true; ceLayout(); ceChips(); ceSchedule();
 }
@@ -1784,7 +2098,9 @@ function ceLayout(){
   const st = $('#ceStage'), W = CE.work.width, H = CE.work.height, aw = Math.max(120, st.clientWidth - 36), ah = Math.max(120, st.clientHeight - 36);
   CE.scale = Math.min(aw / W, ah / H); const cw = Math.round(W * CE.scale), ch = Math.round(H * CE.scale); CE.scale = cw / W;
   const dpr = Math.min(2, window.devicePixelRatio || 1), cv = $('#ceCanvas'); cv.style.width = cw + 'px'; cv.style.height = ch + 'px'; cv.width = Math.round(cw * dpr); cv.height = Math.round(ch * dpr);
-  const g = cv.getContext('2d'); g.imageSmoothingQuality = 'high'; g.drawImage(CE.work, 0, 0, cv.width, cv.height); cv.style.filter = ceCssFilter();
+  const g = cv.getContext('2d'); g.imageSmoothingQuality = 'high';
+  if (fxActive()){ const t = mkCanvas(cv.width, cv.height), tg = t.getContext('2d'); tg.imageSmoothingQuality = 'high'; tg.drawImage(CE.work, 0, 0, cv.width, cv.height); g.clearRect(0, 0, cv.width, cv.height); g.drawImage(applyFx(t), 0, 0); } else g.drawImage(CE.work, 0, 0, cv.width, cv.height);
+  cv.style.filter = ceCssFilter();
   const wrap = $('#ceWrap'); wrap.style.width = cw + 'px'; wrap.style.height = ch + 'px'; ceUpdateBox();
 }
 function ceUpdateBox(){
@@ -1800,7 +2116,7 @@ function ceChips(){
 }
 function ceSchedule(){
   clearTimeout(CE.timer); const tok = ++CE.token; $('#ceEst').innerHTML = '<span class="spin"></span> Calcul du poids…';
-  CE.timer = setTimeout(async () => { if (!CE.on) return; try { const c = await ceRender(), b = await encodeCanvas(c, { fmt:CE.out.fmt, q:CE.out.q / 100, alpha:CE.alpha }); if (tok !== CE.token || !CE.on) return; CE.estType = b.type; $('#ceEst').innerHTML = 'Résultat : <b>' + c.width + ' × ' + c.height + ' px</b> · <b>≈ ' + humanSize(b.size) + '</b> · ' + (typeLabel(b.type) || 'image'); } catch(e){ if (tok === CE.token) $('#ceEst').textContent = 'Aperçu du poids indisponible.'; } }, 380);
+  CE.timer = setTimeout(async () => { if (!CE.on) return; try { const c = await ceRender(), b = await ceEncode(c); if (tok !== CE.token || !CE.on) return; CE.estType = b.type; $('#ceEst').innerHTML = 'Résultat : <b>' + c.width + ' × ' + c.height + ' px</b> · <b>≈ ' + humanSize(b.size) + '</b> · ' + (typeLabel(b.type) || 'image'); } catch(e){ if (tok === CE.token) $('#ceEst').textContent = 'Aperçu du poids indisponible.'; } }, 380);
 }
 
 /* ---------- rendu final ---------- */
@@ -1816,14 +2132,58 @@ function applyAdjust(canvas, a){
   }
   g.putImageData(id, 0, 0);
 }
+/* ---------- fond transparent, couleur unie, remplissage du fond ---------- */
+const hex2rgb = h => { const m = /^#?([0-9a-f]{6})$/i.exec(h || ''); const n = m ? parseInt(m[1], 16) : 0; return [(n >> 16) & 255, (n >> 8) & 255, n & 255]; };
+function ceBgColor(){
+  const f = CE.fx; if (f.bgMode === 'white') return [255, 255, 255]; if (f.bgMode === 'black') return [0, 0, 0];
+  const w = CE.work, g = w.getContext('2d'), pts = [[0, 0], [w.width - 1, 0], [0, w.height - 1], [w.width - 1, w.height - 1]]; let r = 0, gg = 0, b = 0;
+  pts.forEach(([x, y]) => { const d = g.getImageData(x, y, 1, 1).data; r += d[0]; gg += d[1]; b += d[2]; }); return [r / 4, gg / 4, b / 4];
+}
+function removeBackground(cv, f, bg){
+  const w = cv.width, h = cv.height, g = cv.getContext('2d'), id = g.getImageData(0, 0, w, h), d = id.data, br = bg[0], bgc = bg[1], bb = bg[2];
+  const T = f.tol * 2.2, T2 = T * 1.6 + 1, dist = i => { const a = d[i] - br, b = d[i + 1] - bgc, c = d[i + 2] - bb; return Math.sqrt(a * a + b * b + c * c); };
+  const mask = new Uint8Array(w * h);
+  if (f.inside){ for (let p = 0; p < w * h; p++) if (dist(p * 4) <= T) mask[p] = 1; }
+  else { const st = new Int32Array(w * h); let sp = 0; const push = p => { if (!mask[p] && dist(p * 4) <= T){ mask[p] = 1; st[sp++] = p; } };
+    for (let x = 0; x < w; x++){ push(x); push((h - 1) * w + x); } for (let y = 0; y < h; y++){ push(y * w); push(y * w + w - 1); }
+    while (sp){ const p = st[--sp], x = p % w, y = (p / w) | 0; if (x > 0) push(p - 1); if (x < w - 1) push(p + 1); if (y > 0) push(p - w); if (y < h - 1) push(p + w); } }
+  const alpha = new Float32Array(w * h), cl = v => v < 0 ? 0 : v > 255 ? 255 : v;
+  for (let p = 0; p < w * h; p++){
+    const i = p * 4; if (mask[p]){ alpha[p] = 0; continue; } let a = 1;
+    const near = (p % w > 0 && mask[p - 1]) || (p % w < w - 1 && mask[p + 1]) || (p >= w && mask[p - w]) || (p < w * (h - 1) && mask[p + w]);
+    if (near){ const dd = dist(i); a = Math.max(0, Math.min(1, (dd - T) / (T2 - T))); if (a > .02 && a < 1){ d[i] = cl((d[i] - br * (1 - a)) / a); d[i + 1] = cl((d[i + 1] - bgc * (1 - a)) / a); d[i + 2] = cl((d[i + 2] - bb * (1 - a)) / a); } }
+    alpha[p] = a * (d[i + 3] / 255);
+  }
+  for (let k = 0; k < f.soft; k++){ const cp = alpha.slice(); for (let y = 1; y < h - 1; y++) for (let x = 1; x < w - 1; x++){ const p = y * w + x; if (cp[p] > 0 || cp[p - 1] > 0 || cp[p + 1] > 0) alpha[p] = (cp[p] * 4 + cp[p - 1] + cp[p + 1] + cp[p - w] + cp[p + w]) / 8; } }
+  for (let p = 0; p < w * h; p++) d[p * 4 + 3] = Math.round(alpha[p] * 255);
+  g.putImageData(id, 0, 0);
+}
+const fxActive = () => CE.fx.bgOn || CE.fx.tintOn || CE.fx.fillOn;
+function applyFx(src){
+  if (!fxActive()) return src; const f = CE.fx, c = mkCanvas(src.width, src.height), g = c.getContext('2d'); g.drawImage(src, 0, 0);
+  if (f.bgOn) removeBackground(c, f, CE.bgRGB || ceBgColor());
+  if (f.tintOn){ const [r, gg, b] = hex2rgb(f.tint), id = g.getImageData(0, 0, c.width, c.height), d = id.data; for (let i = 0; i < d.length; i += 4){ d[i] = r; d[i + 1] = gg; d[i + 2] = b; } g.putImageData(id, 0, 0); }
+  if (f.fillOn){ const o = mkCanvas(c.width, c.height), og = o.getContext('2d'); og.fillStyle = f.fill; og.fillRect(0, 0, o.width, o.height); og.drawImage(c, 0, 0); return o; }
+  return c;
+}
+const ceAlphaOut = () => CE.fx.fillOn ? false : (CE.alpha || CE.fx.bgOn);
+const ceFmt = () => { const f = CE.out.fmt; return (f === 'auto' && CE.fx.fillOn) || (CE.fx.bgOn && (f === 'auto' || f === 'jpeg')) ? 'png' : f; };
+const ceEncode = c => encodeCanvas(c, { fmt:ceFmt(), q:CE.out.q / 100, alpha:ceAlphaOut() });
+function ceLayoutSoon(){ clearTimeout(CE.lt); CE.lt = setTimeout(() => { if (CE.on) ceLayout(); }, 90); }
+function ceFxSync(){
+  const v = id => $('#' + id), f = CE.fx;
+  f.bgOn = v('ceBgOn').checked; f.bgMode = v('ceBgMode').value; f.tol = +v('ceBgTol').value; f.soft = +v('ceBgSoft').value; f.inside = v('ceBgIn').checked; f.tintOn = v('ceTintOn').checked; f.tint = v('ceTint').value; f.fillOn = v('ceFillOn').checked; f.fill = v('ceFill').value;
+  v('ceBgOpts').hidden = !f.bgOn; v('ceTintOpts').hidden = !f.tintOn; v('ceFillOpts').hidden = !f.fillOn; v('ceBgTolO').textContent = f.tol; v('ceBgSoftO').textContent = f.soft;
+  CE.bgRGB = f.bgOn ? ceBgColor() : null; CE.touched = true; ceLayoutSoon(); ceSchedule();
+}
 async function ceRender(){
   const r = CE.rect, o = outSize(), out = drawScaled(CE.work, Math.round(r.x), Math.round(r.y), Math.max(1, Math.round(r.w)), Math.max(1, Math.round(r.h)), o.w, o.h);
-  applyAdjust(out, CE.adj); return out;
+  const fxOut = applyFx(out); applyAdjust(fxOut, CE.adj); return fxOut;
 }
 async function ceSave(mode){
   if (CE.saving) return; CE.saving = true; $$('#ceFoot button').forEach(b => b.disabled = true); impShow('Enregistrement de la photo…');
   try {
-    const c = await ceRender(), blob = await encodeCanvas(c, { fmt:CE.out.fmt, q:CE.out.q / 100, alpha:CE.alpha }), thumb = await makeThumb(c, blob.type === 'image/png');
+    const c = await ceRender(), blob = await ceEncode(c), thumb = await makeThumb(c, blob.type === 'image/png');
     const { path } = await registerBlob(blob, thumb, c.width, c.height, cleanBase(CE.path), '');
     const en = entryOf(path); if (en) en.nom = mode === 'replace' ? CE.nom : (CE.nom.replace(/ \(modifiée\)$/, '') + ' (modifiée)').slice(0, 60);
     if (mode === 'replace'){ replaceRefs(CE.path, path); removeEntries([CE.path]); if (CE.target) setp(CONTENT, CE.target, path); } else if (CE.target) setp(CONTENT, CE.target, path);
@@ -1844,7 +2204,7 @@ async function openCrop({ path, target = null, fit = false }){
   else { impShow('Chargement de la photo…'); try { const r = await fetch(path, { cache:'no-store' }); if (!r.ok) throw 0; blob = await r.blob(); } catch(e){ impHide(); toast('Impossible de charger cette photo pour la modifier (introuvable ?). Ouvre l\'admin depuis le site en ligne.', true); return null; } }
   impShow('Ouverture de la photo…'); let d; try { d = await decodeAny(blob, { maxSide:3200 }); } finally { impHide(); }
   const m = meta(path), cfg = target ? fieldCfg(target) : null;
-  CE = { on:true, path, target, cfg, kind:d.kind, animated:d.animated, src:d.canvas, alpha:d.alpha, nom:m.nom, system:SYS.has(path), rot:0, fh:false, fv:false, work:null, rect:null, mode:'free', fixed:null, adj:{ b:100, c:100, s:100 }, out:{ max:(cfg && cfg.max) || 2000, fmt:(cfg && cfg.fmt) || (d.kind === 'svg' ? 'png' : 'auto'), q:85 }, token:0, touched:false, saving:false, resolve:null, timer:null, estType:'', origMax:Math.max(d.origW, d.origH) };
+  CE = { on:true, path, target, cfg, kind:d.kind, animated:d.animated, src:d.canvas, alpha:d.alpha, nom:m.nom, system:SYS.has(path), rot:0, fh:false, fv:false, work:null, rect:null, mode:'free', fixed:null, adj:{ b:100, c:100, s:100 }, fx:{ bgOn:false, bgMode:'auto', tol:30, soft:1, inside:false, tintOn:false, tint:'#ffffff', fillOn:false, fill:'#08090b' }, bgRGB:null, lt:null, out:{ max:(cfg && cfg.max) || 2000, fmt:(cfg && cfg.fmt) || (d.kind === 'svg' ? 'png' : 'auto'), q:85 }, token:0, touched:false, saving:false, resolve:null, timer:null, estType:'', origMax:Math.max(d.origW, d.origH) };
   buildWork(); CE.rect = fullRect();
   if (fit && cfg && cfg.ratio){ CE.mode = 'fixed'; CE.fixed = cfg.ratio[0] / cfg.ratio[1]; CE.rect = fitRatioRect(CE.fixed); CE.touched = true; }
   $('#ceTitle').textContent = target ? 'Recadrer pour : ' + describeField(target).label : 'Recadrer / modifier';
@@ -1853,6 +2213,16 @@ async function openCrop({ path, target = null, fit = false }){
   $('#cePanel').innerHTML = `<h4>Format du cadre</h4><div class="md-chips" id="ceRatios" role="group" aria-label="Format du cadre"></div>
     <h4>Orientation</h4><div class="ce-row"><button class="ib" type="button" data-t="ccw" title="Pivoter à gauche" aria-label="Pivoter à gauche"><svg viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/></svg></button><button class="ib" type="button" data-t="cw" title="Pivoter à droite" aria-label="Pivoter à droite"><svg viewBox="0 0 24 24"><path d="M21 12a9 9 0 1 1-3-6.7"/><path d="M21 4v5h-5"/></svg></button><button class="ib" type="button" data-t="fh" title="Miroir horizontal" aria-label="Miroir horizontal"><svg viewBox="0 0 24 24"><path d="M12 3v18M8 7 3 12l5 5zM16 7l5 5-5 5z"/></svg></button><button class="ib" type="button" data-t="fv" title="Miroir vertical" aria-label="Miroir vertical"><svg viewBox="0 0 24 24"><path d="M3 12h18M7 8l5-5 5 5zM7 16l5 5 5-5z"/></svg></button></div>
     <h4>Réglages</h4>${[['b', 'Luminosité', 50, 150], ['c', 'Contraste', 50, 150], ['s', 'Saturation', 0, 200]].map(([k, l, mn, mx]) => `<div class="ce-sl"><label for="ceS_${k}">${l}</label><input id="ceS_${k}" type="range" min="${mn}" max="${mx}" value="100" data-a="${k}"><output id="ceO_${k}">100</output></div>`).join('')}<button class="btn sm" type="button" data-t="adj0">Réinitialiser les réglages</button>
+    <h4>Fond et couleur</h4><div class="ce-fx">
+      <label class="sw"><span class="t">Rendre le fond transparent<small>Pour un logo sur fond uni : le fond disparaît.</small></span><span class="switch"><input type="checkbox" id="ceBgOn"><i></i></span></label>
+      <div class="sub-opts" id="ceBgOpts" hidden><label style="font-size:.86rem;font-weight:600;display:grid;gap:.25rem">Couleur du fond<select id="ceBgMode"><option value="auto">Automatique (coins de l'image)</option><option value="white">Blanc</option><option value="black">Noir</option></select></label>
+        <div class="ce-sl"><label for="ceBgTol">Tolérance</label><input id="ceBgTol" type="range" min="2" max="100" value="30"><output id="ceBgTolO">30</output></div>
+        <div class="ce-sl"><label for="ceBgSoft">Bords adoucis</label><input id="ceBgSoft" type="range" min="0" max="4" value="1"><output id="ceBgSoftO">1</output></div>
+        <label class="crow2"><input type="checkbox" id="ceBgIn"> Supprimer aussi à l'intérieur (lettres, trous)</label></div>
+      <label class="sw"><span class="t">Couleur unie<small>Toute l'image prend une couleur, la transparence est gardée (ex. silhouette noire → blanche).</small></span><span class="switch"><input type="checkbox" id="ceTintOn"><i></i></span></label>
+      <div class="sub-opts" id="ceTintOpts" hidden><div class="crow2"><input type="color" id="ceTint" value="#ffffff" aria-label="Couleur unie"><span>Couleur appliquée</span></div></div>
+      <label class="sw"><span class="t">Remplir le fond transparent<small>Pour une icône : un fond de couleur derrière l'image.</small></span><span class="switch"><input type="checkbox" id="ceFillOn"><i></i></span></label>
+      <div class="sub-opts" id="ceFillOpts" hidden><div class="crow2"><input type="color" id="ceFill" value="#08090b" aria-label="Couleur de fond"><span>Couleur du fond</span></div></div></div>
     <h4>Enregistrement</h4><div class="ce-out"><label>Taille maximale<select id="ceMax">${sizes.map(([v, l]) => `<option value="${v}" ${String(o.max) === v ? 'selected' : ''}>${l}</option>`).join('')}</select></label>
       <label>Format<select id="ceFmt"><option value="auto" ${o.fmt === 'auto' ? 'selected' : ''}>Automatique (conseillé)</option><option value="jpeg" ${o.fmt === 'jpeg' ? 'selected' : ''}>JPEG (photos)</option><option value="webp">WebP (plus léger)</option><option value="png" ${o.fmt === 'png' ? 'selected' : ''}>PNG (logos, transparence)</option></select></label>
       <label><span>Qualité : <output id="ceQo">85</output> %</span><input id="ceQ" type="range" min="50" max="100" value="85"></label></div>
@@ -1900,14 +2270,15 @@ $('#cePanel').addEventListener('click', e => {
 });
 $('#cePanel').addEventListener('input', e => {
   const t = e.target; if (!CE.on) return;
+  if (/^ce(Bg|Tint|Fill)/.test(t.id || '')){ ceFxSync(); return; }
   if (t.dataset.a){ CE.adj[t.dataset.a] = +t.value; $('#ceO_' + t.dataset.a).textContent = t.value; $('#ceCanvas').style.filter = ceCssFilter(); CE.touched = true; ceSchedule(); }
   else if (t.id === 'ceQ'){ CE.out.q = +t.value; $('#ceQo').textContent = t.value; CE.touched = true; ceSchedule(); }
 });
-$('#cePanel').addEventListener('change', e => { const t = e.target; if (!CE.on) return; if (t.id === 'ceMax'){ CE.out.max = t.value; CE.touched = true; ceUpdateBox(); ceSchedule(); } else if (t.id === 'ceFmt'){ CE.out.fmt = t.value; CE.touched = true; ceSchedule(); } });
+$('#cePanel').addEventListener('change', e => { const t = e.target; if (!CE.on) return; if (/^ce(Bg|Tint|Fill)/.test(t.id || '')){ ceFxSync(); return; } if (t.id === 'ceMax'){ CE.out.max = t.value; CE.touched = true; ceUpdateBox(); ceSchedule(); } else if (t.id === 'ceFmt'){ CE.out.fmt = t.value; CE.touched = true; ceSchedule(); } });
 $('#ceFoot').addEventListener('click', e => {
   const b = e.target.closest('[data-c]'); if (!b || !CE.on) return; const a = b.dataset.c;
   if (a === 'cancel') ceTryClose();
-  else if (a === 'reset'){ CE.rot = 0; CE.fh = false; CE.fv = false; CE.adj = { b:100, c:100, s:100 }; ['b', 'c', 's'].forEach(k => { $('#ceS_' + k).value = 100; $('#ceO_' + k).textContent = 100; }); buildWork(); CE.mode = 'free'; CE.fixed = null; CE.rect = fullRect(); CE.touched = false; ceLayout(); ceChips(); ceSchedule(); }
+  else if (a === 'reset'){ CE.rot = 0; CE.fh = false; CE.fv = false; CE.adj = { b:100, c:100, s:100 }; ['b', 'c', 's'].forEach(k => { $('#ceS_' + k).value = 100; $('#ceO_' + k).textContent = 100; }); ['ceBgOn', 'ceBgIn', 'ceTintOn', 'ceFillOn'].forEach(id => { $('#' + id).checked = false; }); $('#ceBgMode').value = 'auto'; $('#ceBgTol').value = 30; $('#ceBgSoft').value = 1; ceFxSync(); CE.touched = false; buildWork(); CE.mode = 'free'; CE.fixed = null; CE.rect = fullRect(); CE.touched = false; ceLayout(); ceChips(); ceSchedule(); }
   else if (a === 'copy') guard(() => ceSave('copy')); else if (a === 'replace') guard(() => ceSave('replace'));
 });
 $('#ceClose').addEventListener('click', () => { if (CE.on) ceTryClose(); });
@@ -1941,23 +2312,29 @@ const FIELD_LABELS = {
   'disponibilite.actif':'Bandeau de disponibilité', 'disponibilite.texte':'Texte de disponibilité',
   'footer.copyright':'Copyright', 'footer.tagline':'Phrase de pied de page', 'legal.titre':'Mentions légales : titre', 'legal.texte':'Mentions légales : texte',
   'seo.siteTitle':'Titre du site', 'seo.description':'Description', 'seo.siteUrl':'Adresse du site', 'seo.shareImage':'Image de partage',
+  'design.ambiance':'Ambiance', 'design.police':'Polices', 'design.titres.italique':'Titres en italique', 'design.titres.majuscules':'Titres en majuscules', 'design.titres.graisse':'Graisse des titres', 'design.titres.etirement':'Largeur des lettres', 'design.tailleTexte':'Taille du texte', 'design.boutons':'Forme des boutons', 'design.cartes':'Forme des cartes', 'design.rayon':'Arrondi des angles', 'design.densite':'Densité', 'design.largeur':'Largeur du contenu', 'design.entete':'Style de l\'en-tête', 'design.accueil':'Alignement de l\'accueil', 'design.fond':'Fond des sections', 'design.grain':'Grain de l\'accueil', 'design.mouvement':'Mouvement', 'design.ordre':'Ordre des sections',
+  'modules.annonce.actif':'Bandeau d\'annonce', 'modules.annonce.texte':'Annonce : texte', 'modules.annonce.lien':'Annonce : lien', 'modules.annonce.libelle':'Annonce : libellé du lien', 'modules.annonce.style':'Annonce : style', 'modules.annonce.fermable':'Annonce : bouton de fermeture', 'modules.atouts.actif':'Module Atouts', 'modules.atouts.titre':'Atouts : titre', 'modules.atouts.texte':'Atouts : texte', 'modules.chiffres.actif':'Module Chiffres clés', 'modules.chiffres.titre':'Chiffres clés : titre', 'modules.cta.actif':'Module Appel à l\'action', 'modules.cta.titre':'Appel à l\'action : titre', 'modules.cta.texte':'Appel à l\'action : texte', 'modules.cta.bouton':'Appel à l\'action : bouton', 'modules.cta.lien':'Appel à l\'action : lien',
+  'branding.nom':'Nom affiché', 'branding.logo':'Logo principal', 'branding.logoHauteur':'Taille du logo', 'branding.logoPied':'Logo du pied de page', 'branding.silhouette':'Silhouette de voiture', 'branding.silhouetteActive':'Silhouette sur l\'accueil', 'branding.icone':'Icône du site',
   'images.hero':'Photo d\'accueil', 'images.portrait':'Portrait', 'estimateur.actif':'Estimateur de prix', 'estimateur.note':'Note sous l\'estimation', 'marquee':'Bandeau défilant',
   'effets.intro':'Écran d\'intro', 'effets.essuyage':'Peinture à polir', 'effets.rail':'Rail de navigation', 'effets.curseur':'Curseur personnalisé', 'effets.details':'Détails de la voiture', 'effets.marquee':'Bandeau défilant'
 };
-const LEAF_LABELS = { titre:'Titre', texte:'Texte', resume:'Résumé', description:'Description détaillée', categorie:'Catégorie', prix:'Prix', unite:'Texte au-dessus du prix', duree:'Durée', inclus:'Ce qui est inclus', populaire:'Mise en avant « Populaire »', visible:'Affichage sur le site', image:'Photo', vehicule:'Voiture', avant:'Photo avant', apres:'Photo après', q:'Question', a:'Réponse', nom:'Nom', src:'Photo', alt:'Description', label:'Nom', coef:'Coefficient', x:'Position horizontale', y:'Position verticale', prestation:'Prestation liée', id:'Lien', actif:'Activé' };
+const LEAF_LABELS = { titre:'Titre', texte:'Texte', resume:'Résumé', description:'Description détaillée', categorie:'Catégorie', prix:'Prix', unite:'Texte au-dessus du prix', duree:'Durée', inclus:'Ce qui est inclus', populaire:'Mise en avant « Populaire »', visible:'Affichage sur le site', image:'Photo', vehicule:'Voiture', avant:'Photo avant', apres:'Photo après', q:'Question', a:'Réponse', nom:'Nom', src:'Photo', alt:'Description', label:'Nom', coef:'Coefficient', x:'Position horizontale', y:'Position verticale', prestation:'Prestation liée', id:'Lien', actif:'Affiché', icone:'Icône', valeur:'Valeur', suffixe:'Après le nombre', mise:'Mise en page', bouton:'Bouton', lien:'Lien' };
 const ITEM_NOUNS = {
   services:['Nouvelle prestation', 'Prestation supprimée', 'prestations'], avantApres:['Nouvelle comparaison avant / après', 'Comparaison supprimée', 'comparaisons'], etapes:['Nouvelle étape', 'Étape supprimée', 'étapes'], faq:['Nouvelle question', 'Question supprimée', 'questions'],
-  avis:['Nouvel avis', 'Avis supprimé', 'avis'], galerie:['Photo ajoutée à la galerie', 'Photo retirée de la galerie', 'photos de la galerie'], zones:['Nouveau point sur la voiture', 'Point supprimé', 'points'], 'estimateur.tailles':['Nouvelle taille de voiture', 'Taille supprimée', 'tailles'], 'estimateur.etats':['Nouvel état', 'État supprimé', 'états'], nav:['Nouveau lien de menu', 'Lien de menu supprimé', 'liens']
+  avis:['Nouvel avis', 'Avis supprimé', 'avis'], blocs:['Nouveau bloc libre', 'Bloc libre supprimé', 'blocs'], 'modules.atouts.items':['Nouvel atout', 'Atout supprimé', 'atouts'], 'modules.chiffres.items':['Nouveau chiffre clé', 'Chiffre clé supprimé', 'chiffres'], galerie:['Photo ajoutée à la galerie', 'Photo retirée de la galerie', 'photos de la galerie'], zones:['Nouveau point sur la voiture', 'Point supprimé', 'points'], 'estimateur.tailles':['Nouvelle taille de voiture', 'Taille supprimée', 'tailles'], 'estimateur.etats':['Nouvel état', 'État supprimé', 'états'], nav:['Nouveau lien de menu', 'Lien de menu supprimé', 'liens']
 };
 function itemName(lp, it){
   if (!it) return '—';
-  const pick = { services:it.titre, avantApres:it.titre, etapes:it.titre, faq:it.q, avis:it.nom, zones:it.titre, 'estimateur.tailles':it.label, 'estimateur.etats':it.label, nav:it.label, galerie:it.alt || (it.src ? meta(it.src).nom : '') }[lp];
+  const pick = { services:it.titre, avantApres:it.titre, etapes:it.titre, faq:it.q, avis:it.nom, zones:it.titre, 'estimateur.tailles':it.label, 'estimateur.etats':it.label, nav:it.label, galerie:it.alt || (it.src ? meta(it.src).nom : ''), blocs:it.titre, 'modules.atouts.items':it.titre, 'modules.chiffres.items':(nz(it.valeur) + nz(it.suffixe) + ' ' + nz(it.label)).trim() }[lp];
   return String(pick || '').trim() || 'Sans titre';
 }
 function fieldLabel(fp, key){ return FIELD_LABELS[fp] || (fp.indexOf('visibility.') === 0 && VIS_LABELS[fp.slice(11)] ? VIS_LABELS[fp.slice(11)][0] : '') || (fp.indexOf('theme.') === 0 && (COLORS.find(c => c[0] === fp.slice(6)) || [])[1]) || LEAF_LABELS[key] || key; }
 function boolWords(fp, key){
-  if (/^visibility\./.test(fp) || key === 'visible' || fp === 'apropos.certif.actif' || fp === 'disponibilite.actif') return ['affiché', 'masqué'];
+  if (/^visibility\./.test(fp) || key === 'visible' || fp === 'branding.silhouetteActive' || fp === 'apropos.certif.actif' || fp === 'disponibilite.actif') return ['affiché', 'masqué'];
   if (key === 'populaire') return ['mise en avant', 'normale'];
+  if (key === 'actif' && fp.indexOf('blocs.') === 0) return ['affiché', 'masqué'];
+  if (fp === 'modules.annonce.fermable') return ['avec bouton', 'sans bouton'];
+  if (fp === 'design.titres.italique' || fp === 'design.titres.majuscules') return ['oui', 'non'];
   return ['activé', 'désactivé'];
 }
 /* libellé lisible d'un chemin (historique annuler/rétablir) */
@@ -2055,7 +2432,10 @@ function diffMedias(O, N){
   return rows;
 }
 const DSECS = [
+  ['design', 'Design et ambiance', '🎨', [['obj', 'design']]],
+  ['modules', 'Modules ajoutables', '🧩', [['obj', 'modules', ['modules.atouts.items', 'modules.chiffres.items']], ['list', 'modules.atouts.items'], ['list', 'modules.chiffres.items'], ['list', 'blocs']]],
   ['photos', 'Photothèque', '🖼️', [['medias']]],
+  ['identite', 'Logo et identité visuelle', '🏷️', [['obj', 'branding']]],
   ['prestations', 'Prestations et tarifs', '🚗', [['obj', 'prestationsIntro'], ['list', 'services']]],
   ['estimateur', 'Estimateur de prix', '🧮', [['obj', 'estimateur', ['estimateur.tailles', 'estimateur.etats']], ['list', 'estimateur.tailles'], ['list', 'estimateur.etats']]],
   ['details', 'Détails de la voiture', '🔍', [['obj', 'detailsIntro'], ['list', 'zones']]],
@@ -2204,6 +2584,234 @@ $('#globalDiff').addEventListener('click', previewPendingChanges); $('#diffBtn')
 $('#saveState').addEventListener('click', previewPendingChanges); $('#saveState').addEventListener('keydown', e => { if (e.key === 'Enter' || e.key === ' '){ e.preventDefault(); previewPendingChanges(); } });
 panelsEl.addEventListener('click', e => { const b = e.target.closest('[data-restore-section]'); if (b){ e.stopPropagation(); restoreSection(b.dataset.restoreSection); } });
 
+/* ---------- guide : recherche ---------- */
+$('#guideSearch').addEventListener('input', e => {
+  const q = norm(e.target.value).trim(), secs = $$('.gsec', $('#dlgGuide')); let n = 0;
+  secs.forEach(s => { const ok = !q || norm(s.textContent).indexOf(q) >= 0; s.hidden = !ok; if (ok) n++; });
+  $$('#guideToc a').forEach(a => { const t = $(a.getAttribute('href')); a.hidden = !!t && t.hidden; });
+  let m = $('#guideNone'); if (!m){ m = document.createElement('p'); m.id = 'guideNone'; m.className = 'g-lead'; $('.guide').appendChild(m); } m.textContent = q && !n ? 'Aucun résultat pour « ' + e.target.value + ' ». Essaie un mot plus court.' : '';
+});
+
+/* =====================================================================
+   STUDIO DE DESIGN : ambiances, couleurs, style, mise en page, modules, avec aperçu du site en direct
+   ===================================================================== */
+const DESIGN_DEF_A = { ambiance:'piste', police:'sport', titres:{ italique:true, majuscules:true, graisse:800, etirement:118 }, tailleTexte:100, boutons:'parallelogramme', cartes:'coins', rayon:14, densite:'normale', largeur:1360, entete:'degrade', accueil:'gauche', fond:'carbone', grain:7, mouvement:'riche' };
+const mkT = (bg, surface, surface2, ink, muted, accent, accentHot, line) => ({ bg, surface, surface2, ink, muted, accent, accentHot, line });
+const AMBIANCES = [
+  { id:'piste', nom:'Piste rouge', desc:'L\'ambiance d\'origine : noir carbone et rouge course.', t:mkT('#08090b', '#111317', '#181b21', '#f5f6f8', '#9aa3ad', '#e10a1e', '#ff3347', '#2a2f37'), d:{} },
+  { id:'glace', nom:'Glace bleue', desc:'Technique et net : bleu électrique, boutons arrondis.', t:mkT('#070b12', '#0d141f', '#131c2a', '#f2f7ff', '#8fa3bd', '#0a6cff', '#4d9bff', '#1e2a3c'), d:{ police:'moderne', boutons:'arrondi', cartes:'arrondi', rayon:12, titres:{ italique:false, majuscules:false, graisse:700, etirement:100 }, mouvement:'riche' } },
+  { id:'showroom', nom:'Showroom clair', desc:'Lumineux et élégant : fond clair, titres à empattements.', t:mkT('#f6f4ef', '#ffffff', '#ece8df', '#14110d', '#5e564a', '#b3122a', '#d11f3a', '#d9d2c3'), d:{ police:'elegant', boutons:'arrondi', cartes:'arrondi', rayon:14, titres:{ italique:false, majuscules:false, graisse:700, etirement:100 }, densite:'aeree', entete:'plein', accueil:'centre', fond:'points', mouvement:'calme' } },
+  { id:'or', nom:'Or prestige', desc:'Luxe discret : noir chaud, or, angles droits.', t:mkT('#0a0907', '#14110c', '#1c1812', '#f6f1e6', '#a89f8a', '#c8a24a', '#e6c568', '#2c261b'), d:{ police:'elegant', boutons:'carre', cartes:'carre', rayon:0, titres:{ italique:false, majuscules:true, graisse:700, etirement:100 }, densite:'aeree', entete:'verre', accueil:'centre', fond:'lignes', mouvement:'calme' } },
+  { id:'neon', nom:'Néon violet', desc:'Nocturne et futuriste : violet électrique, boutons pilule.', t:mkT('#0a0612', '#120b1e', '#1a1128', '#f6efff', '#a897c4', '#b026ff', '#d77bff', '#2a1d40'), d:{ police:'technique', boutons:'pilule', cartes:'arrondi', rayon:20, titres:{ italique:false, majuscules:true, graisse:700, etirement:100 }, fond:'grille', grain:12 } },
+  { id:'racing', nom:'Racing green', desc:'Sportif et chic : vert anglais, esprit circuit.', t:mkT('#06100b', '#0c1a12', '#112619', '#eef7f0', '#8fae9a', '#19c26b', '#5fe39b', '#1c3326'), d:{ fond:'points' } },
+  { id:'paddock', nom:'Orange paddock', desc:'Énergique : orange vif, formes douces.', t:mkT('#0c0907', '#17110c', '#211812', '#fff4ea', '#b39a86', '#ff6a00', '#ff9244', '#33261b'), d:{ police:'moderne', boutons:'arrondi', cartes:'arrondi', rayon:10, titres:{ italique:false, majuscules:false, graisse:800, etirement:100 } } },
+  { id:'mono', nom:'Noir et blanc', desc:'Radical et graphique : monochrome, angles droits.', t:mkT('#000000', '#0e0e0e', '#161616', '#ffffff', '#9a9a9a', '#ffffff', '#e6e6e6', '#2a2a2a'), d:{ police:'systeme', boutons:'carre', cartes:'carre', rayon:0, titres:{ italique:false, majuscules:true, graisse:800, etirement:100 }, fond:'uni', mouvement:'calme', entete:'plein' } },
+  { id:'sable', nom:'Sable chaud', desc:'Doux et premium : beige, brun, boutons pilule.', t:mkT('#f4efe6', '#fffaf0', '#eadfce', '#2b2217', '#6f6150', '#8a5a2b', '#a8733a', '#d8c9b2'), d:{ police:'elegant', boutons:'pilule', cartes:'arrondi', rayon:22, titres:{ italique:false, majuscules:false, graisse:700, etirement:100 }, densite:'aeree', entete:'discret', fond:'points', mouvement:'calme' } }
+];
+const FONT_SAMPLES = { sport:['Sport', '"Saira",Arial,sans-serif', 'italic', 'uppercase', 800], moderne:['Moderne', '"Barlow","Segoe UI",system-ui,sans-serif', 'normal', 'none', 700], elegant:['Élégant', 'Georgia,"Times New Roman",serif', 'normal', 'none', 700], technique:['Technique', 'ui-monospace,"SF Mono",Consolas,monospace', 'normal', 'uppercase', 700], systeme:['Système', 'system-ui,-apple-system,"Segoe UI",sans-serif', 'normal', 'none', 700] };
+
+/* ---------- couleurs ---------- */
+const rgbOf = h => { const m = /^#?([0-9a-f]{6})$/i.exec(h || ''); const n = m ? parseInt(m[1], 16) : 0; return [(n >> 16) & 255, (n >> 8) & 255, n & 255]; };
+const toHex = (r, g, b) => '#' + [r, g, b].map(v => Math.max(0, Math.min(255, Math.round(v))).toString(16).padStart(2, '0')).join('');
+function hsl2hex(h, s, l){ h = ((h % 360) + 360) % 360; s = Math.max(0, Math.min(1, s)); l = Math.max(0, Math.min(1, l)); const a = s * Math.min(l, 1 - l), f = n => { const k = (n + h / 30) % 12; return l - a * Math.max(-1, Math.min(k - 3, 9 - k, 1)); }; return toHex(f(0) * 255, f(8) * 255, f(4) * 255); }
+function hex2hsl(hex){ const [r, g, b] = rgbOf(hex).map(v => v / 255), mx = Math.max(r, g, b), mn = Math.min(r, g, b), l = (mx + mn) / 2, d = mx - mn; let h = 0, s = 0; if (d){ s = d / (1 - Math.abs(2 * l - 1)); h = mx === r ? ((g - b) / d) % 6 : mx === g ? (b - r) / d + 2 : (r - g) / d + 4; h *= 60; if (h < 0) h += 360; } return [h, s, l]; }
+const lumOf = hex => { const a = rgbOf(hex).map(v => { v /= 255; return v <= .03928 ? v / 12.92 : Math.pow((v + .055) / 1.055, 2.4); }); return .2126 * a[0] + .7152 * a[1] + .0722 * a[2]; };
+const contrastOf = (a, b) => { const x = lumOf(a), y = lumOf(b); return (Math.max(x, y) + .05) / (Math.min(x, y) + .05); };
+const onAccent = acc => contrastOf('#ffffff', acc) >= contrastOf('#0a0b0e', acc) ? '#ffffff' : '#0a0b0e';
+function paletteFrom(accent, light){
+  const [h, s] = hex2hsl(accent), sat = Math.max(.35, Math.min(.9, s));
+  if (light) return mkT(hsl2hex(h, .22, .955), '#ffffff', hsl2hex(h, .18, .915), hsl2hex(h, .3, .08), hsl2hex(h, .12, .34), hsl2hex(h, sat, .38), hsl2hex(h, sat, .46), hsl2hex(h, .16, .84));
+  return mkT(hsl2hex(h, .3, .035), hsl2hex(h, .22, .075), hsl2hex(h, .2, .105), hsl2hex(h, .25, .965), hsl2hex(h, .12, .66), hsl2hex(h, sat, .5), hsl2hex(h, sat, .62), hsl2hex(h, .16, .17));
+}
+function fixContrast(t){
+  const out = Object.assign({}, t), light = lumOf(t.bg) > .35, dir = light ? -1 : 1, [h, s, l0] = hex2hsl(t.muted);
+  let l = l0; for (let i = 0; i < 40 && Math.min(contrastOf(out.muted, t.bg), contrastOf(out.muted, t.surface)) < 4.6; i++){ l = Math.max(0, Math.min(1, l + dir * .02)); out.muted = hsl2hex(h, s, l); }
+  const [hi, si, li0] = hex2hsl(t.ink); let li = li0; for (let i = 0; i < 40 && Math.min(contrastOf(out.ink, t.bg), contrastOf(out.ink, t.surface)) < 7; i++){ li = Math.max(0, Math.min(1, li + dir * .02)); out.ink = hsl2hex(hi, si, li); }
+  return out;
+}
+
+/* ---------- panneau « Design » et panneau « Modules » ---------- */
+function ambOf(){ const a = AMBIANCES.find(x => x.id === CONTENT.design.ambiance); return a ? a.nom : 'Personnalisée'; }
+function swatches(t){ return ['bg', 'surface', 'accent', 'accentHot', 'ink'].map(k => `<i style="background:${esc(t[k])}" title="${esc(k)}"></i>`).join(''); }
+function designLauncher(){
+  return `<p class="pdesc">Le studio affiche ton site en direct pendant que tu règles ambiance, couleurs, polices, formes et modules. Rien ne change sur le vrai site tant que tu ne télécharges pas le pack.</p>
+    <div class="st-now"><div><small>Ambiance actuelle</small><b>${esc(ambOf())}</b></div><div class="st-sw">${swatches(CONTENT.theme)}</div><button class="btn pri" type="button" data-m="open-studio">🎨 Ouvrir le studio</button></div>
+    <h4 class="sub">Changer d'ambiance en un clic</h4><div class="amb-grid sm">${AMBIANCES.map(a => ambTile(a)).join('')}</div>
+    <p class="hint">Les couleurs seules se règlent aussi dans « Couleurs », les effets dans « Effets et animations ». Le studio réunit tout, avec aperçu.</p>`;
+}
+function modHead(path, title, desc){ return `<div class="modhd"><div><b>${esc(title)}</b><small>${esc(desc)}</small></div><label class="switch" title="Activer ou désactiver"><input type="checkbox" data-path="${path}" ${get(CONTENT, path) ? 'checked' : ''} aria-label="${esc(title)}"><i></i></label></div>`; }
+function modulesBody(){
+  const M = CONTENT.modules;
+  return `<p class="pdesc">Des blocs en plus, à activer selon tes besoins. L'<b>ordre</b> de toutes les sections se règle dans le studio (onglet Modules). Chaque module est invisible tant que son interrupteur est éteint ou qu'il est vide.</p>
+  <div class="modcard">${modHead('modules.annonce.actif', 'Bandeau d\'annonce', 'Une barre en haut du site : promotion, congés, nouveauté.')}
+    ${sel('modules.annonce.style', 'Style', [['accent', 'Couleur d\'accent'], ['sombre', 'Sombre'], ['clair', 'Clair (inversé)']])}${fld('modules.annonce.texte', 'Texte', { ph:'-15 % sur la protection céramique en octobre' })}
+    ${row2(fld('modules.annonce.libelle', 'Texte du lien', { ph:'Réserver' }), fld('modules.annonce.lien', 'Lien', { nocap:1, ph:'#contact ou https://…' }))}${sw('modules.annonce.fermable', 'Bouton « fermer » pour le visiteur')}</div>
+  <div class="modcard">${modHead('modules.atouts.actif', 'Atouts', 'Trois ou quatre arguments avec icône : garantie, rapidité, déplacement…')}${fld('modules.atouts.titre', 'Titre de la section', { ph:'Pourquoi nous choisir' })}${fld('modules.atouts.texte', 'Texte d\'introduction (facultatif)')}${listBlock('modules.atouts.items', { add:'Ajouter un atout', empty:'Aucun atout.' })}</div>
+  <div class="modcard">${modHead('modules.chiffres.actif', 'Chiffres clés', 'Des nombres qui s\'animent : voitures traitées, note moyenne, années d\'expérience.')}${fld('modules.chiffres.titre', 'Titre de la section (facultatif)')}${listBlock('modules.chiffres.items', { add:'Ajouter un chiffre', empty:'Aucun chiffre.' })}</div>
+  <div class="modcard">${modHead('modules.cta.actif', 'Appel à l\'action', 'Un grand bandeau avec un bouton, pour pousser vers le devis.')}${fld('modules.cta.titre', 'Titre', { ph:'Prêt à retrouver une voiture neuve ?' })}${fld('modules.cta.texte', 'Texte')}${row2(fld('modules.cta.bouton', 'Texte du bouton', { ph:'Demander un devis' }), fld('modules.cta.lien', 'Lien du bouton', { nocap:1, ph:'#contact' }))}</div>
+  <div class="modcard"><div class="modhd"><div><b>Blocs libres</b><small>Autant que tu veux : texte, texte + image, citation. Place-les où tu veux dans le studio.</small></div></div>${listBlock('blocs', { add:'Ajouter un bloc libre', empty:'Aucun bloc libre.' })}</div>`;
+}
+
+/* ---------- vignette d'ambiance ---------- */
+function ambTile(a, extra = ''){
+  const D = Object.assign({}, DESIGN_DEF_A, a.d), t = a.t, ff = FONT_SAMPLES[D.police][1].replace(/"/g, "'"), tt = Object.assign({}, DESIGN_DEF_A.titres, D.titres);
+  const br = D.boutons === 'pilule' ? '99px' : D.boutons === 'arrondi' ? '6px' : '0', cr = D.cartes === 'arrondi' ? Math.min(14, D.rayon) + 'px' : D.cartes === 'carre' ? '0' : '2px';
+  const style = `--a-bg:${t.bg};--a-sf:${t.surface};--a-ink:${t.ink};--a-mut:${t.muted};--a-acc:${t.accent};--a-on:${onAccent(t.accent)};--a-line:${t.line};--a-ff:${ff};--a-st:${tt.italique ? 'italic' : 'normal'};--a-tc:${tt.majuscules ? 'uppercase' : 'none'};--a-w:${tt.graisse};--a-br:${br};--a-cr:${cr}`;
+  const on = CONTENT.design.ambiance === a.id;
+  return `<button type="button" class="amb-wrap ${on ? 'on' : ''}" data-st="amb" data-id="${a.id}" aria-pressed="${on}" aria-label="Ambiance ${esc(a.nom)}"><span class="amb ${D.boutons === 'parallelogramme' ? 'para' : ''}" style="${style}"><span class="a-h"><i></i><i></i><u></u></span><span class="a-t">Votre voiture</span><span class="a-p"></span><span class="a-b">Devis</span><span class="a-c"></span></span><strong>${esc(a.nom)}</strong>${extra}</button>`;
+}
+
+/* ---------- le studio ---------- */
+const dlgStudio = $('#dlgStudio');
+const ST = { tab:'amb', dev:'desktop', loaded:false, timer:null, tmp:false };
+const DEVS = { desktop:[1280], tablet:[820], phone:[390] };
+const TABS = [['amb', '✨ Ambiances'], ['col', '🎨 Couleurs'], ['sty', 'Aa Style'], ['pag', '▭ Mise en page'], ['mod', '🧩 Modules']];
+const DEFAULT_ORDER = ['bandeau', 'prestations', 'details', 'resultats', 'methode', 'apropos', 'galerie', 'zone', 'faq', 'avis', 'atouts', 'chiffres', 'cta'];
+function secList(){
+  const base = [
+    { k:'bandeau', nom:'Bandeau défilant', tog:'effets.marquee', def:true }, { k:'prestations', nom:'Prestations' }, { k:'details', nom:'Chaque détail compte', tog:'effets.details', def:true },
+    { k:'resultats', nom:'Résultats avant / après', tog:'visibility.resultats' }, { k:'methode', nom:'Méthode', tog:'visibility.methode' }, { k:'apropos', nom:'À propos', tog:'visibility.apropos' },
+    { k:'galerie', nom:'Galerie', tog:'visibility.galerie' }, { k:'zone', nom:'Zone d\'intervention', tog:'visibility.zone' }, { k:'faq', nom:'Questions fréquentes', tog:'visibility.faq' }, { k:'avis', nom:'Avis clients', tog:'visibility.avis' },
+    { k:'atouts', nom:'Atouts', tog:'modules.atouts.actif', mod:true }, { k:'chiffres', nom:'Chiffres clés', tog:'modules.chiffres.actif', mod:true }, { k:'cta', nom:'Appel à l\'action', tog:'modules.cta.actif', mod:true }];
+  CONTENT.blocs.forEach((b, i) => base.push({ k:'bloc-' + slug(String(b._id || b.titre || 'x')), nom:'Bloc : ' + (b.titre || 'sans titre'), tog:'blocs.' + i + '.actif', mod:true }));
+  const ord = CONTENT.design.ordre || [], pos = k => { const i = ord.indexOf(k); return i < 0 ? 1e6 : i; };
+  return base.map((x, i) => ({ x, i })).sort((a, b) => (pos(a.x.k) - pos(b.x.k)) || (a.i - b.i)).map(z => z.x);
+}
+function frameSrc(){ return fetch('index.html', { cache:'no-store' }).then(r => { if (!r.ok) throw 0; return r.text(); }); }
+async function openStudio(tab){
+  ST.tab = tab || ST.tab; ST.loaded = false; renderStudio();
+  if (!dlgStudio.open) dlgStudio.showModal();
+  $('#stLoad').hidden = false; $('#stLoad').textContent = 'Chargement de l\'aperçu…';
+  try { const src = await frameSrc(); INDEX_SRC = src; const f = $('#stFrame'); f.onload = () => { ST.loaded = true; $('#stLoad').hidden = true; studioFit(); }; f.srcdoc = buildPreview(src); }
+  catch(e){ $('#stLoad').textContent = 'Aperçu indisponible : ouvre l\'admin depuis l\'adresse du site (https://…/admin.html), pas depuis un fichier.'; }
+  studioFit();
+}
+function closeStudio(){ if (dlgStudio.open) dlgStudio.close(); $('#stFrame').srcdoc = ''; renderAll(); }
+function studioPush(content){ clearTimeout(ST.timer); ST.timer = setTimeout(() => { const w = $('#stFrame').contentWindow; if (w && ST.loaded) w.postMessage({ type:'pl-content', content:content || CONTENT }, '*'); }, 90); }
+function studioFit(){
+  const box = $('#stPrev'); if (!box || !dlgStudio.open) return; const r = box.getBoundingClientRect(), w = DEVS[ST.dev][0], pad = 20, k = Math.min(1, (r.width - pad * 2) / w), h = Math.max(200, r.height - pad * 2), f = $('#stFrame'), vp = $('#stVp');
+  f.style.width = w + 'px'; f.style.height = (h / k) + 'px'; f.style.transform = 'scale(' + k + ')'; vp.style.width = (w * k) + 'px'; vp.style.height = h + 'px';
+  $$('#stDev button').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.dev === ST.dev)));
+}
+function sset(path, val, label, structural){
+  if ((path.indexOf('design.') === 0 || path.indexOf('theme.') === 0) && path !== 'design.ordre' && path !== 'design.ambiance') CONTENT.design.ambiance = 'perso';   // un réglage manuel : l'ambiance devient « personnalisée »
+  setp(CONTENT, path, val); changed(!!structural, label); studioPush();
+}
+function applyAmb(a, label){
+  CONTENT.theme = Object.assign({}, a.t); const keepOrder = CONTENT.design.ordre || [];
+  CONTENT.design = Object.assign({}, clone(DESIGN_DEF_A), clone(a.d || {}), { ambiance:a.id, ordre:keepOrder }); CONTENT.design.titres = Object.assign({}, DESIGN_DEF_A.titres, (a.d || {}).titres || {});
+  changed(true, label || 'Ambiance : ' + a.nom); studioPush();
+}
+function randomAmb(){
+  const pick = arr => arr[Math.floor(Math.random() * arr.length)], hue = Math.floor(Math.random() * 360), light = Math.random() < .3;
+  const t = paletteFrom(hsl2hex(hue, .75, .5), light), D = { police:pick(['sport', 'moderne', 'elegant', 'technique', 'systeme']), boutons:pick(['parallelogramme', 'carre', 'arrondi', 'pilule']), cartes:pick(['coins', 'arrondi', 'carre']), rayon:pick([0, 8, 14, 20]), fond:pick(['carbone', 'uni', 'points', 'lignes', 'grille']), densite:pick(['normale', 'aeree']), accueil:pick(['gauche', 'centre']), entete:pick(['degrade', 'plein', 'verre', 'discret']), titres:{ italique:Math.random() < .5, majuscules:Math.random() < .6, graisse:pick([700, 800]), etirement:pick([100, 118]) } };
+  applyAmb({ id:'perso', nom:'Surprise', t, d:D }, 'Ambiance surprise');
+}
+const tileBtn = (p, v, label, sample, cur) => `<button type="button" class="st-tile ${String(cur) === String(v) ? 'on' : ''}" data-st="set" data-p="${p}" data-v="${v}" aria-pressed="${String(cur) === String(v)}">${sample || ''}<span>${esc(label)}</span></button>`;
+const slider = (p, label, min, max, step, val, unit, fmt) => `<div class="st-sl"><label for="stS_${p.replace(/\W/g, '_')}">${esc(label)} <output>${fmt ? fmt(val) : val}${unit || ''}</output></label><input id="stS_${p.replace(/\W/g, '_')}" type="range" min="${min}" max="${max}" step="${step}" value="${val}" data-st="rng" data-p="${p}" data-u="${unit || ''}"></div>`;
+const switchRow = (p, label, hint) => `<label class="st-sw"><span>${esc(label)}${hint ? `<small>${esc(hint)}</small>` : ''}</span><span class="switch"><input type="checkbox" data-st="chk" data-p="${p}" ${get(CONTENT, p) ? 'checked' : ''}><i></i></span></label>`;
+function paneAmb(){
+  const t = CONTENT.theme;
+  return `<p class="st-help">Clique une ambiance pour l'appliquer à tout le site. <b>Survole-la</b> pour la prévisualiser sans la valider. Tout reste modifiable ensuite.</p>
+    <div class="amb-grid">${AMBIANCES.map(a => ambTile(a)).join('')}</div>
+    <h4 class="sub">Créer la tienne</h4>
+    <div class="st-gen"><label>Couleur de ta marque<input type="color" id="stGenCol" value="${esc(t.accent)}" aria-label="Couleur de la marque"></label>
+      <div class="st-seg" role="group" aria-label="Fond"><button type="button" data-st="gen" data-m="dark">🌙 Fond sombre</button><button type="button" data-st="gen" data-m="light">☀️ Fond clair</button></div>
+      <button type="button" class="btn" data-st="rand">🎲 Surprends-moi</button></div>
+    <p class="st-help">Choisis une couleur : l'admin compose automatiquement une palette complète et lisible autour d'elle.</p>`;
+}
+function paneCol(){
+  const t = CONTENT.theme, pairs = [['Texte sur fond', t.ink, t.bg, 7], ['Texte secondaire', t.muted, t.bg, 4.5], ['Texte sur cartes', t.ink, t.surface, 7], ['Bouton', onAccent(t.accent), t.accent, 4.5], ['Accent sur fond', t.accent, t.bg, 3]];
+  const [h] = hex2hsl(t.accent), harm = [['Complémentaire', 180], ['Voisine +', 30], ['Voisine −', -30], ['Triade', 120]].map(([n, d]) => { const c = hsl2hex(h + d, Math.max(.5, hex2hsl(t.accent)[1]), hex2hsl(t.accent)[2]); return `<button type="button" class="st-harm" data-st="harm" data-c="${c}" title="${n}" aria-label="Accent ${n}"><i style="background:${c}"></i><span>${n}</span></button>`; }).join('');
+  return `<div class="st-colors">${COLORS.map(([k, l]) => `<div class="st-col"><label for="stC_${k}">${esc(l)}</label><div><input type="color" id="stC_${k}" data-st="col" data-k="${k}" value="${esc(t[k])}"><input type="text" data-st="hex" data-k="${k}" value="${esc(t[k])}" maxlength="7" spellcheck="false" aria-label="${esc(l)} (code)"></div></div>`).join('')}</div>
+    <h4 class="sub">Lisibilité</h4><div class="st-contrast">${pairs.map(([n, a, b, min]) => { const r = contrastOf(a, b); return `<span class="${r >= min ? 'ok' : 'bad'}">${r >= min ? '✓' : '⚠'} ${esc(n)} <b>${r.toFixed(1)}:1</b></span>`; }).join('')}</div>
+    <div class="st-acts"><button type="button" class="btn sm" data-st="fixc">🩺 Corriger la lisibilité</button></div>
+    <h4 class="sub">Autres accents harmonieux</h4><div class="st-harms">${harm}</div>`;
+}
+function paneSty(){
+  const D = CONTENT.design, T = D.titres;
+  const fonts = Object.keys(FONT_SAMPLES).map(k => { const [n, ff, st, tc, w] = FONT_SAMPLES[k]; return tileBtn('design.police', k, n, `<em style="font-family:${ff.replace(/"/g, "'")};font-style:${st};text-transform:${tc};font-weight:${w}">Votre voiture</em>`, D.police); }).join('');
+  const btns = [['parallelogramme', 'Course'], ['carre', 'Carré'], ['arrondi', 'Arrondi'], ['pilule', 'Pilule']].map(([v, l]) => tileBtn('design.boutons', v, l, `<i class="smp-btn ${v}"></i>`, D.boutons)).join('');
+  const cards = [['coins', 'Coins coupés'], ['arrondi', 'Arrondies'], ['carre', 'Carrées']].map(([v, l]) => tileBtn('design.cartes', v, l, `<i class="smp-card ${v}"></i>`, D.cartes)).join('');
+  const fonds = [['carbone', 'Carbone'], ['uni', 'Uni'], ['points', 'Points'], ['lignes', 'Lignes'], ['grille', 'Grille']].map(([v, l]) => tileBtn('design.fond', v, l, `<i class="smp-bg ${v}"></i>`, D.fond)).join('');
+  return `<h4 class="sub first">Polices</h4><div class="st-tiles c3">${fonts}</div>
+    <h4 class="sub">Titres</h4>${switchRow('design.titres.italique', 'Italique', 'Penche les titres vers l\'avant.')}${switchRow('design.titres.majuscules', 'Majuscules')}${slider('design.titres.graisse', 'Épaisseur', 400, 900, 100, T.graisse)}${slider('design.titres.etirement', 'Largeur des lettres', 75, 125, 1, T.etirement, '%')}
+    <p class="st-help">La largeur des lettres n'agit que sur la police « Sport ».</p>
+    ${slider('design.tailleTexte', 'Taille générale du texte', 85, 125, 1, D.tailleTexte, '%')}
+    <h4 class="sub">Boutons</h4><div class="st-tiles c4">${btns}</div><h4 class="sub">Cartes et blocs</h4><div class="st-tiles c3">${cards}</div>
+    ${slider('design.rayon', 'Arrondi des angles', 0, 32, 1, D.rayon, ' px')}<p class="st-help">Visible avec les boutons « Arrondi » et les cartes « Arrondies ».</p>
+    <h4 class="sub">Fond des sections alternées</h4><div class="st-tiles c5">${fonds}</div>`;
+}
+function panePag(){
+  const D = CONTENT.design;
+  const dens = [['compacte', 'Compacte'], ['normale', 'Normale'], ['aeree', 'Aérée']].map(([v, l]) => tileBtn('design.densite', v, l, `<i class="smp-dens ${v}"></i>`, D.densite)).join('');
+  const hdr = [['degrade', 'Dégradé'], ['plein', 'Plein'], ['verre', 'Verre'], ['discret', 'Discret']].map(([v, l]) => tileBtn('design.entete', v, l, `<i class="smp-hdr ${v}"></i>`, D.entete)).join('');
+  const hero = [['gauche', 'À gauche'], ['centre', 'Centré']].map(([v, l]) => tileBtn('design.accueil', v, l, `<i class="smp-hero ${v}"></i>`, D.accueil)).join('');
+  const mov = [['riche', 'Riche', 'Toutes les animations'], ['calme', 'Calme', 'Apparitions douces'], ['aucun', 'Aucun', 'Tout est immobile']].map(([v, l, h]) => tileBtn('design.mouvement', v, l + ' · ' + h, '', D.mouvement)).join('');
+  return `<h4 class="sub first">Densité (espaces entre les sections)</h4><div class="st-tiles c3">${dens}</div>
+    ${slider('design.largeur', 'Largeur du contenu', 1000, 1800, 10, D.largeur, ' px', v => v == 1360 ? 'auto' : v)}<p class="st-help">« auto » : le contenu s'élargit seul sur les très grands écrans.</p>
+    <h4 class="sub">En-tête</h4><div class="st-tiles c4">${hdr}</div><h4 class="sub">Accueil</h4><div class="st-tiles c2">${hero}</div>
+    ${slider('design.grain', 'Grain de l\'accueil (texture)', 0, 30, 1, D.grain, ' %')}
+    <h4 class="sub">Mouvement</h4><div class="st-tiles c1">${mov}</div><p class="st-help">Les effets précis (intro, peinture à polir, curseur…) restent réglables dans « Effets et animations ».</p>`;
+}
+function paneMod(){
+  const list = secList(), M = CONTENT.modules;
+  const rows = list.map((s, i) => { const on = s.tog ? (s.def ? get(CONTENT, s.tog) !== false : !!get(CONTENT, s.tog)) : true;
+    return `<li class="st-row ${on ? '' : 'off'}" data-k="${esc(s.k)}"><span class="st-n">${i + 1}</span><b>${esc(s.nom)}</b>${s.mod ? '<em>module</em>' : ''}<span class="st-rb"><button type="button" class="ib" data-st="mv" data-k="${esc(s.k)}" data-d="-1" aria-label="Monter" ${i === 0 ? 'disabled' : ''}>↑</button><button type="button" class="ib" data-st="mv" data-k="${esc(s.k)}" data-d="1" aria-label="Descendre" ${i === list.length - 1 ? 'disabled' : ''}>↓</button>${s.tog ? `<label class="switch"><input type="checkbox" data-st="tog" data-p="${s.tog}" data-def="${s.def ? 1 : 0}" ${on ? 'checked' : ''} aria-label="Afficher ${esc(s.nom)}"><i></i></label>` : '<span class="st-lock" title="Toujours affichée">🔒</span>'}</span></li>`; }).join('');
+  const cards = [['annonce', 'Bandeau d\'annonce', 'Une barre promo en haut du site.', 'modules.annonce.actif'], ['atouts', 'Atouts', 'Arguments avec icônes.', 'modules.atouts.actif'], ['chiffres', 'Chiffres clés', 'Nombres animés.', 'modules.chiffres.actif'], ['cta', 'Appel à l\'action', 'Grand bandeau avec bouton.', 'modules.cta.actif']].map(([k, n, d, p]) => `<div class="st-mod ${get(CONTENT, p) ? 'on' : ''}"><b>${n}</b><small>${d}</small><div><label class="switch"><input type="checkbox" data-st="chk" data-p="${p}" ${get(CONTENT, p) ? 'checked' : ''} aria-label="${n}"><i></i></label><button type="button" class="btn sm" data-st="edit">✏️ Contenu</button></div></div>`).join('');
+  return `<p class="st-help">Ordre des sections : <b>l'accueil reste en tête, le contact et le pied de page en fin</b>. Tout le reste se réorganise avec les flèches, et se masque avec l'interrupteur.</p><ol class="st-list">${rows}</ol>
+    <h4 class="sub">Modules à ajouter</h4><div class="st-mods">${cards}</div><div class="st-acts"><button type="button" class="btn sm pri" data-st="addbloc">＋ Ajouter un bloc libre</button><button type="button" class="btn sm" data-st="edit">✏️ Modifier les contenus</button></div>
+    <p class="st-help">Un bloc libre accepte un titre, un texte, une image et un bouton : à toi de le placer où tu veux.</p>`;
+}
+function renderStudio(){
+  $('#stTabs').innerHTML = TABS.map(([k, l]) => `<button type="button" role="tab" aria-selected="${ST.tab === k}" data-st="tab" data-k="${k}">${l}</button>`).join('');
+  const pane = $('#stPane'), top = pane.scrollTop;
+  pane.innerHTML = ({ amb:paneAmb, col:paneCol, sty:paneSty, pag:panePag, mod:paneMod })[ST.tab](); pane.scrollTop = top;
+  $('#stUndo').disabled = $('#undoBtn').disabled; $('#stRedo').disabled = $('#redoBtn').disabled;
+}
+function commitOrder(list){ CONTENT.design.ordre = list.map(s => s.k); }
+dlgStudio.addEventListener('click', e => {
+  const b = e.target.closest('[data-st]'); if (!b || b.tagName === 'INPUT') return; const a = b.dataset.st;
+  if (a === 'tab'){ ST.tab = b.dataset.k; renderStudio(); }
+  else if (a === 'amb'){ const am = AMBIANCES.find(x => x.id === b.dataset.id); if (am){ ST.tmp = false; applyAmb(am); renderStudio(); } }
+  else if (a === 'set'){ let v = b.dataset.v; sset(b.dataset.p, v, 'Design : ' + (FIELD_LABELS[b.dataset.p] || b.dataset.p) + ' → ' + b.textContent.trim().split('·')[0].trim(), true); renderStudio(); }
+  else if (a === 'gen'){ const t = paletteFrom($('#stGenCol').value, b.dataset.m === 'light'); CONTENT.theme = t; CONTENT.design.ambiance = 'perso'; changed(true, 'Palette générée depuis ' + $('#stGenCol').value); studioPush(); renderStudio(); }
+  else if (a === 'rand'){ randomAmb(); renderStudio(); }
+  else if (a === 'fixc'){ CONTENT.theme = fixContrast(CONTENT.theme); changed(true, 'Lisibilité corrigée'); studioPush(); renderStudio(); toast('Lisibilité corrigée.'); }
+  else if (a === 'harm'){ const c = b.dataset.c, [h, s, l] = hex2hsl(c); CONTENT.theme.accent = c; CONTENT.theme.accentHot = hsl2hex(h, s, Math.min(.75, l + .12)); CONTENT.design.ambiance = 'perso'; changed(true, 'Accent harmonieux ' + c); studioPush(); renderStudio(); }
+  else if (a === 'mv'){ const list = secList(), i = list.findIndex(s => s.k === b.dataset.k), j = i + (+b.dataset.d); if (i < 0 || j < 0 || j >= list.length) return; [list[i], list[j]] = [list[j], list[i]]; commitOrder(list); changed(true, 'Ordre des sections : ' + list[j].nom); studioPush(); renderStudio(); }
+  else if (a === 'addbloc'){ CONTENT.blocs.push(Object.assign(LISTS.blocs.def(), { _id:uid() })); changed(true, 'Ajout : bloc libre'); studioPush(); renderStudio(); toast('Bloc ajouté : modifie son contenu avec « Contenu ».'); }
+  else if (a === 'edit'){ closeStudio(); OPEN_PANELS.add('modules'); renderAll(); setTimeout(() => openPanel('modules'), 60); }
+});
+dlgStudio.addEventListener('input', e => {
+  const t = e.target, a = t.dataset.st; if (!a) return;
+  if (a === 'rng'){ const v = +t.value, o = $('output', t.closest('.st-sl')), u = t.dataset.u || ''; if (o) o.textContent = (t.dataset.p === 'design.largeur' && v === 1360 ? 'auto' : v) + u; sset(t.dataset.p, v, 'Design : ' + (FIELD_LABELS[t.dataset.p] || t.dataset.p)); }
+  else if (a === 'col' || a === 'hex'){ const v = t.value.trim(); if (!/^#[0-9a-f]{6}$/i.test(v)) return; sset('theme.' + t.dataset.k, v, 'Couleur : ' + (COLORS.find(c => c[0] === t.dataset.k) || [])[1]);  const sib = $(`[data-st="${a === 'col' ? 'hex' : 'col'}"][data-k="${t.dataset.k}"]`, t.closest('.st-col')); if (sib) sib.value = v; clearTimeout(ST.rt); ST.rt = setTimeout(() => { const keep = document.activeElement && document.activeElement.id; const pane = $('#stPane'), y = pane.scrollTop; $('.st-contrast', pane).outerHTML = paneCol().match(/<div class="st-contrast">[\s\S]*?<\/div>/)[0]; pane.scrollTop = y; }, 250); }
+});
+dlgStudio.addEventListener('change', e => {
+  const t = e.target, a = t.dataset.st; if (!a) return;
+  if (a === 'chk'){ sset(t.dataset.p, t.checked, 'Design : ' + (FIELD_LABELS[t.dataset.p] || t.dataset.p), true); renderStudio(); }
+  else if (a === 'tog'){ sset(t.dataset.p, t.checked, 'Section : ' + (FIELD_LABELS[t.dataset.p] || t.dataset.p), true); renderStudio(); }
+});
+dlgStudio.addEventListener('pointerover', e => {   // survol d'une ambiance : aperçu temporaire
+  const b = e.target.closest('[data-st="amb"]'); if (!b || e.pointerType === 'touch') return; const am = AMBIANCES.find(x => x.id === b.dataset.id); if (!am) return;
+  clearTimeout(ST.hv); ST.hv = setTimeout(() => { const c = clone(CONTENT); c.theme = Object.assign({}, am.t); c.design = Object.assign({}, clone(DESIGN_DEF_A), clone(am.d || {}), { ambiance:am.id, ordre:CONTENT.design.ordre || [] }); c.design.titres = Object.assign({}, DESIGN_DEF_A.titres, (am.d || {}).titres || {}); ST.tmp = true; studioPush(c); }, 260);
+});
+dlgStudio.addEventListener('pointerout', e => { const b = e.target.closest('[data-st="amb"]'); if (!b) return; clearTimeout(ST.hv); if (ST.tmp){ ST.tmp = false; studioPush(); } });
+$('#stTabs').addEventListener('keydown', e => { if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return; const i = TABS.findIndex(t => t[0] === ST.tab), j = (i + (e.key === 'ArrowRight' ? 1 : TABS.length - 1)) % TABS.length; ST.tab = TABS[j][0]; renderStudio(); $('#stTabs [aria-selected="true"]').focus(); });
+$('#stDev').addEventListener('click', e => { const b = e.target.closest('[data-dev]'); if (!b) return; ST.dev = b.dataset.dev; studioFit(); });
+$('#stDone').addEventListener('click', closeStudio); $('#stClose').addEventListener('click', closeStudio); dlgStudio.addEventListener('cancel', e => { e.preventDefault(); closeStudio(); });
+$('#stUndo').addEventListener('click', () => { undo(); renderStudio(); studioPush(); }); $('#stRedo').addEventListener('click', () => { redo(); renderStudio(); studioPush(); });
+window.addEventListener('resize', () => { if (dlgStudio.open) studioFit(); });
+if (window.ResizeObserver) new ResizeObserver(() => { if (dlgStudio.open) studioFit(); }).observe($('#stPrev'));
+$('#designBtn').addEventListener('click', () => openStudio());
+panelsEl.addEventListener('click', e => {
+  const b = e.target.closest('[data-m="open-studio"],[data-st="amb"]'); if (!b) return;
+  if (b.dataset.m === 'open-studio') openStudio('amb'); else { const am = AMBIANCES.find(x => x.id === b.dataset.id); if (am){ applyAmb(am); const p = b.closest('.panel'); if (p) renderPanel(p); toast('Ambiance « ' + am.nom + ' » appliquée. ↶ pour annuler.'); } }
+});
+
+window.__studio = { AMBIANCES, paletteFrom, fixContrast, contrastOf, onAccent };   // observé par la suite de tests
+
 
 /* =====================================================================
    EXPORT : ZIP sans dépendance
@@ -2256,7 +2864,9 @@ $('#loadFile').addEventListener('change', e => guard(async () => {
   const loaded = normalize(j), ch = diffContent(CONTENT, loaded);
   if (!countRows(ch)){ toast('Ce fichier est identique à ton contenu actuel.'); return; }
   const ok = await showDiffModal({ icon:'📂', title:'Charger ce fichier ?', subtitle:'Voici ce qui changera dans l\'éditeur par rapport à ton contenu actuel. Rien n\'est téléchargé.', changes:ch, readonly:true, confirmLabel:'Charger ce fichier', cancelLabel:'Annuler' });
-  if (!ok) return; CONTENT = loaded; pushHist('Fichier chargé : ' + f.name); renderAll(); persist(); toast('Fichier chargé.');
+  if (!ok) return;
+  pushHist();   // d'abord l'état en cours (une saisie peut ne pas être encore enregistrée) : ↶ reviendra exactement ici
+  CONTENT = loaded; pushHist('Fichier chargé : ' + f.name); renderAll(); persist(); toast('Fichier chargé.');
 }));
 $('#undoBtn').addEventListener('click', undo); $('#redoBtn').addEventListener('click', redo);
 document.addEventListener('keydown', e => {
@@ -2313,7 +2923,7 @@ async function init(){
     try { localStorage.removeItem(DRAFT_KEY); } catch(e){} await clearAllPending(); CONTENT = normalize(ORIGINAL ? JSON.parse(ORIGINAL) : {}); await reconcileImages(); HIST = [{ label:'État initial', state:snap() }]; HI = 0; renderAll(); toast('Tout le contenu a été restauré aux valeurs en ligne.');
   });
   renderAll(); $('#loading').style.display = 'none';
-  probeAll().then(() => { rerenderPanels(); renderChecklist(); });
+  probeAll().then(() => { refreshThumbs(); renderChecklist(); });   // seulement les vignettes : ne jamais redessiner un formulaire en cours de saisie
   scheduleBadges(true);
 }
 init().catch(err => { console.error(err); $('#loading').style.display = 'none'; $('#errBanner').innerHTML = '<div class="errbanner">Une erreur est survenue au chargement : ' + esc(err && err.message) + '</div>'; });

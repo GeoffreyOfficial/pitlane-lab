@@ -415,5 +415,65 @@
       }
     ],
     "note": "Estimation indicative : le prix final est confirmé dans le devis, avant toute intervention."
-  }
+  },
+  "branding": {
+    "nom": "Pitlane Lab",
+    "logo": "images/logo-full.png",
+    "logoHauteur": 2.9,
+    "logoPied": "",
+    "silhouette": "images/car-lines.png",
+    "silhouetteActive": true,
+    "icone": ""
+  },
+  "design": {
+    "ambiance": "piste",
+    "police": "sport",
+    "titres": {
+      "italique": true,
+      "majuscules": true,
+      "graisse": 800,
+      "etirement": 118
+    },
+    "tailleTexte": 100,
+    "boutons": "parallelogramme",
+    "cartes": "coins",
+    "rayon": 14,
+    "densite": "normale",
+    "largeur": 1360,
+    "entete": "degrade",
+    "accueil": "gauche",
+    "fond": "carbone",
+    "grain": 7,
+    "mouvement": "riche",
+    "ordre": []
+  },
+  "modules": {
+    "annonce": {
+      "actif": false,
+      "texte": "",
+      "lien": "",
+      "libelle": "",
+      "style": "accent",
+      "fermable": true
+    },
+    "atouts": {
+      "actif": false,
+      "titre": "",
+      "texte": "",
+      "items": []
+    },
+    "chiffres": {
+      "actif": false,
+      "titre": "",
+      "items": []
+    },
+    "cta": {
+      "actif": false,
+      "titre": "",
+      "texte": "",
+      "bouton": "",
+      "lien": ""
+    }
+  },
+  "blocs": []
 }

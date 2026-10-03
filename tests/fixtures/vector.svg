@@ -1,0 +1,1 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300"><script>alert(1)</script><rect width="400" height="300" fill="#222" onclick="alert(2)"/><circle cx="200" cy="150" r="90" fill="#e10a1e"/></svg>

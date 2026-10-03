@@ -60,3 +60,15 @@ La liste « Avant de publier » en haut de l'admin suit tout ça.
 - La fenêtre de comparaison (clic sur l'indicateur ou « Voir les modifications ») liste ajouts, suppressions et modifications avec anciennes et nouvelles valeurs ; chaque ligne s'annule seule.
 - Elle s'ouvre aussi avant chaque téléchargement (pack ou content.json) et avant le chargement d'un fichier.
 - Les éléments des listes portent un identifiant interne `_id` dans `content.json` : normal, ne pas supprimer.
+
+## Suite de tests (dossier tests/)
+- 530 tests automatiques (670 avec `--full`) (site public, administration, parcours complet de publication) : voir `tests/README.md`.
+- Lancer : `tests/run-tests.sh` (Linux/macOS) ou `tests\run-tests.bat` (Windows). Rapide : `tests/run-tests.sh -m static`.
+- Avant l'ouverture au public : `tests/run-tests.sh --launch --full`.
+- Le workflow `.github/workflows/tests.yml` relance tout à chaque envoi sur GitHub et chaque lundi.
+- Le dossier `tests/` et `.github/` ne servent pas au site : tu peux les garder dans le dépôt sans effet pour les visiteurs.
+
+## Studio de design (admin)
+- Bouton « Design » : aperçu du site en direct (ordinateur, tablette, téléphone) + ambiances, couleurs, style, mise en page, modules.
+- Huit ambiances prêtes (dont deux thèmes clairs), générateur de palette, contrôle de lisibilité, ordre des sections, modules ajoutables.
+- Sans réglage, l'aspect d'origine du site est strictement conservé. Voir le guide intégré (section 6).

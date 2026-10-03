@@ -1,0 +1,5 @@
+playwright>=1.40
+pytest>=7.4
+pytest-html>=4.0
+pillow>=10.0
+pillow-heif>=0.16
